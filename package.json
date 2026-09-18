@@ -1,0 +1,13 @@
+{
+  "name": "pokemon-english-pocket",
+  "version": "8.1.0-together-preview",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node server.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "build": "node build.mjs",
+    "together": "node network/dev-server.mjs",
+    "verify:all": "node tools/vscode-verify.mjs"
+  }
+}

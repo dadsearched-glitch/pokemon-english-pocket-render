@@ -1,0 +1,4288 @@
+{
+  "3": [
+    {
+      "focus": "Ask politely; explain with because",
+      "s": [
+        "May I borrow your pencil, please?",
+        "I will return it after we finish."
+      ],
+      "story": "Kai opens his pencil case, but his pencil is missing. He asks Hana before taking hers. Hana lends him a pencil. Kai writes carefully and returns it after the lesson. Now both children are ready for lunch.",
+      "r": [
+        [
+          "What does Kai return?",
+          "A pencil",
+          "A lunchbox",
+          "A book"
+        ],
+        [
+          "How does Kai show respect?",
+          "He asks before borrowing and gives it back.",
+          "He keeps the pencil.",
+          "He takes it without asking."
+        ]
+      ],
+      "l": [
+        "The speaker wants to borrow something politely.",
+        "The speaker wants to keep a gift.",
+        "The speaker wants to leave school."
+      ],
+      "words": [
+        [
+          "borrow",
+          "빌리다",
+          "use something and give it back"
+        ],
+        [
+          "return",
+          "돌려주다",
+          "give something back"
+        ],
+        [
+          "ready",
+          "준비된",
+          "prepared to begin"
+        ],
+        [
+          "carefully",
+          "조심해서",
+          "with attention so you avoid mistakes"
+        ]
+      ],
+      "name": "Ready for class",
+      "place": "School routines",
+      "year": 3
+    },
+    {
+      "focus": "Invite someone; notice feelings",
+      "s": [
+        "Would you like to join our game?",
+        "I can invite someone who feels lonely."
+      ],
+      "story": "At morning tea, Mia stands beside the playground. She watches a game but does not move closer. Kai remembers how he felt on his first day. He invites Mia to join. She smiles and asks about the rules. A kind invitation can help someone feel welcome.",
+      "r": [
+        [
+          "Who invites Mia?",
+          "Kai",
+          "The teacher",
+          "Mia herself"
+        ],
+        [
+          "Why might Mia smile at the end?",
+          "She feels included.",
+          "The game has been cancelled.",
+          "Everyone has gone home."
+        ]
+      ],
+      "l": [
+        "The speaker is inviting someone to play.",
+        "The speaker is telling someone to leave.",
+        "The speaker is asking for food."
+      ],
+      "words": [
+        [
+          "invite",
+          "초대하다",
+          "ask someone to join you"
+        ],
+        [
+          "join",
+          "함께하다",
+          "take part with others"
+        ],
+        [
+          "lonely",
+          "외로운",
+          "sad because you feel alone"
+        ],
+        [
+          "kind",
+          "친절한",
+          "caring about other people"
+        ]
+      ],
+      "name": "Making friends",
+      "place": "Friendship",
+      "year": 3
+    },
+    {
+      "focus": "Describe food; give a reason",
+      "s": [
+        "These fresh apples are crunchy.",
+        "I am thirsty, so I need some water."
+      ],
+      "story": "Kai packs an apple, a sandwich and a water bottle. At lunch he eats his crunchy apple first. After running, he feels thirsty. His bottle is empty, so he refills it at the drinking fountain. He checks that he has enough water before returning to play.",
+      "r": [
+        [
+          "Where does Kai refill his bottle?",
+          "At the drinking fountain",
+          "In the sandpit",
+          "At his desk"
+        ],
+        [
+          "Why does Kai refill it before playing again?",
+          "He may get thirsty while running.",
+          "He wants to make it lighter.",
+          "He has finished school."
+        ]
+      ],
+      "l": [
+        "The speaker is describing the apples.",
+        "The speaker is asking for a sandwich.",
+        "The speaker is describing an empty bottle."
+      ],
+      "words": [
+        [
+          "crunchy",
+          "아삭한",
+          "making a crisp sound when you bite"
+        ],
+        [
+          "fresh",
+          "신선한",
+          "recently picked or made"
+        ],
+        [
+          "enough",
+          "충분한",
+          "as much as you need"
+        ],
+        [
+          "thirsty",
+          "목마른",
+          "needing a drink"
+        ]
+      ],
+      "name": "Lunchbox choices",
+      "place": "Food and everyday needs",
+      "year": 3
+    },
+    {
+      "focus": "Use if and so; read clues",
+      "s": [
+        "If it starts to drizzle, I will wear my coat.",
+        "The forecast says we may need shelter from the rain."
+      ],
+      "story": "The morning is sunny, but the forecast says rain is coming. Kai puts a waterproof coat in his bag. On the way home, drizzle begins. He puts on his coat and waits under a shelter with his whānau. The bag stays dry too.",
+      "r": [
+        [
+          "What does Kai pack?",
+          "A waterproof coat",
+          "A beach towel",
+          "An umbrella stand"
+        ],
+        [
+          "Why does he pack a coat on a sunny morning?",
+          "The forecast predicts a change.",
+          "He expects snow inside school.",
+          "He has lost his bag."
+        ]
+      ],
+      "l": [
+        "The speaker has a plan for light rain.",
+        "The speaker says rain is impossible.",
+        "The speaker wants to swim in a coat."
+      ],
+      "words": [
+        [
+          "drizzle",
+          "이슬비",
+          "very light rain"
+        ],
+        [
+          "forecast",
+          "일기예보",
+          "a prediction of the weather"
+        ],
+        [
+          "shelter",
+          "비바람을 피할 곳",
+          "a place that protects you from weather"
+        ],
+        [
+          "waterproof",
+          "방수의",
+          "not letting water pass through"
+        ]
+      ],
+      "name": "A change in weather",
+      "place": "NZ weather",
+      "year": 3
+    },
+    {
+      "focus": "Directions; sequence instructions",
+      "s": [
+        "Walk straight to the next corner.",
+        "The library is opposite the crossing."
+      ],
+      "story": "Kai and an adult walk to the library. They go straight past the bakery and stop at the corner. The library is opposite them, across the road. They use the marked crossing together. Inside the library, Kai finds a book about sea birds.",
+      "r": [
+        [
+          "What do they pass before the corner?",
+          "The bakery",
+          "The swimming pool",
+          "The library entrance"
+        ],
+        [
+          "Why do they use the crossing?",
+          "It is the marked place to cross the road.",
+          "It is inside the library.",
+          "It takes them back to the bakery."
+        ]
+      ],
+      "l": [
+        "The speaker is giving a direction.",
+        "The speaker is naming a favourite book.",
+        "The speaker is asking for a drink."
+      ],
+      "words": [
+        [
+          "corner",
+          "모퉁이",
+          "a place where two streets or edges meet"
+        ],
+        [
+          "opposite",
+          "맞은편의",
+          "on the other side facing something"
+        ],
+        [
+          "straight",
+          "곧장",
+          "without turning"
+        ],
+        [
+          "crossing",
+          "건널목",
+          "a place marked for crossing a road"
+        ]
+      ],
+      "name": "Finding your way",
+      "place": "Neighbourhood",
+      "year": 3
+    },
+    {
+      "focus": "Polite requests; everyday amounts",
+      "s": [
+        "Could I have a receipt, please?",
+        "I will check the price before I choose."
+      ],
+      "story": "Kai goes to a shop with his dad. He chooses a notebook priced at three dollars. His dad pays with a five-dollar note. The shopkeeper gives back two dollars in change and a receipt. Kai keeps the receipt with the notebook.",
+      "r": [
+        [
+          "How much change do they receive?",
+          "Two dollars",
+          "Three dollars",
+          "Five dollars"
+        ],
+        [
+          "What could the receipt help them check later?",
+          "What they paid for the notebook",
+          "Tomorrow’s weather",
+          "The bus route home"
+        ]
+      ],
+      "l": [
+        "The speaker asks for a record of the payment.",
+        "The speaker asks to borrow money.",
+        "The speaker asks where the notebook was made."
+      ],
+      "words": [
+        [
+          "price",
+          "가격",
+          "how much something costs"
+        ],
+        [
+          "change",
+          "거스름돈",
+          "money returned after you pay too much"
+        ],
+        [
+          "receipt",
+          "영수증",
+          "a record of what you paid"
+        ],
+        [
+          "choose",
+          "고르다",
+          "pick one thing from several"
+        ]
+      ],
+      "name": "At the shops",
+      "place": "Money and requests",
+      "year": 3
+    },
+    {
+      "focus": "Take turns; explain fair choices",
+      "s": [
+        "Let us agree on a fair rule.",
+        "You can have the next turn."
+      ],
+      "story": "Three children want to use two skipping ropes. Kai suggests that each person skips for one minute, then swaps. The children agree on the rule before starting. When the timer rings, Kai passes his rope to Ana. Nobody has to wait for the whole game.",
+      "r": [
+        [
+          "When do the children swap?",
+          "After one minute",
+          "After lunch",
+          "After an hour"
+        ],
+        [
+          "Why is their rule fair?",
+          "Everyone gets a turn.",
+          "Kai keeps both ropes.",
+          "Ana never has to share."
+        ]
+      ],
+      "l": [
+        "The speaker wants everyone to decide on a reasonable rule.",
+        "The speaker wants to hide the ropes.",
+        "The speaker is asking for the time."
+      ],
+      "words": [
+        [
+          "fair",
+          "공평한",
+          "treating people in a reasonable way"
+        ],
+        [
+          "turn",
+          "차례",
+          "a chance to do something"
+        ],
+        [
+          "agree",
+          "동의하다",
+          "have the same opinion"
+        ],
+        [
+          "rule",
+          "규칙",
+          "an instruction everyone follows"
+        ]
+      ],
+      "name": "A fair playground",
+      "place": "Play and cooperation",
+      "year": 3
+    },
+    {
+      "focus": "Sequence; connect actions and results",
+      "s": [
+        "First, I will sort the books into piles.",
+        "We can repair this useful box instead of throwing it away."
+      ],
+      "story": "Kai tidies a shelf with his sister. They sort books and toys into different piles. A useful storage box has a loose handle. Instead of putting it in the rubbish, they ask an adult to help repair it. The repaired box holds the small toys, and the shelf is clear. A tidy space makes useful things easier to find.",
+      "r": [
+        [
+          "What is loose on the box?",
+          "The handle",
+          "The lid of a bottle",
+          "A book cover"
+        ],
+        [
+          "Why do they keep the box?",
+          "It can be repaired and used again.",
+          "They need more rubbish.",
+          "It belongs on the floor forever."
+        ]
+      ],
+      "l": [
+        "The speaker is describing the first step of tidying.",
+        "The speaker is choosing a game.",
+        "The speaker is asking to buy a shelf."
+      ],
+      "words": [
+        [
+          "tidy",
+          "정리하다",
+          "put things in their proper places"
+        ],
+        [
+          "sort",
+          "분류하다",
+          "put things into groups"
+        ],
+        [
+          "repair",
+          "수리하다",
+          "make a damaged thing work again"
+        ],
+        [
+          "useful",
+          "유용한",
+          "helping you do something"
+        ]
+      ],
+      "name": "Looking after things",
+      "place": "Home routines",
+      "year": 3
+    },
+    {
+      "focus": "Retell in order; predict",
+      "s": [
+        "The setting is a small village beside the sea.",
+        "This clue helps me predict the ending."
+      ],
+      "story": "Kai reads a story about a child who finds wet footprints in a hall. The setting is a seaside village. Earlier in the story, a seal has disappeared from the beach. Kai uses that clue to guess who made the footprints. He reads the ending to check his idea. A character is someone in a story.",
+      "r": [
+        [
+          "Where is the story set?",
+          "In a seaside village",
+          "On a space station",
+          "In a desert"
+        ],
+        [
+          "Who might have made the wet footprints?",
+          "The missing seal",
+          "A dry notebook",
+          "The village clock"
+        ]
+      ],
+      "l": [
+        "The speaker tells us where a story happens.",
+        "The speaker tells us who wrote the book.",
+        "The speaker gives the price of the book."
+      ],
+      "words": [
+        [
+          "character",
+          "등장인물",
+          "a person or creature in a story"
+        ],
+        [
+          "setting",
+          "이야기의 배경",
+          "where and when a story happens"
+        ],
+        [
+          "clue",
+          "단서",
+          "information that helps you work something out"
+        ],
+        [
+          "ending",
+          "결말",
+          "the last part of a story"
+        ]
+      ],
+      "name": "Books we choose",
+      "place": "Library and stories",
+      "year": 3
+    },
+    {
+      "focus": "Observe changes; sequence growth",
+      "s": [
+        "Put the seed in the soil and water it gently.",
+        "A tiny shoot is growing towards the light."
+      ],
+      "story": "Kai plants a seed in a small pot. He adds soil and gives it a gentle sprinkle of water. For several days nothing appears above the soil. Then a green shoot pushes through. Kai draws the change instead of pulling the plant out to look at its roots.",
+      "r": [
+        [
+          "What appears above the soil?",
+          "A green shoot",
+          "A ripe apple",
+          "A large branch"
+        ],
+        [
+          "Why is drawing a better way to check the change?",
+          "It does not disturb the growing plant.",
+          "It makes the seed grow instantly.",
+          "It removes all the soil."
+        ]
+      ],
+      "l": [
+        "The speaker explains how to plant a seed.",
+        "The speaker explains how to buy a pot.",
+        "The speaker explains how to draw a tree."
+      ],
+      "words": [
+        [
+          "seed",
+          "씨앗",
+          "the small part from which a plant can grow"
+        ],
+        [
+          "soil",
+          "흙",
+          "the earth plants grow in"
+        ],
+        [
+          "shoot",
+          "새싹",
+          "a new stem growing from a plant"
+        ],
+        [
+          "gentle",
+          "부드러운",
+          "careful and not rough"
+        ]
+      ],
+      "name": "Our school garden",
+      "place": "Plants and care",
+      "year": 3
+    },
+    {
+      "focus": "Describe places; follow a plan",
+      "s": [
+        "We will stay together near the shore.",
+        "Please put your litter in a bin."
+      ],
+      "story": "Kai visits the beach with his whānau. At low tide, they look at shallow rock pools from the shore. An adult reminds everyone that the tide will change. Before leaving, they collect their own litter and check the picnic place. They leave the animals in their pools.",
+      "r": [
+        [
+          "What do they look at?",
+          "Shallow rock pools",
+          "A frozen lake",
+          "A garden pond"
+        ],
+        [
+          "Why does the adult mention the tide?",
+          "The water level will not stay the same.",
+          "The picnic will last forever.",
+          "The sea cannot move."
+        ]
+      ],
+      "l": [
+        "The speaker wants the group to remain together.",
+        "The speaker wants everyone to go alone.",
+        "The speaker says they are already home."
+      ],
+      "words": [
+        [
+          "shore",
+          "물가",
+          "the land along the edge of water"
+        ],
+        [
+          "tide",
+          "밀물과 썰물",
+          "the regular rise and fall of the sea"
+        ],
+        [
+          "shallow",
+          "얕은",
+          "not deep"
+        ],
+        [
+          "litter",
+          "쓰레기",
+          "rubbish left in the wrong place"
+        ]
+      ],
+      "name": "A trip to the beach",
+      "place": "Coast and care",
+      "year": 3
+    },
+    {
+      "focus": "Read times; ask for information",
+      "s": [
+        "What time does the bus depart?",
+        "We should arrive before the passengers get on."
+      ],
+      "story": "Kai checks a bus timetable with his mum. Their bus departs at ten fifteen. They reach the stop at ten past ten and wait. A different bus arrives first, so they check the number before boarding. Their own bus arrives a few minutes later.",
+      "r": [
+        [
+          "When is their bus due to depart?",
+          "Ten fifteen",
+          "Ten past ten",
+          "Eleven fifteen"
+        ],
+        [
+          "Why do they check the number?",
+          "The first bus may be going somewhere else.",
+          "Every bus has the same route.",
+          "They want to count its wheels."
+        ]
+      ],
+      "l": [
+        "The speaker asks when the bus leaves.",
+        "The speaker asks how long the bus is.",
+        "The speaker asks who built the bus."
+      ],
+      "words": [
+        [
+          "arrive",
+          "도착하다",
+          "reach a place"
+        ],
+        [
+          "depart",
+          "출발하다",
+          "leave a place"
+        ],
+        [
+          "timetable",
+          "시간표",
+          "a list of planned arrival and departure times"
+        ],
+        [
+          "passenger",
+          "승객",
+          "someone travelling in a vehicle without driving it"
+        ]
+      ],
+      "name": "Getting around",
+      "place": "Public transport",
+      "year": 3
+    },
+    {
+      "focus": "Name feelings; ask for support",
+      "s": [
+        "I feel worried, and I would like to explain why.",
+        "A quiet rest can help me feel calm."
+      ],
+      "story": "Before sharing his story with the class, Kai feels worried. He tells his teacher that he might forget the ending. They look at his picture plan together. Kai takes a quiet moment, then starts with the first picture. He still feels a little nervous, but he knows what to say next.",
+      "r": [
+        [
+          "What worries Kai?",
+          "Forgetting the ending",
+          "Losing his lunch",
+          "Missing the bus"
+        ],
+        [
+          "How does the picture plan help?",
+          "It reminds him of the story’s order.",
+          "It makes the audience disappear.",
+          "It changes every word he has written."
+        ]
+      ],
+      "l": [
+        "The speaker wants to talk about a worry.",
+        "The speaker says they never feel worried.",
+        "The speaker asks for a new storybook."
+      ],
+      "words": [
+        [
+          "worried",
+          "걱정하는",
+          "feeling that something may go wrong"
+        ],
+        [
+          "calm",
+          "차분한",
+          "not upset or excited"
+        ],
+        [
+          "rest",
+          "쉬다",
+          "stop activity to regain energy"
+        ],
+        [
+          "explain",
+          "설명하다",
+          "make something clear with words"
+        ]
+      ],
+      "name": "Feelings and needs",
+      "place": "Wellbeing",
+      "year": 3
+    },
+    {
+      "focus": "Describe a role; combine ideas",
+      "s": [
+        "My partner and I will check our plan.",
+        "We each have a task to finish."
+      ],
+      "story": "Kai and Ben make a poster about their school. Ben draws the playground while Kai writes labels. They check their plan and notice that the library is missing. Ben adds a small drawing and Kai labels it. Both partners help check the finished poster.",
+      "r": [
+        [
+          "What is missing at first?",
+          "The library",
+          "The playground",
+          "Every label"
+        ],
+        [
+          "Why do both partners check the poster?",
+          "They may notice different things.",
+          "Only one of them did any work.",
+          "They want to erase it all."
+        ]
+      ],
+      "l": [
+        "The speaker plans to review the plan with a partner.",
+        "The speaker wants to work without a plan.",
+        "The speaker asks someone to leave the group."
+      ],
+      "words": [
+        [
+          "task",
+          "할 일",
+          "a piece of work to do"
+        ],
+        [
+          "partner",
+          "짝",
+          "someone working with you"
+        ],
+        [
+          "plan",
+          "계획",
+          "an idea of what you will do"
+        ],
+        [
+          "check",
+          "확인하다",
+          "look closely to make sure something is right"
+        ]
+      ],
+      "name": "Working together",
+      "place": "Class projects",
+      "year": 3
+    },
+    {
+      "focus": "Sequence actions; describe amounts",
+      "s": [
+        "Measure the oats before adding them to the bowl.",
+        "Finally, stir the mixture gently."
+      ],
+      "story": "Kai helps an adult make a snack. First, they measure oats into a bowl. Next, they add yoghurt and chopped fruit. Kai stirs the mixture slowly so it stays in the bowl. Finally, they share it between two dishes. He follows the steps in order.",
+      "r": [
+        [
+          "What goes into the bowl first?",
+          "Oats",
+          "Two dishes",
+          "A whole fruit tree"
+        ],
+        [
+          "Why does Kai stir slowly?",
+          "To keep the mixture in the bowl",
+          "To make the bowl disappear",
+          "To avoid mixing the ingredients"
+        ]
+      ],
+      "l": [
+        "The speaker says to find the amount before adding the oats.",
+        "The speaker says to put away the bowl first.",
+        "The speaker asks which snack tastes best."
+      ],
+      "words": [
+        [
+          "measure",
+          "재다",
+          "find the size or amount of something"
+        ],
+        [
+          "stir",
+          "젓다",
+          "move a spoon around to mix"
+        ],
+        [
+          "mixture",
+          "섞은 것",
+          "two or more things combined"
+        ],
+        [
+          "finally",
+          "마지막으로",
+          "after all the other steps"
+        ]
+      ],
+      "name": "Making something tasty",
+      "place": "Cooking and instructions",
+      "year": 3
+    },
+    {
+      "focus": "Describe traditions without assuming everyone is the same",
+      "s": [
+        "We can welcome our visitors with a song.",
+        "People may celebrate in different ways."
+      ],
+      "story": "Families visit the school to share stories and songs. Kai’s class prepares a welcome. One family brings a song that is part of its tradition. Another shares a photograph and a story. Kai notices that the families celebrate differently, but everyone is invited to listen and ask thoughtful questions. People can feel they belong when others welcome them.",
+      "r": [
+        [
+          "What does one family bring?",
+          "A traditional song",
+          "A bus timetable",
+          "A broken shelf"
+        ],
+        [
+          "What helps visitors feel they belong?",
+          "Being welcomed and listened to",
+          "Being told every tradition must be the same",
+          "Being left outside"
+        ]
+      ],
+      "l": [
+        "The speaker suggests a friendly greeting for visitors.",
+        "The speaker wants visitors to stay away.",
+        "The speaker asks where a song was recorded."
+      ],
+      "words": [
+        [
+          "celebrate",
+          "기념하다",
+          "do something special for an important event"
+        ],
+        [
+          "welcome",
+          "환영하다",
+          "greet someone in a friendly way"
+        ],
+        [
+          "tradition",
+          "전통",
+          "a custom passed on within a group"
+        ],
+        [
+          "belong",
+          "소속감을 느끼다",
+          "feel accepted as part of a group"
+        ]
+      ],
+      "name": "Celebrating together",
+      "place": "Community and whānau",
+      "year": 3
+    },
+    {
+      "focus": "Ask before sharing; identify messages",
+      "s": [
+        "Please ask permission before sharing my picture.",
+        "I can pause and ask an adult about a strange message."
+      ],
+      "story": "Kai takes a photo of a model that his friend has made. His friend appears in the picture too. Before sharing it with the class group, Kai asks permission. His friend prefers a photo of just the model. Kai takes another picture and checks it before sharing. Some information is private and should not be shared with strangers.",
+      "r": [
+        [
+          "What does the friend prefer?",
+          "A photo of just the model",
+          "A photo of the whole street",
+          "No model in the photo"
+        ],
+        [
+          "Why does Kai take another picture?",
+          "To respect his friend’s choice",
+          "To hide the model from everyone",
+          "To avoid checking the image"
+        ]
+      ],
+      "l": [
+        "The speaker asks to be consulted before a photo is shared.",
+        "The speaker wants every photo deleted.",
+        "The speaker asks how to build a model."
+      ],
+      "words": [
+        [
+          "message",
+          "메시지",
+          "words sent to another person"
+        ],
+        [
+          "private",
+          "사적인",
+          "meant only for particular people"
+        ],
+        [
+          "permission",
+          "허락",
+          "agreement that lets you do something"
+        ],
+        [
+          "pause",
+          "잠깐 멈추다",
+          "stop briefly before continuing"
+        ]
+      ],
+      "name": "The world online",
+      "place": "Digital communication",
+      "year": 3
+    },
+    {
+      "focus": "Use descriptive details; make a simple inference",
+      "s": [
+        "We can watch the native birds quietly.",
+        "I notice a white feather beside the tree."
+      ],
+      "story": "On a walk with an adult, Kai hears a bird before he sees it. He stops and listens quietly. A tūī moves between flowers, and Kai notices the white tuft at its throat. He draws the bird in his notebook. He does not need to get close enough to touch it.",
+      "r": [
+        [
+          "What does Kai notice at the bird’s throat?",
+          "A white tuft",
+          "A red scarf",
+          "A long leaf"
+        ],
+        [
+          "Why does he stay quiet?",
+          "So he can observe without disturbing the bird",
+          "So nobody can hear the road",
+          "So the flowers will open faster"
+        ]
+      ],
+      "l": [
+        "The speaker suggests observing birds without making much noise.",
+        "The speaker suggests chasing the birds.",
+        "The speaker asks to feed every bird."
+      ],
+      "words": [
+        [
+          "native",
+          "토종의",
+          "naturally belonging to a place"
+        ],
+        [
+          "feather",
+          "깃털",
+          "one of the light coverings on a bird"
+        ],
+        [
+          "quietly",
+          "조용히",
+          "with little noise"
+        ],
+        [
+          "notice",
+          "알아차리다",
+          "become aware of something"
+        ]
+      ],
+      "name": "Noticing the natural world",
+      "place": "Native wildlife",
+      "year": 3
+    },
+    {
+      "focus": "Explain a choice; use less and again",
+      "s": [
+        "We can reuse this bag for our next visit.",
+        "Using less paper can reduce our rubbish."
+      ],
+      "story": "Kai’s class counts the paper in its rubbish bin. Many sheets have writing on only one side. The class makes a tray for paper that can be reused for drafts. They also check the local recycling instructions with their teacher. A week later, they count again to see whether their plan helped.",
+      "r": [
+        [
+          "What goes in the new tray?",
+          "Paper with one blank side",
+          "Wet food scraps",
+          "Broken glass"
+        ],
+        [
+          "Why does the class count again?",
+          "To find out whether the plan reduced waste",
+          "To make more rubbish",
+          "To stop using notebooks forever"
+        ]
+      ],
+      "l": [
+        "The speaker plans to use the same bag again.",
+        "The speaker plans to buy a bag every time.",
+        "The speaker asks what colour the bag is."
+      ],
+      "words": [
+        [
+          "reduce",
+          "줄이다",
+          "make an amount smaller"
+        ],
+        [
+          "reuse",
+          "다시 쓰다",
+          "use something again"
+        ],
+        [
+          "recycle",
+          "재활용하다",
+          "process used material to make something new"
+        ],
+        [
+          "rubbish",
+          "쓰레기",
+          "things people throw away"
+        ]
+      ],
+      "name": "Changing our waste",
+      "place": "Environment",
+      "year": 3
+    },
+    {
+      "focus": "Describe effort; set a small goal",
+      "s": [
+        "I will practise balancing for a little longer.",
+        "I can improve by trying one small step at a time."
+      ],
+      "story": "Kai practises balancing along a painted line. At first he steps off after two paces. He slows down and holds his arms out. On the next try he manages four paces. He is not at the end of the line yet, but he notices that he has improved. They stretch gently as part of their warm-up.",
+      "r": [
+        [
+          "How many paces does Kai manage on the next try?",
+          "Four",
+          "Two",
+          "Twenty"
+        ],
+        [
+          "What shows improvement?",
+          "He stays on the line for more paces.",
+          "The line becomes shorter.",
+          "He stops trying after the first step."
+        ]
+      ],
+      "l": [
+        "The speaker intends to keep practising balance.",
+        "The speaker says the practice is impossible.",
+        "The speaker is asking for a painted picture."
+      ],
+      "words": [
+        [
+          "balance",
+          "균형",
+          "being steady without falling"
+        ],
+        [
+          "stretch",
+          "뻗다",
+          "extend your body or a body part"
+        ],
+        [
+          "practise",
+          "연습하다",
+          "repeat an activity to improve"
+        ],
+        [
+          "improve",
+          "나아지다",
+          "get better at something"
+        ]
+      ],
+      "name": "Moving and practising",
+      "place": "Sport and activity",
+      "year": 3
+    },
+    {
+      "focus": "Distinguish a clue from a guess",
+      "s": [
+        "Perhaps the missing book is under the cushion.",
+        "We can search carefully before asking for another one."
+      ],
+      "story": "Kai cannot find his library book. He remembers reading on the sofa. Perhaps it slipped behind a cushion. He searches there and discovers the book beside his jumper. Remembering where he last used it helped him choose a sensible place to look.",
+      "r": [
+        [
+          "Where does Kai find the book?",
+          "Beside his jumper",
+          "In the garden shed",
+          "On the school bus"
+        ],
+        [
+          "Why is the sofa a sensible place to search?",
+          "He remembers reading there.",
+          "Every missing object is there.",
+          "The sofa belongs to the library."
+        ]
+      ],
+      "l": [
+        "The speaker suggests a possible location, not a certainty.",
+        "The speaker says the book has been found already.",
+        "The speaker says the book is definitely outside."
+      ],
+      "words": [
+        [
+          "missing",
+          "사라진",
+          "not where something should be"
+        ],
+        [
+          "search",
+          "찾다",
+          "look carefully for something"
+        ],
+        [
+          "perhaps",
+          "아마",
+          "used when something is possible but not certain"
+        ],
+        [
+          "discover",
+          "발견하다",
+          "find something you did not know before"
+        ]
+      ],
+      "name": "Solving a mystery",
+      "place": "Reasoning",
+      "year": 3
+    },
+    {
+      "focus": "Order events; connect them with after and when",
+      "s": [
+        "Suddenly, the wind blew my hat across the grass.",
+        "Afterwards, we laughed about our windy walk."
+      ],
+      "story": "Kai tells his class about a windy walk. At the beginning, he and his aunt set off for the park. In the middle of the story, his hat blows away and lands beside a bench. His aunt picks it up. Afterwards, they fasten the hat more carefully and carry on walking.",
+      "r": [
+        [
+          "Where does the hat land?",
+          "Beside a bench",
+          "Inside the classroom",
+          "In the sea"
+        ],
+        [
+          "Why do they fasten the hat afterwards?",
+          "They do not want it to blow away again.",
+          "They are leaving it on the bench.",
+          "They want to make the wind stronger."
+        ]
+      ],
+      "l": [
+        "The speaker describes an unexpected event.",
+        "The speaker gives instructions for making a hat.",
+        "The speaker explains tomorrow’s timetable."
+      ],
+      "words": [
+        [
+          "beginning",
+          "시작 부분",
+          "the first part of something"
+        ],
+        [
+          "middle",
+          "가운데 부분",
+          "the part between the start and end"
+        ],
+        [
+          "suddenly",
+          "갑자기",
+          "quickly and unexpectedly"
+        ],
+        [
+          "afterwards",
+          "그 후에",
+          "at a later time"
+        ]
+      ],
+      "name": "Telling our stories",
+      "place": "Narrative language",
+      "year": 3
+    },
+    {
+      "focus": "Give an opinion and a reason",
+      "s": [
+        "I suggest a reading corner because it would be quiet.",
+        "I can listen even when my opinion is different."
+      ],
+      "story": "The class chooses how to use an empty corner. Kai suggests a reading space because the corner is away from the busy door. Another child suggests a place for building models. The class listens to both reasons. They decide to try a reading corner first and check how well it works after a week.",
+      "r": [
+        [
+          "Why does Kai suggest a reading space?",
+          "The corner is away from the busy door.",
+          "The corner has no floor.",
+          "Nobody in the class has books."
+        ],
+        [
+          "Why check after a week?",
+          "The class can see whether the idea works well.",
+          "The class must always change every decision.",
+          "The reasons no longer matter."
+        ]
+      ],
+      "l": [
+        "The speaker proposes a quiet place for reading and gives a reason.",
+        "The speaker says nobody is allowed to read.",
+        "The speaker asks for a louder doorway."
+      ],
+      "words": [
+        [
+          "opinion",
+          "의견",
+          "what someone thinks about something"
+        ],
+        [
+          "reason",
+          "이유",
+          "why someone thinks or does something"
+        ],
+        [
+          "suggest",
+          "제안하다",
+          "offer an idea for others to consider"
+        ],
+        [
+          "listen",
+          "귀 기울이다",
+          "pay attention to sounds or what someone says"
+        ]
+      ],
+      "name": "An idea worth sharing",
+      "place": "Opinions and explanation",
+      "year": 3
+    },
+    {
+      "focus": "Describe learning; plan a next step",
+      "s": [
+        "My next goal is to explain my ideas more clearly.",
+        "I feel more confident when I remember what I have practised."
+      ],
+      "story": "Kai looks through his learning notebook. A sentence that once felt like a challenge is now easier to say. He reads it aloud and explains where he could use it. He chooses a new goal: ask a clear question when he needs help. His notebook shows progress, but there are still new things to learn.",
+      "r": [
+        [
+          "What new goal does Kai choose?",
+          "Ask a clear question when he needs help",
+          "Never ask another question",
+          "Memorise only the page numbers"
+        ],
+        [
+          "What shows more than memorising a sentence?",
+          "Explaining where he could use it",
+          "Closing the notebook immediately",
+          "Counting its words without understanding"
+        ]
+      ],
+      "l": [
+        "The speaker sets a goal for clearer communication.",
+        "The speaker says there is nothing left to learn.",
+        "The speaker asks for a different notebook cover."
+      ],
+      "words": [
+        [
+          "remember",
+          "기억하다",
+          "bring something back to your mind"
+        ],
+        [
+          "confident",
+          "자신 있는",
+          "feeling able to try something"
+        ],
+        [
+          "challenge",
+          "도전",
+          "something that needs effort"
+        ],
+        [
+          "goal",
+          "목표",
+          "something you aim to achieve"
+        ]
+      ],
+      "name": "Looking back and ahead",
+      "place": "Reflection",
+      "year": 3
+    }
+  ],
+  "4": [
+    {
+      "year": 4,
+      "words": [
+        [
+          "prepare",
+          "준비하다",
+          "get ready for something"
+        ],
+        [
+          "follow",
+          "따르다",
+          "do what instructions say"
+        ],
+        [
+          "understand",
+          "이해하다",
+          "know what something means"
+        ],
+        [
+          "finish",
+          "끝내다",
+          "do the last part"
+        ]
+      ],
+      "s": [
+        "I prepare my bag before school.",
+        "We follow the steps to finish our work."
+      ],
+      "story": "Tony and Kai prepare their bags for school. Their teacher gives the class three steps for making a poster. Tony does not understand the second step, so he asks her to show an example. Now he can follow the steps. He checks each one before he says the work is finished. The example helped him work independently.",
+      "r": [
+        [
+          "What helps Tony understand the second step?",
+          "An example from the teacher",
+          "A new school bag",
+          "A longer lunch break"
+        ],
+        [
+          "Why does Tony check the steps?",
+          "To make sure he has finished the whole task",
+          "To change every instruction",
+          "To avoid making a poster"
+        ]
+      ],
+      "l": [
+        "The speaker gets a bag ready before school.",
+        "The speaker buys a new bag after school.",
+        "The speaker leaves a bag at school."
+      ],
+      "exposure": [
+        [
+          "independently",
+          "스스로",
+          "without someone doing it for you"
+        ]
+      ],
+      "focus": "Explain everyday choices with because and so.",
+      "name": "Ready for class",
+      "place": "School routines"
+    },
+    {
+      "year": 4,
+      "words": [
+        [
+          "greet",
+          "인사하다",
+          "say hello to someone"
+        ],
+        [
+          "share",
+          "나누다",
+          "let others use or have some"
+        ],
+        [
+          "friendly",
+          "다정한",
+          "kind and welcoming"
+        ],
+        [
+          "support",
+          "도와주다",
+          "help someone when they need it"
+        ]
+      ],
+      "s": [
+        "We greet our new classmate with a smile.",
+        "I can share my ideas and support others."
+      ],
+      "story": "A new classmate arrives during morning tea. Kai and Tony greet her with a smile. She wants to build with the blocks, but she is unsure where to start. They share the blocks and ask about her ideas. Their friendly welcome helps her join in. When her tower falls, they support her by helping her try again.",
+      "r": [
+        [
+          "What do the children share?",
+          "Blocks",
+          "Their lunches",
+          "Bus tickets"
+        ],
+        [
+          "Which action shows support?",
+          "Helping her try again after the tower falls",
+          "Building without listening to her",
+          "Putting all the blocks away"
+        ]
+      ],
+      "l": [
+        "The children say hello in a welcoming way.",
+        "The children say goodbye for the holidays.",
+        "The children ask for a quiet room."
+      ],
+      "exposure": [
+        [
+          "welcome",
+          "환영",
+          "a kind greeting for someone arriving"
+        ]
+      ],
+      "focus": "Explain everyday choices with because and so.",
+      "name": "Making friends",
+      "place": "Friendship"
+    },
+    {
+      "year": 4,
+      "words": [
+        [
+          "healthy",
+          "건강에 좋은",
+          "good for your body"
+        ],
+        [
+          "snack",
+          "간식",
+          "a small amount of food between meals"
+        ],
+        [
+          "refill",
+          "다시 채우다",
+          "fill something again"
+        ],
+        [
+          "prefer",
+          "더 좋아하다",
+          "like one thing more than another"
+        ]
+      ],
+      "s": [
+        "I prefer a healthy snack after swimming.",
+        "Please refill your bottle before we leave."
+      ],
+      "story": "After swimming, Tony feels hungry and thirsty. He would prefer an apple for his snack today, but he only has a sandwich. His dad explains that different foods help our bodies in different ways. Tony eats the sandwich and saves room for fruit at home. Before they leave, he remembers to refill his water bottle at the fountain.",
+      "r": [
+        [
+          "What does Tony eat after swimming?",
+          "A sandwich",
+          "An apple",
+          "An ice cream"
+        ],
+        [
+          "Why does he refill the bottle?",
+          "So he has water for the journey home",
+          "So he can carry less water",
+          "So he can replace his snack"
+        ]
+      ],
+      "l": [
+        "The speaker likes a healthy snack after swimming.",
+        "The speaker wants to swim after every meal.",
+        "The speaker does not want any food."
+      ],
+      "exposure": [
+        [
+          "fountain",
+          "음수대",
+          "a place where drinking water comes out"
+        ]
+      ],
+      "focus": "Explain everyday choices with because and so.",
+      "name": "Lunchbox choices",
+      "place": "Food and everyday needs"
+    },
+    {
+      "year": 4,
+      "words": [
+        [
+          "cloudy",
+          "구름이 낀",
+          "with many clouds in the sky"
+        ],
+        [
+          "shower",
+          "소나기",
+          "rain that lasts a short time"
+        ],
+        [
+          "temperature",
+          "기온",
+          "how hot or cold something is"
+        ],
+        [
+          "protect",
+          "보호하다",
+          "keep something safe from harm"
+        ]
+      ],
+      "s": [
+        "A cloudy sky may bring a shower.",
+        "My jacket helps protect me from the rain."
+      ],
+      "story": "The class plans a walk to the park. It is cloudy, and the weather report says a shower may arrive after lunch. The temperature is lower than yesterday. Tony packs a jacket to protect himself from the rain and cold. The walk still goes ahead. A short shower arrives, but the children stay comfortable because they brought the right clothes.",
+      "r": [
+        [
+          "What does Tony pack?",
+          "A jacket",
+          "A sun umbrella",
+          "A picnic blanket"
+        ],
+        [
+          "Why can the children enjoy the walk?",
+          "They prepared for the weather",
+          "They knew it could never rain",
+          "They stayed inside all day"
+        ]
+      ],
+      "l": [
+        "The speaker thinks a short period of rain is possible.",
+        "The speaker promises snow all day.",
+        "The speaker says the sky has no clouds."
+      ],
+      "exposure": [
+        [
+          "comfortable",
+          "편안한",
+          "feeling warm and well enough"
+        ]
+      ],
+      "focus": "Explain everyday choices with because and so.",
+      "name": "A change in weather",
+      "place": "NZ weather"
+    },
+    {
+      "year": 4,
+      "words": [
+        [
+          "direction",
+          "방향",
+          "the way something goes"
+        ],
+        [
+          "nearby",
+          "가까이에",
+          "not far away"
+        ],
+        [
+          "across",
+          "건너서",
+          "from one side to the other"
+        ],
+        [
+          "map",
+          "지도",
+          "a drawing that shows places"
+        ]
+      ],
+      "s": [
+        "The map shows a library nearby.",
+        "We walk across the road at the crossing."
+      ],
+      "story": "Tony wants to find the library after school. He checks a map with his whānau. The library is nearby, but a busy road is between them and the entrance. The map shows a crossing further along the road. They walk in that direction and go across safely. The shortest line on a map is not always the best walking route.",
+      "r": [
+        [
+          "Where do they cross the road?",
+          "At the crossing",
+          "Between parked cars",
+          "Outside the library entrance"
+        ],
+        [
+          "Why do they walk further along the road?",
+          "To use a safer crossing",
+          "To get further away from the library",
+          "To avoid using the map"
+        ]
+      ],
+      "l": [
+        "A library is shown not far away.",
+        "The library is missing from every map.",
+        "The speaker is inside a faraway library."
+      ],
+      "exposure": [
+        [
+          "route",
+          "이동 경로",
+          "the way you take to a place"
+        ]
+      ],
+      "focus": "Explain everyday choices with because and so.",
+      "name": "Finding your way",
+      "place": "Neighbourhood"
+    },
+    {
+      "year": 4,
+      "words": [
+        [
+          "cost",
+          "가격이 들다",
+          "have a price"
+        ],
+        [
+          "total",
+          "합계",
+          "the whole amount added together"
+        ],
+        [
+          "cheaper",
+          "더 싼",
+          "costing less money"
+        ],
+        [
+          "decide",
+          "결정하다",
+          "choose after thinking"
+        ]
+      ],
+      "s": [
+        "These pencils cost less than those ones.",
+        "We decide after checking the total cost."
+      ],
+      "story": "The class has ten dollars for art supplies. A large packet of pencils costs eight dollars. Two small packets cost six dollars in total and contain the same number of pencils. Tony checks the labels before helping the group decide. They choose the cheaper option and keep four dollars for paper. Comparing the packets helps them use their budget well.",
+      "r": [
+        [
+          "How much do two small packets cost in total?",
+          "Six dollars",
+          "Eight dollars",
+          "Ten dollars"
+        ],
+        [
+          "Why does the class choose the small packets?",
+          "They get the same number of pencils for less money",
+          "The packets have more colours",
+          "They want to spend all ten dollars"
+        ]
+      ],
+      "l": [
+        "One set of pencils is cheaper than the other.",
+        "Both sets of pencils are free.",
+        "The speaker has already bought both sets."
+      ],
+      "exposure": [
+        [
+          "budget",
+          "예산",
+          "the money available to spend"
+        ]
+      ],
+      "focus": "Explain everyday choices with because and so.",
+      "name": "At the shops",
+      "place": "Money and requests"
+    },
+    {
+      "year": 4,
+      "words": [
+        [
+          "patient",
+          "참을성 있는",
+          "able to wait without getting angry"
+        ],
+        [
+          "equal",
+          "똑같은",
+          "the same in amount"
+        ],
+        [
+          "solve",
+          "해결하다",
+          "find an answer to a problem"
+        ],
+        [
+          "calmly",
+          "차분하게",
+          "without getting upset or shouting"
+        ]
+      ],
+      "s": [
+        "We take equal turns with the ball.",
+        "We can solve this problem by talking calmly."
+      ],
+      "story": "Two groups want to use the same ball at morning tea. One group has waited longer, but both want a whole game. Tony listens patiently as they explain. He suggests equal turns of five minutes. The children talk calmly and agree to try it. A timer helps them follow the plan. They solve the problem without stopping either group from playing.",
+      "r": [
+        [
+          "How long is each turn?",
+          "Five minutes",
+          "Ten minutes",
+          "The whole morning"
+        ],
+        [
+          "What makes the plan fair?",
+          "Both groups get the same time with the ball",
+          "Only the first group plays",
+          "The loudest group keeps the ball"
+        ]
+      ],
+      "l": [
+        "Each person gets the same amount of time with the ball.",
+        "One person keeps the ball all day.",
+        "The speaker wants to stop the game."
+      ],
+      "exposure": [
+        [
+          "patiently",
+          "참을성 있게",
+          "in a patient way"
+        ]
+      ],
+      "focus": "Explain everyday choices with because and so.",
+      "name": "A fair playground",
+      "place": "Play and cooperation"
+    },
+    {
+      "year": 4,
+      "words": [
+        [
+          "clean",
+          "깨끗이 하다",
+          "remove dirt"
+        ],
+        [
+          "mend",
+          "수선하다",
+          "fix something that is torn or broken"
+        ],
+        [
+          "store",
+          "보관하다",
+          "keep something in a place until needed"
+        ],
+        [
+          "waste",
+          "낭비하다",
+          "use more than is needed or throw useful things away"
+        ]
+      ],
+      "s": [
+        "We clean our tools before storing them.",
+        "I can mend this bag instead of buying another."
+      ],
+      "story": "After gardening, Tony notices a small hole in his cloth bag. He could throw it away, but most of the bag is still strong. His aunt helps him mend the hole with a patch. They clean the garden tools and store them in a dry cupboard. Looking after useful things means the family does not waste them or need replacements so often.",
+      "r": [
+        [
+          "How do they mend the bag?",
+          "With a patch",
+          "With water",
+          "With a new cupboard"
+        ],
+        [
+          "Why is mending a good choice here?",
+          "Most of the bag can still be used",
+          "The bag is too small for anything",
+          "A new bag would have no holes"
+        ]
+      ],
+      "l": [
+        "The tools are cleaned before being put away.",
+        "The tools are left outside in the rain.",
+        "The tools are bought after gardening."
+      ],
+      "exposure": [
+        [
+          "replacement",
+          "대체품",
+          "something used in place of another thing"
+        ]
+      ],
+      "focus": "Explain everyday choices with because and so.",
+      "name": "Looking after things",
+      "place": "Home routines"
+    },
+    {
+      "year": 4,
+      "words": [
+        [
+          "plot",
+          "줄거리",
+          "the main events of a story"
+        ],
+        [
+          "detail",
+          "세부 내용",
+          "one small piece of information"
+        ],
+        [
+          "theme",
+          "주제",
+          "an important idea in a story"
+        ],
+        [
+          "describe",
+          "묘사하다",
+          "say what something is like"
+        ]
+      ],
+      "s": [
+        "One small detail helps us understand the character.",
+        "I can describe how the story ends."
+      ],
+      "story": "Tony reads a story about a child who loses a race but stays to cheer for a friend. He first describes the plot: the training, the race and the cheering at the end. Then he notices a detail. The child smiles when the friend wins. Tony thinks friendship is a theme because the child values a friend more than a prize. His partner finds another clue that supports this idea.",
+      "r": [
+        [
+          "Which detail does Tony notice?",
+          "The child smiles when the friend wins",
+          "The child hides the prize",
+          "The friend misses the race"
+        ],
+        [
+          "Why might friendship be a theme?",
+          "The child cares about a friend even after losing",
+          "Every story about racing has the same theme",
+          "The child trained every morning"
+        ]
+      ],
+      "l": [
+        "A small piece of information helps explain a character.",
+        "Every small detail must be left out.",
+        "The speaker has forgotten the character."
+      ],
+      "exposure": [
+        [
+          "character",
+          "등장인물",
+          "a person or creature in a story"
+        ],
+        [
+          "clue",
+          "단서",
+          "something that helps you work out an answer"
+        ]
+      ],
+      "focus": "Connect ideas and find clues in a short text.",
+      "name": "Books we choose",
+      "place": "Library and stories"
+    },
+    {
+      "year": 4,
+      "words": [
+        [
+          "root",
+          "뿌리",
+          "the part of a plant that takes in water from soil"
+        ],
+        [
+          "stem",
+          "줄기",
+          "the part that holds up leaves"
+        ],
+        [
+          "growth",
+          "성장",
+          "the process of getting bigger"
+        ],
+        [
+          "sunlight",
+          "햇빛",
+          "light from the sun"
+        ]
+      ],
+      "s": [
+        "The root takes water from the soil.",
+        "We measure growth and record how much sunlight reaches each plant."
+      ],
+      "story": "The class grows two bean plants in matching pots. Each plant has a root in the soil and a stem holding its leaves. They give both plants the same amount of water, but one receives less sunlight. Each week they measure the growth. After three weeks, the plants look different. The children compare their records before discussing how light may have affected them. They know one experiment does not answer every question about plants.",
+      "r": [
+        [
+          "What do the children keep the same?",
+          "The amount of water",
+          "The amount of sunlight",
+          "The height of the plants"
+        ],
+        [
+          "Why do they use records?",
+          "To compare what happened over time",
+          "To make both plants identical",
+          "To stop the roots taking in water"
+        ]
+      ],
+      "l": [
+        "A plant gets water from the soil through its root.",
+        "A plant gets all its water from sunlight.",
+        "A stem keeps every root dry."
+      ],
+      "exposure": [
+        [
+          "measure",
+          "측정하다",
+          "find the size or amount"
+        ],
+        [
+          "experiment",
+          "실험",
+          "a planned way to test an idea"
+        ]
+      ],
+      "focus": "Connect ideas and find clues in a short text.",
+      "name": "Our school garden",
+      "place": "Plants and care"
+    },
+    {
+      "year": 4,
+      "words": [
+        [
+          "coast",
+          "해안",
+          "land beside the sea"
+        ],
+        [
+          "wave",
+          "파도",
+          "moving water that rises and falls"
+        ],
+        [
+          "rockpool",
+          "바위 웅덩이",
+          "seawater left between rocks as the tide goes out"
+        ],
+        [
+          "pollution",
+          "오염",
+          "harmful things added to water air or land"
+        ]
+      ],
+      "s": [
+        "A wave washes over the rocks nearby.",
+        "We leave each rockpool as we found it."
+      ],
+      "story": "On a visit to the coast, Tony watches a wave break near a rockpool. His group stays with the adult leading the walk. They spot a small crab sheltering under a rock. Nearby, a plastic wrapper floats in shallow water. Their guide explains that rubbish can cause pollution and harm sea creatures. She safely collects it with a tool. The children look closely without moving the crab or taking anything home.",
+      "r": [
+        [
+          "What does the guide collect?",
+          "A plastic wrapper",
+          "A crab",
+          "A large rock"
+        ],
+        [
+          "Why do the children leave the crab there?",
+          "It belongs in its living place",
+          "It is made of plastic",
+          "It needs to travel home with them"
+        ]
+      ],
+      "l": [
+        "Moving seawater rises and breaks near some rocks.",
+        "All the water has disappeared from the coast.",
+        "The rocks are being carried to school."
+      ],
+      "exposure": [
+        [
+          "tide",
+          "밀물과 썰물",
+          "the regular rise and fall of the sea"
+        ],
+        [
+          "sheltering",
+          "몸을 피하는",
+          "staying in a protected place"
+        ]
+      ],
+      "focus": "Connect ideas and find clues in a short text.",
+      "name": "A trip to the beach",
+      "place": "Coast and care"
+    },
+    {
+      "year": 4,
+      "words": [
+        [
+          "journey",
+          "여정",
+          "a trip from one place to another"
+        ],
+        [
+          "station",
+          "역",
+          "a place where trains stop"
+        ],
+        [
+          "board",
+          "탑승하다",
+          "get onto a bus train or boat"
+        ],
+        [
+          "cancel",
+          "취소하다",
+          "decide that something planned will not happen"
+        ]
+      ],
+      "s": [
+        "We wait at the station with our tickets.",
+        "Our journey will change if they cancel this train."
+      ],
+      "story": "Tony and his whānau reach the station for a journey into town. An announcement says their train is cancelled. They check the screen and ask a staff member about another service. A bus will take passengers to the next station. Before they board, they check that it goes in the right direction. They arrive later than planned, so they message the family member waiting for them. Checking information helps them make a new plan.",
+      "r": [
+        [
+          "Why do they take a bus?",
+          "Their train is cancelled",
+          "They forgot where the station is",
+          "They want to leave their tickets behind"
+        ],
+        [
+          "Why do they send a message?",
+          "Someone waiting needs to know they will be late",
+          "They want the train to disappear",
+          "They have already returned home"
+        ]
+      ],
+      "l": [
+        "The speakers wait with tickets at a train stop.",
+        "The speakers leave their tickets at home.",
+        "The speakers have finished every journey."
+      ],
+      "exposure": [
+        [
+          "announcement",
+          "안내 방송",
+          "information spoken for everyone to hear"
+        ],
+        [
+          "passenger",
+          "승객",
+          "someone travelling in a vehicle"
+        ]
+      ],
+      "focus": "Connect ideas and find clues in a short text.",
+      "name": "Getting around",
+      "place": "Public transport"
+    },
+    {
+      "year": 4,
+      "words": [
+        [
+          "nervous",
+          "긴장한",
+          "worried about something that may happen"
+        ],
+        [
+          "relaxed",
+          "편안한",
+          "calm and not worried"
+        ],
+        [
+          "upset",
+          "속상한",
+          "unhappy or worried"
+        ],
+        [
+          "solution",
+          "해결책",
+          "a way to deal with a problem"
+        ]
+      ],
+      "s": [
+        "I feel nervous before speaking to the class.",
+        "A quiet practice helps me feel more relaxed."
+      ],
+      "story": "Tony feels nervous about reading his story aloud. He is upset when he loses his place during practice. His friend listens and asks which part feels hardest. Together they find a solution: mark the paragraphs and practise one at a time. Tony feels more relaxed after a few tries. He still feels a little nervous on the day, but he knows where to pause. Feeling nervous does not mean he cannot do it.",
+      "r": [
+        [
+          "What helps Tony keep his place?",
+          "Marking the paragraphs",
+          "Reading every word faster",
+          "Putting his story away"
+        ],
+        [
+          "What does the ending suggest?",
+          "He can try even while feeling a little nervous",
+          "He must never feel nervous again",
+          "His friend should always speak for him"
+        ]
+      ],
+      "l": [
+        "The speaker feels worried before addressing the class.",
+        "The speaker has no story to read.",
+        "The speaker feels sleepy after lunch."
+      ],
+      "exposure": [
+        [
+          "pause",
+          "잠깐 멈추다",
+          "stop for a short time"
+        ],
+        [
+          "paragraph",
+          "문단",
+          "a group of sentences about one idea"
+        ]
+      ],
+      "focus": "Connect ideas and find clues in a short text.",
+      "name": "Feelings and needs",
+      "place": "Wellbeing"
+    },
+    {
+      "year": 4,
+      "words": [
+        [
+          "role",
+          "역할",
+          "a job someone has in a group"
+        ],
+        [
+          "discuss",
+          "의논하다",
+          "talk about ideas together"
+        ],
+        [
+          "cooperate",
+          "협력하다",
+          "work together to help each other"
+        ],
+        [
+          "complete",
+          "완료하다",
+          "finish all parts of something"
+        ]
+      ],
+      "s": [
+        "We discuss each role before starting our project.",
+        "We cooperate so everyone can complete a useful part."
+      ],
+      "story": "Four children plan a class display about local birds. First they discuss what needs doing. One role is checking facts, another is drawing, and two involve writing and arranging the display. A child who finishes early offers help instead of taking over someone else’s work. They cooperate to complete the display before Friday. At the end, they explain how each person helped. Their different skills make the whole display clearer.",
+      "r": [
+        [
+          "What is one role in the project?",
+          "Checking facts",
+          "Selling bird food",
+          "Choosing a new classroom"
+        ],
+        [
+          "Why does the child offer help instead of taking over?",
+          "To support the group while respecting each role",
+          "To avoid finishing the display",
+          "To make only one person do everything"
+        ]
+      ],
+      "l": [
+        "The group talks about each job before starting.",
+        "The group finishes without planning any jobs.",
+        "The group asks one person to do every job."
+      ],
+      "exposure": [
+        [
+          "display",
+          "전시물",
+          "work arranged for people to look at"
+        ],
+        [
+          "take over",
+          "대신 맡아 버리다",
+          "start doing a job someone else was doing"
+        ]
+      ],
+      "focus": "Connect ideas and find clues in a short text.",
+      "name": "Working together",
+      "place": "Class projects"
+    },
+    {
+      "year": 4,
+      "words": [
+        [
+          "recipe",
+          "요리법",
+          "instructions for making a dish"
+        ],
+        [
+          "slice",
+          "얇게 썰다",
+          "cut into thin pieces"
+        ],
+        [
+          "boil",
+          "끓이다",
+          "heat a liquid until it bubbles"
+        ],
+        [
+          "taste",
+          "맛보다",
+          "try a little food to notice its flavour"
+        ]
+      ],
+      "s": [
+        "We read the recipe before preparing our ingredients.",
+        "An adult will boil the water for our soup."
+      ],
+      "story": "Tony and his uncle choose a vegetable soup recipe. They read all the instructions before starting. Tony washes the vegetables, and his uncle helps him slice them safely. His uncle puts the pot on the stove and waits for the water to boil. When the soup has cooled enough, they taste a small spoonful. It needs a little more flavour, so they add herbs. Reading ahead helped them know which jobs needed an adult.",
+      "r": [
+        [
+          "Who heats the water on the stove?",
+          "Tony’s uncle",
+          "Tony alone",
+          "A classmate"
+        ],
+        [
+          "Why did they read all the instructions first?",
+          "To plan the steps and identify jobs needing an adult",
+          "To avoid using any ingredients",
+          "To make the water cool faster"
+        ]
+      ],
+      "l": [
+        "The speakers check the cooking instructions before preparing food.",
+        "The speakers taste the food before it exists.",
+        "The speakers choose a recipe after eating."
+      ],
+      "exposure": [
+        [
+          "herb",
+          "허브",
+          "a plant used to add flavour"
+        ],
+        [
+          "stove",
+          "레인지",
+          "equipment used for heating food"
+        ]
+      ],
+      "focus": "Connect ideas and find clues in a short text.",
+      "name": "Making something tasty",
+      "place": "Cooking and instructions"
+    },
+    {
+      "year": 4,
+      "words": [
+        [
+          "culture",
+          "문화",
+          "shared ways of living and expressing ideas"
+        ],
+        [
+          "ceremony",
+          "의식",
+          "a planned event marking something important"
+        ],
+        [
+          "special",
+          "특별한",
+          "different from usual and important"
+        ],
+        [
+          "community",
+          "공동체",
+          "people connected by a place or shared interests"
+        ]
+      ],
+      "s": [
+        "Our community shares stories at a special gathering.",
+        "We ask before joining a ceremony we do not know."
+      ],
+      "story": "The school community plans an evening where families may share stories, songs or food. Some families choose to watch, and others take part. Tony learns that culture can be expressed in many ways, even within one family. Before a special ceremony, a host explains what guests should do. Tony listens and asks politely when he is unsure. He notices that respectful questions help him learn without assuming that everyone has the same customs.",
+      "r": [
+        [
+          "Who explains what guests should do?",
+          "A host",
+          "A visitor who is guessing",
+          "Every child at once"
+        ],
+        [
+          "Why does Tony ask when unsure?",
+          "To learn how to show respect",
+          "To prove every family is the same",
+          "To change the ceremony immediately"
+        ]
+      ],
+      "l": [
+        "People connected to the speaker gather to share stories.",
+        "Everyone must share the same story.",
+        "The speaker is describing an empty school."
+      ],
+      "exposure": [
+        [
+          "custom",
+          "관습",
+          "a way of doing things in a group"
+        ],
+        [
+          "host",
+          "주최자",
+          "someone welcoming guests"
+        ]
+      ],
+      "focus": "Connect ideas and find clues in a short text.",
+      "name": "Celebrating together",
+      "place": "Community and whānau"
+    },
+    {
+      "year": 4,
+      "words": [
+        [
+          "password",
+          "비밀번호",
+          "a secret set of characters used to sign in"
+        ],
+        [
+          "safe",
+          "안전한",
+          "protected from danger"
+        ],
+        [
+          "trust",
+          "신뢰하다",
+          "believe someone or something can be relied on"
+        ],
+        [
+          "report",
+          "알리다",
+          "tell an appropriate person about something"
+        ]
+      ],
+      "s": [
+        "I keep my password private to stay safe online.",
+        "I report worrying messages to an adult I trust."
+      ],
+      "story": "While playing an online game, Tony receives a message offering free items in exchange for his password. The sender uses a familiar-looking picture, but Tony does not know who is behind it. He wants to stay safe, so he does not reply or open the link. Instead, he shows the message to an adult he can trust. They report it using the game’s tools. Tony learns that a friendly picture is not proof that a request is safe.",
+      "r": [
+        [
+          "What does Tony do with the message?",
+          "Shows it to a trusted adult",
+          "Sends his password",
+          "Opens the link for free items"
+        ],
+        [
+          "Why is the picture not enough to trust the sender?",
+          "Someone can use a picture without being that person",
+          "Every picture online is dangerous",
+          "Only messages without pictures are safe"
+        ]
+      ],
+      "l": [
+        "The speaker protects a sign-in secret.",
+        "The speaker shares a password with every player.",
+        "The speaker forgets how to play offline."
+      ],
+      "exposure": [
+        [
+          "private",
+          "비공개의",
+          "kept for yourself or allowed people"
+        ],
+        [
+          "proof",
+          "증거",
+          "information showing something is true"
+        ]
+      ],
+      "focus": "Compare ideas, give a reason and plan a next step.",
+      "name": "The world online",
+      "place": "Digital communication"
+    },
+    {
+      "year": 4,
+      "words": [
+        [
+          "environment",
+          "환경",
+          "the natural world around living things"
+        ],
+        [
+          "forest",
+          "숲",
+          "a large area with many trees"
+        ],
+        [
+          "creature",
+          "생물",
+          "a living animal"
+        ],
+        [
+          "survive",
+          "살아남다",
+          "stay alive"
+        ]
+      ],
+      "s": [
+        "Every creature needs a suitable place to live.",
+        "Protecting our forest environment helps native birds survive."
+      ],
+      "story": "The class visits a forest with a local guide. She asks them to listen before they speak. They hear birds, insects and leaves moving in the wind. Each creature depends on parts of this environment to survive. A fallen log may look untidy, but it shelters insects and helps the soil as it breaks down. Tony changes his idea that a healthy forest must look neat. The class stays on the path and leaves the log where it is.",
+      "r": [
+        [
+          "What can a fallen log provide?",
+          "Shelter for insects",
+          "A road for buses",
+          "A clean lunch table"
+        ],
+        [
+          "Why does Tony change his idea?",
+          "He learns that something untidy can still help living things",
+          "He sees that every log must be removed",
+          "He hears no animals in the forest"
+        ]
+      ],
+      "l": [
+        "All animals need places that meet their needs.",
+        "Every animal can live in the same small box.",
+        "Only large animals need somewhere to live."
+      ],
+      "exposure": [
+        [
+          "native",
+          "토착의",
+          "naturally found in a place"
+        ],
+        [
+          "depend on",
+          "의지하다",
+          "need something or someone"
+        ]
+      ],
+      "focus": "Compare ideas, give a reason and plan a next step.",
+      "name": "Noticing the natural world",
+      "place": "Native wildlife"
+    },
+    {
+      "year": 4,
+      "words": [
+        [
+          "compost",
+          "퇴비",
+          "decayed plant material used to help soil"
+        ],
+        [
+          "plastic",
+          "플라스틱",
+          "a material used for many containers and objects"
+        ],
+        [
+          "collect",
+          "모으다",
+          "bring things together"
+        ],
+        [
+          "save",
+          "절약하다",
+          "keep something from being used unnecessarily"
+        ]
+      ],
+      "s": [
+        "We collect suitable food scraps for the compost bin.",
+        "Reusing containers can save materials and reduce plastic waste."
+      ],
+      "story": "The class checks what is being thrown away after lunch. They collect information for three days before suggesting changes. Many scraps can go into the school compost, but plastic wrappers cannot. Tony suggests clear signs with examples above each bin. Another group suggests reusable containers to save materials. The class tries both ideas for a week, then checks the bins again. They want to know whether their plan actually reduces waste, rather than only looking helpful on a poster.",
+      "r": [
+        [
+          "What cannot go into the school compost here?",
+          "Plastic wrappers",
+          "Suitable food scraps",
+          "Decayed plant material"
+        ],
+        [
+          "Why do they check the bins again?",
+          "To find out whether the changes helped",
+          "To count only the new signs",
+          "To make more plastic wrappers"
+        ]
+      ],
+      "l": [
+        "Appropriate food scraps are gathered for compost.",
+        "All plastic is put into compost.",
+        "The speakers stop using every school bin."
+      ],
+      "exposure": [
+        [
+          "reusable",
+          "재사용 가능한",
+          "able to be used again"
+        ],
+        [
+          "reduce",
+          "줄이다",
+          "make something smaller in amount"
+        ]
+      ],
+      "focus": "Compare ideas, give a reason and plan a next step.",
+      "name": "Changing our waste",
+      "place": "Environment"
+    },
+    {
+      "year": 4,
+      "words": [
+        [
+          "warm-up",
+          "준비 운동",
+          "gentle exercise before harder activity"
+        ],
+        [
+          "skill",
+          "기술",
+          "an ability learned through practice"
+        ],
+        [
+          "effort",
+          "노력",
+          "energy used to try hard"
+        ],
+        [
+          "routine",
+          "정해진 순서",
+          "a usual set of actions"
+        ]
+      ],
+      "s": [
+        "A gentle warm-up is part of our practice routine.",
+        "Regular effort helps me improve a skill over time."
+      ],
+      "story": "Tony wants to improve his passing in netball. At practice, the coach begins with a warm-up and explains the routine. Tony tries to pass faster, but the ball often misses its target. The coach suggests slowing down and checking his hand position first. After several sessions, his passes become more accurate. He notices that useful effort means practising carefully, not only repeating quickly. His skill develops gradually, and he records one small improvement after each session.",
+      "r": [
+        [
+          "What does the coach suggest first?",
+          "Slow down and check hand position",
+          "Pass as fast as possible",
+          "Stop warming up"
+        ],
+        [
+          "What does Tony learn about effort?",
+          "Careful practice can help more than rushing",
+          "Repeating quickly always gives the best result",
+          "A skill should improve without practice"
+        ]
+      ],
+      "l": [
+        "Practice begins with gentle exercise as a usual step.",
+        "The speaker finishes all practice without moving.",
+        "The speaker only practises a skill once."
+      ],
+      "exposure": [
+        [
+          "accurate",
+          "정확한",
+          "close to the intended result"
+        ],
+        [
+          "gradually",
+          "점차",
+          "little by little over time"
+        ]
+      ],
+      "focus": "Compare ideas, give a reason and plan a next step.",
+      "name": "Moving and practising",
+      "place": "Sport and activity"
+    },
+    {
+      "year": 4,
+      "words": [
+        [
+          "unusual",
+          "특이한",
+          "different from what is usual"
+        ],
+        [
+          "possibility",
+          "가능성",
+          "something that might be true or happen"
+        ],
+        [
+          "pattern",
+          "패턴",
+          "a repeated or regular way things happen"
+        ],
+        [
+          "result",
+          "결과",
+          "what happens after an action or test"
+        ]
+      ],
+      "s": [
+        "We notice an unusual pattern in our results.",
+        "One possibility is that the surface changed the distance."
+      ],
+      "story": "Groups roll the same toy car down a ramp onto different surfaces. Most results form a pattern: the car travels further on smooth flooring. One unusual result shows a very short distance there. Tony suggests one possibility: the car may have touched the edge of the ramp. They check their notes and repeat that run carefully. The new result fits the pattern. They keep the original result in their record and explain why they checked it instead of quietly deleting it.",
+      "r": [
+        [
+          "What do they do about the unusual result?",
+          "Check the notes and repeat the run",
+          "Delete every result",
+          "Change the toy car for all groups"
+        ],
+        [
+          "Why keep the original result?",
+          "To show what happened and how they checked it",
+          "To pretend the short run never happened",
+          "To prove smooth flooring always stops cars"
+        ]
+      ],
+      "l": [
+        "Something in the results differs from the usual pattern.",
+        "Every result is missing from the record.",
+        "The speakers have not tried any test."
+      ],
+      "exposure": [
+        [
+          "surface",
+          "표면",
+          "the outside or top of something"
+        ],
+        [
+          "repeat",
+          "반복하다",
+          "do something again"
+        ]
+      ],
+      "focus": "Compare ideas, give a reason and plan a next step.",
+      "name": "Solving a mystery",
+      "place": "Reasoning"
+    },
+    {
+      "year": 4,
+      "words": [
+        [
+          "event",
+          "사건",
+          "something that happens"
+        ],
+        [
+          "paragraph",
+          "문단",
+          "sentences grouped around an idea"
+        ],
+        [
+          "dialogue",
+          "대화",
+          "words spoken between characters"
+        ],
+        [
+          "connect",
+          "연결하다",
+          "join ideas or things together"
+        ]
+      ],
+      "s": [
+        "I use dialogue to show how characters feel.",
+        "Each paragraph helps connect one event to the next."
+      ],
+      "story": "Tony writes about two friends whose kite gets caught in a tree. At first, his story jumps straight from the problem to the ending. His partner cannot understand how the friends solve it. Tony adds a paragraph describing their plan and uses dialogue to show their different ideas. He checks that each event connects clearly to the next. When his partner reads it again, the ending makes sense. Adding the missing link helps more than simply adding lots of extra words.",
+      "r": [
+        [
+          "What was missing from the first draft?",
+          "How the friends planned to solve the problem",
+          "The names of every tree",
+          "A second unrelated ending"
+        ],
+        [
+          "Why is the revised story clearer?",
+          "It connects the problem, plan and ending",
+          "It uses more words with no purpose",
+          "It removes every line of dialogue"
+        ]
+      ],
+      "l": [
+        "Characters’ spoken words reveal their feelings.",
+        "The speaker removes all characters from a story.",
+        "The speaker counts paragraphs without reading them."
+      ],
+      "exposure": [
+        [
+          "draft",
+          "초고",
+          "an early version of a piece of writing"
+        ],
+        [
+          "revise",
+          "고쳐 쓰다",
+          "change work to make it better"
+        ]
+      ],
+      "focus": "Compare ideas, give a reason and plan a next step.",
+      "name": "Telling our stories",
+      "place": "Narrative language"
+    },
+    {
+      "year": 4,
+      "words": [
+        [
+          "idea",
+          "생각",
+          "a thought or suggestion"
+        ],
+        [
+          "example",
+          "예시",
+          "a specific case that helps explain"
+        ],
+        [
+          "point",
+          "요점",
+          "the main thing someone wants to say"
+        ],
+        [
+          "convince",
+          "설득하다",
+          "help someone believe an idea by giving reasons"
+        ]
+      ],
+      "s": [
+        "An example can make my point easier to understand.",
+        "I use reasons to convince others to consider my idea."
+      ],
+      "story": "Tony wants the class to create a quiet reading corner. His first point is that some readers find it hard to concentrate near noisy games. He gives an example from yesterday, when a classmate moved three times to find a quiet spot. Another student worries that the corner will take space from building activities. Tony listens and suggests trying a small corner for one week. He hopes to convince the class through reasons and a fair trial, rather than by speaking the loudest.",
+      "r": [
+        [
+          "What example does Tony give?",
+          "A classmate moved three times to find quiet",
+          "Everyone stopped reading for a month",
+          "The classroom had no books"
+        ],
+        [
+          "Why suggest a one-week trial?",
+          "To check the idea while considering the concern about space",
+          "To avoid listening to any other ideas",
+          "To keep the reading corner forever without discussion"
+        ]
+      ],
+      "l": [
+        "A specific case can help explain the main message.",
+        "An example always replaces every reason.",
+        "The speaker wants to hide the main message."
+      ],
+      "exposure": [
+        [
+          "concentrate",
+          "집중하다",
+          "give your attention to something"
+        ],
+        [
+          "trial",
+          "시험 적용",
+          "trying an idea to see how it works"
+        ]
+      ],
+      "focus": "Compare ideas, give a reason and plan a next step.",
+      "name": "An idea worth sharing",
+      "place": "Opinions and explanation"
+    },
+    {
+      "year": 4,
+      "words": [
+        [
+          "progress",
+          "진전",
+          "improvement over time"
+        ],
+        [
+          "strength",
+          "강점",
+          "something you can do well"
+        ],
+        [
+          "target",
+          "목표",
+          "something you aim to achieve"
+        ],
+        [
+          "future",
+          "미래",
+          "time that has not happened yet"
+        ]
+      ],
+      "s": [
+        "My progress shows a strength I can build on.",
+        "I choose a small target for my future learning."
+      ],
+      "story": "At the end of the course, Tony compares an early piece of writing with a recent one. He notices progress in connecting ideas and giving examples. That is now a strength, but he still wants to check punctuation more carefully. He chooses a clear target: reread one paragraph aloud before handing work in. Kai shares a different target for his own learning. They do not need identical goals. Both can use what they have learnt to plan a useful next step for the future.",
+      "r": [
+        [
+          "What target does Tony choose?",
+          "Reread a paragraph aloud before handing work in",
+          "Use exactly the same target as Kai",
+          "Never look at an earlier piece of work"
+        ],
+        [
+          "Why compare early and recent work?",
+          "To notice improvement and choose a useful next step",
+          "To decide that learning has ended",
+          "To prove every learner needs identical goals"
+        ]
+      ],
+      "l": [
+        "Improvement reveals something the speaker can develop further.",
+        "The speaker has decided never to learn again.",
+        "Every learner has the same strength."
+      ],
+      "exposure": [
+        [
+          "punctuation",
+          "문장 부호",
+          "marks that help make writing clear"
+        ],
+        [
+          "goal",
+          "목표",
+          "something you want to achieve"
+        ]
+      ],
+      "focus": "Compare ideas, give a reason and plan a next step.",
+      "name": "Looking back and ahead",
+      "place": "Reflection"
+    }
+  ],
+  "5": [
+    {
+      "focus": "Clarification; conditional promises",
+      "s": [
+        "Could you clarify the final instruction, please?",
+        "I will organise our materials before the group arrives."
+      ],
+      "story": "Tony reads the instructions for a group project. The final step says to display the results, but it does not say how. Rather than guessing, he asks the teacher to clarify it. She explains that a labelled chart will work. Tony organises the materials while his partner prepares the chart. They share responsibility for finishing on time.",
+      "r": [
+        [
+          "What does the teacher suggest?",
+          "A labelled chart",
+          "A long video",
+          "An unlabelled drawing"
+        ],
+        [
+          "Why is asking better than guessing here?",
+          "It helps the group meet the actual requirement.",
+          "It means Tony can avoid the work.",
+          "It proves every instruction is wrong."
+        ]
+      ],
+      "l": [
+        "The speaker is asking for a clearer explanation.",
+        "The speaker is refusing to follow instructions.",
+        "The speaker is asking for a new partner."
+      ],
+      "words": [
+        [
+          "clarify",
+          "분명히 설명하다",
+          "make an idea easier to understand"
+        ],
+        [
+          "instruction",
+          "지시사항",
+          "information that tells you what to do"
+        ],
+        [
+          "organise",
+          "정리하다",
+          "put things in a useful order"
+        ],
+        [
+          "responsibility",
+          "책임",
+          "a task or duty you must look after"
+        ]
+      ],
+      "name": "Ready for class",
+      "place": "School routines",
+      "year": 5,
+      "exposure": [
+        [
+          "labelled",
+          "표시가 붙은",
+          "with names or notes added"
+        ],
+        [
+          "materials",
+          "재료",
+          "things used to make something"
+        ]
+      ]
+    },
+    {
+      "focus": "Infer feelings; make considerate choices",
+      "s": [
+        "We could include everyone by changing the rules.",
+        "A considerate teammate encourages others to have a go."
+      ],
+      "story": "A new student hesitates at the edge of the court. The game usually needs two equal teams, and another player would make the numbers uneven. Tony suggests taking turns as referee. Everyone can now join without leaving anyone out. The new student volunteers to referee first and joins a team in the next round.",
+      "r": [
+        [
+          "What change does Tony suggest?",
+          "Taking turns as referee",
+          "Ending the game",
+          "Choosing only the fastest players"
+        ],
+        [
+          "Which detail suggests the new student feels more confident?",
+          "They volunteer for a role.",
+          "The teams were uneven.",
+          "The court has an edge."
+        ]
+      ],
+      "l": [
+        "The speaker suggests a change so everyone can participate.",
+        "The speaker wants fewer people in the game.",
+        "The speaker thinks rules never change."
+      ],
+      "words": [
+        [
+          "include",
+          "포함하다",
+          "make someone part of a group"
+        ],
+        [
+          "considerate",
+          "배려하는",
+          "thinking about other people’s needs"
+        ],
+        [
+          "hesitate",
+          "망설이다",
+          "pause because you are unsure"
+        ],
+        [
+          "encourage",
+          "격려하다",
+          "help someone feel able to try"
+        ]
+      ],
+      "name": "Making friends",
+      "place": "Friendship",
+      "year": 5,
+      "exposure": [
+        [
+          "referee",
+          "심판",
+          "someone who checks that game rules are followed"
+        ],
+        [
+          "volunteers",
+          "자원하다",
+          "offers to do something"
+        ]
+      ]
+    },
+    {
+      "focus": "Compare choices; distinguish needs and preferences",
+      "s": [
+        "My preference is a sandwich with fresh ingredients.",
+        "A smaller portion may be enough for me today."
+      ],
+      "story": "The class plans a shared lunch. Some students prefer sandwiches, while others suggest fruit and rice dishes. They read the ingredient lists so that people can make suitable choices. Tony proposes several options and small portions that people can add to if needed. A balanced plan does not require everyone to choose exactly the same food.",
+      "r": [
+        [
+          "Why does the class read ingredient lists?",
+          "To help people make suitable choices",
+          "To count the letters",
+          "To choose the most expensive dish"
+        ],
+        [
+          "What does the final sentence suggest?",
+          "A useful plan can allow different preferences.",
+          "Everyone must eat the same portion.",
+          "Only one kind of food is acceptable."
+        ]
+      ],
+      "l": [
+        "The speaker says which sandwich they would rather have.",
+        "The speaker gives the price of a sandwich.",
+        "The speaker says every ingredient is missing."
+      ],
+      "words": [
+        [
+          "ingredient",
+          "재료",
+          "one of the foods used to make a dish"
+        ],
+        [
+          "portion",
+          "한 분량",
+          "an amount of food for one person"
+        ],
+        [
+          "balanced",
+          "균형 잡힌",
+          "including a suitable variety"
+        ],
+        [
+          "preference",
+          "선호",
+          "something you like more than another"
+        ]
+      ],
+      "name": "Lunchbox choices",
+      "place": "Food and everyday needs",
+      "year": 5,
+      "exposure": [
+        [
+          "suitable",
+          "알맞은",
+          "right for a purpose"
+        ],
+        [
+          "options",
+          "선택지",
+          "things you can choose"
+        ]
+      ]
+    },
+    {
+      "focus": "Possibility; evidence versus certainty",
+      "s": [
+        "Rain is likely, although the sky is clear at present.",
+        "Checking the conditions helps us take sensible precautions."
+      ],
+      "story": "The class has planned an outdoor art lesson. A forecast predicts showers after lunch, although the morning sky is clear. Tony suggests preparing an indoor space as a precaution. The teacher keeps the outdoor plan but puts the paper near the door. When dark clouds arrive, the group moves inside before the first shower. The forecast helped them prepare; it did not tell them the exact minute rain would start.",
+      "r": [
+        [
+          "What precaution does the group take?",
+          "They prepare an indoor space.",
+          "They throw away the paper.",
+          "They cancel all art lessons."
+        ],
+        [
+          "Why does the writer mention the exact minute?",
+          "To show that a prediction is not complete certainty.",
+          "To show that forecasts are always useless.",
+          "To show that rain follows the school bell."
+        ]
+      ],
+      "l": [
+        "The speaker thinks rain is probable but not certain.",
+        "The speaker says it is already raining heavily.",
+        "The speaker is certain it will stay dry."
+      ],
+      "words": [
+        [
+          "conditions",
+          "상태나 상황",
+          "the features of a situation"
+        ],
+        [
+          "predict",
+          "예측하다",
+          "say what you think will happen"
+        ],
+        [
+          "likely",
+          "가능성이 큰",
+          "expected to happen"
+        ],
+        [
+          "precaution",
+          "예방 조치",
+          "something you do to avoid a possible problem"
+        ]
+      ],
+      "name": "A change in weather",
+      "place": "NZ weather",
+      "year": 5,
+      "exposure": [
+        [
+          "forecast",
+          "일기예보",
+          "a report about expected weather"
+        ],
+        [
+          "outdoor",
+          "야외의",
+          "outside a building"
+        ]
+      ]
+    },
+    {
+      "focus": "Precise directions; compare routes",
+      "s": [
+        "Our destination is the library beside the old clock tower.",
+        "This route is longer, but it has a marked crossing."
+      ],
+      "story": "Two routes lead from school to the community library. The direct route passes a busy intersection without a marked crossing. A slightly longer route goes past the clock tower and a crossing used by families. Tony chooses the second route with the supervising adult. The clock tower is a useful landmark, but the safer crossing is the main reason for their choice.",
+      "r": [
+        [
+          "Which landmark helps them?",
+          "The clock tower",
+          "A distant mountain",
+          "A bus inside the library"
+        ],
+        [
+          "Which reason best explains their choice?",
+          "The route offers a more suitable place to cross.",
+          "They want to walk as far as possible.",
+          "They cannot recognise the clock tower."
+        ]
+      ],
+      "l": [
+        "The speaker identifies where the group is going.",
+        "The speaker says the library is closed.",
+        "The speaker asks what time the tower was built."
+      ],
+      "words": [
+        [
+          "route",
+          "경로",
+          "a way from one place to another"
+        ],
+        [
+          "landmark",
+          "눈에 띄는 장소",
+          "an easily recognised place that helps you find your way"
+        ],
+        [
+          "intersection",
+          "교차로",
+          "a place where roads meet"
+        ],
+        [
+          "destination",
+          "목적지",
+          "the place you are travelling to"
+        ]
+      ],
+      "name": "Finding your way",
+      "place": "Neighbourhood",
+      "year": 5,
+      "exposure": [
+        [
+          "supervising",
+          "보살피는",
+          "watching over an activity to keep it safe"
+        ],
+        [
+          "direct",
+          "직접 가는",
+          "going without extra turns or stops"
+        ]
+      ]
+    },
+    {
+      "focus": "Compare value; explain a decision",
+      "s": [
+        "We should compare the prices before making a purchase.",
+        "This option fits our budget and gives us enough materials."
+      ],
+      "story": "The group has a twelve-dollar budget for poster materials. A large pack of pens costs ten dollars; a smaller pack costs six. Both contain the colours they need, and paper costs four dollars. Tony compares the choices. The smaller pack leaves enough money for paper, so it offers better value for this project even though it contains fewer pens.",
+      "r": [
+        [
+          "How much do the smaller pack and paper cost together?",
+          "Ten dollars",
+          "Fourteen dollars",
+          "Sixteen dollars"
+        ],
+        [
+          "Why is the smaller pack better value for this project?",
+          "It meets their needs and leaves money for paper.",
+          "More expensive items are always worse.",
+          "The group does not need any colours."
+        ]
+      ],
+      "l": [
+        "The speaker recommends checking options before buying.",
+        "The speaker says the purchase is already finished.",
+        "The speaker wants to ignore the prices."
+      ],
+      "words": [
+        [
+          "budget",
+          "예산",
+          "a plan for how much money can be spent"
+        ],
+        [
+          "compare",
+          "비교하다",
+          "look for similarities and differences"
+        ],
+        [
+          "value",
+          "가격 대비 가치",
+          "how useful something is compared with its cost"
+        ],
+        [
+          "purchase",
+          "구매하다",
+          "buy something"
+        ]
+      ],
+      "name": "At the shops",
+      "place": "Money and requests",
+      "year": 5,
+      "exposure": [
+        [
+          "contain",
+          "들어 있다",
+          "have something inside"
+        ],
+        [
+          "project",
+          "과제",
+          "a planned piece of work"
+        ]
+      ]
+    },
+    {
+      "focus": "Negotiate; contrast ideas respectfully",
+      "s": [
+        "We can disagree while remaining respectful.",
+        "A compromise could help us resolve this problem."
+      ],
+      "story": "One group wants a quiet playground game and another wants a running game. At first, both groups insist on their own choice. Tony asks each group to explain what matters to them. They agree to use separate areas for ten minutes and then try a game together. The compromise does not give everyone their first choice, but it gives both groups something they need. Listening helps them understand the disagreement before choosing a solution.",
+      "r": [
+        [
+          "What do the groups agree to do first?",
+          "Use separate areas for ten minutes",
+          "Play only a running game",
+          "Stop playing for the day"
+        ],
+        [
+          "What makes the solution a compromise?",
+          "Both groups adjust their original plans.",
+          "One group gets everything it wants.",
+          "Nobody explains an opinion."
+        ]
+      ],
+      "l": [
+        "The speaker says different opinions can be expressed politely.",
+        "The speaker says everyone must have the same opinion.",
+        "The speaker says being respectful means staying silent."
+      ],
+      "words": [
+        [
+          "compromise",
+          "절충하다",
+          "find an agreement where each side changes something"
+        ],
+        [
+          "resolve",
+          "해결하다",
+          "find an answer to a problem"
+        ],
+        [
+          "disagreement",
+          "의견 차이",
+          "a situation where people think differently"
+        ],
+        [
+          "respectful",
+          "존중하는",
+          "showing care for someone’s views and rights"
+        ]
+      ],
+      "name": "A fair playground",
+      "place": "Play and cooperation",
+      "year": 5,
+      "exposure": [
+        [
+          "insist",
+          "고집하다",
+          "keep saying something must happen"
+        ],
+        [
+          "separate",
+          "분리된",
+          "apart from each other"
+        ]
+      ]
+    },
+    {
+      "focus": "Plan tasks; explain efficiency",
+      "s": [
+        "Our first priority is to clear a safe working space.",
+        "Maintaining reusable equipment can reduce unnecessary waste."
+      ],
+      "story": "The class prepares equipment for a community working bee. Tony makes clearing the walkway the first priority, because carrying tools through clutter would be difficult. The group then sorts reusable equipment and checks what needs repair. They work efficiently by sharing different tasks. Maintaining what they already have means they need to buy fewer replacements.",
+      "r": [
+        [
+          "What is the first priority?",
+          "Clearing the walkway",
+          "Buying replacements",
+          "Painting every tool"
+        ],
+        [
+          "How does maintenance reduce waste?",
+          "It keeps existing equipment useful for longer.",
+          "It makes every object disposable.",
+          "It removes the need to organise tasks."
+        ]
+      ],
+      "l": [
+        "The speaker puts a safe space ahead of other tasks.",
+        "The speaker says the work is finished.",
+        "The speaker plans to block the walkway."
+      ],
+      "words": [
+        [
+          "priority",
+          "우선할 일",
+          "something that should be dealt with before other things"
+        ],
+        [
+          "efficient",
+          "효율적인",
+          "working well without wasting time or resources"
+        ],
+        [
+          "maintain",
+          "관리하다",
+          "keep something in good condition"
+        ],
+        [
+          "reusable",
+          "재사용 가능한",
+          "able to be used again"
+        ]
+      ],
+      "name": "Looking after things",
+      "place": "Home routines",
+      "year": 5,
+      "exposure": [
+        [
+          "clutter",
+          "어질러진 물건",
+          "things lying around in the way"
+        ],
+        [
+          "replacements",
+          "대체품",
+          "things used instead of old ones"
+        ]
+      ]
+    },
+    {
+      "focus": "Inference supported by textual evidence",
+      "s": [
+        "I can infer her motive from the evidence in the story.",
+        "The narrator describes the event without explaining every feeling."
+      ],
+      "story": "In a story Tony reads, a girl leaves her umbrella beside a neighbour’s door and runs home through the rain. The narrator does not explain her motive. Earlier, the neighbour had said that he could not find his umbrella. Tony infers that the girl wanted to help him. Her action and the earlier conversation support that idea; simply saying that she likes rain would ignore part of the evidence.",
+      "r": [
+        [
+          "Which earlier detail supports Tony’s inference?",
+          "The neighbour could not find his umbrella.",
+          "The girl had finished a book.",
+          "The rain stopped at lunchtime."
+        ],
+        [
+          "Why is the helping explanation stronger?",
+          "It connects her action with the earlier conversation.",
+          "It repeats the title of the story.",
+          "It requires no evidence at all."
+        ]
+      ],
+      "l": [
+        "The speaker will use clues to explain a reason for an action.",
+        "The speaker will choose an answer without reading.",
+        "The speaker will count the pages."
+      ],
+      "words": [
+        [
+          "infer",
+          "추론하다",
+          "work out an idea from clues"
+        ],
+        [
+          "evidence",
+          "근거",
+          "information that supports an idea"
+        ],
+        [
+          "narrator",
+          "서술자",
+          "the voice that tells a story"
+        ],
+        [
+          "motive",
+          "동기",
+          "a reason for doing something"
+        ]
+      ],
+      "name": "Books we choose",
+      "place": "Library and stories",
+      "year": 5,
+      "exposure": [
+        [
+          "neighbour",
+          "이웃",
+          "someone who lives nearby"
+        ],
+        [
+          "conversation",
+          "대화",
+          "a talk between people"
+        ]
+      ]
+    },
+    {
+      "focus": "Record observations; separate cause and guess",
+      "s": [
+        "We will record what we observe each morning.",
+        "Changing one variable helps us compare the results fairly."
+      ],
+      "story": "Tony’s group investigates how light affects seedlings. They use the same kind of seed, similar pots and equal amounts of water. One tray stands near a window and another in a darker corner. They record when seeds germinate and measure the shoots. By keeping several conditions similar, the group can make a more useful comparison, although a small investigation cannot answer every question about plant growth.",
+      "r": [
+        [
+          "Which condition is deliberately different?",
+          "The amount of light",
+          "The kind of seed",
+          "The amount of water"
+        ],
+        [
+          "Why keep the pots and water similar?",
+          "To make light the main variable being compared",
+          "To ensure every shoot has the same height",
+          "To avoid recording any results"
+        ]
+      ],
+      "l": [
+        "The speaker plans to keep a written account of observations.",
+        "The speaker plans to guess without looking.",
+        "The speaker plans to change the results later."
+      ],
+      "words": [
+        [
+          "observe",
+          "관찰하다",
+          "watch carefully to notice information"
+        ],
+        [
+          "germinate",
+          "발아하다",
+          "begin to grow from a seed"
+        ],
+        [
+          "variable",
+          "변인",
+          "something that can change in an investigation"
+        ],
+        [
+          "record",
+          "기록하다",
+          "keep information so it can be checked later"
+        ]
+      ],
+      "name": "Our school garden",
+      "place": "Plants and care",
+      "year": 5,
+      "exposure": [
+        [
+          "seedlings",
+          "어린 모종",
+          "very young plants"
+        ],
+        [
+          "comparison",
+          "비교",
+          "looking at how things are alike or different"
+        ]
+      ]
+    },
+    {
+      "focus": "Explain environmental effects; cautious conclusions",
+      "s": [
+        "Rock pools are fragile habitats for marine life.",
+        "Even a small action can have an impact on this place."
+      ],
+      "story": "During a coastal visit, the class observes crabs and small fish in rock pools. A guide explains that these marine habitats can be fragile. Moving rocks or taking animals away changes their shelter. Tony sketches what he sees without rearranging the pool. The group also carries its rubbish home. Observing carefully allows them to learn while reducing their impact.",
+      "r": [
+        [
+          "What does Tony do instead of moving rocks?",
+          "He sketches what he sees.",
+          "He takes the fish home.",
+          "He empties the pool."
+        ],
+        [
+          "What connects sketching and taking rubbish home?",
+          "Both reduce the group’s impact on the habitat.",
+          "Both make the tide rise faster.",
+          "Both require removing animals."
+        ]
+      ],
+      "l": [
+        "The speaker explains that sea-life homes can be easily harmed.",
+        "The speaker says rock pools are empty.",
+        "The speaker says every marine animal lives on land."
+      ],
+      "words": [
+        [
+          "habitat",
+          "서식지",
+          "the place where a living thing naturally lives"
+        ],
+        [
+          "marine",
+          "바다의",
+          "connected with the sea"
+        ],
+        [
+          "fragile",
+          "연약한",
+          "easily damaged"
+        ],
+        [
+          "impact",
+          "영향",
+          "the effect one thing has on another"
+        ]
+      ],
+      "name": "A trip to the beach",
+      "place": "Coast and care",
+      "year": 5,
+      "exposure": [
+        [
+          "coastal",
+          "해안의",
+          "near the sea"
+        ],
+        [
+          "rearranging",
+          "다시 배치하는",
+          "moving things into different positions"
+        ]
+      ]
+    },
+    {
+      "focus": "Interpret changes; plan alternatives",
+      "s": [
+        "The delay means we may need an alternative route.",
+        "We can transfer at the next stop if the schedule changes."
+      ],
+      "story": "Tony and an adult plan to take two buses to a museum. The first bus is delayed, so they may miss their transfer. They check the updated schedule rather than relying only on the printed timetable. An alternative route takes slightly longer but goes directly to the museum. They choose it because it avoids another connection that might be missed.",
+      "r": [
+        [
+          "What creates the problem?",
+          "The first bus is delayed.",
+          "The museum moves location.",
+          "The printed timetable has no numbers."
+        ],
+        [
+          "Why choose the direct alternative?",
+          "It removes the risk of missing another transfer.",
+          "It is guaranteed to be the fastest route.",
+          "It requires more connections."
+        ]
+      ],
+      "l": [
+        "The speaker thinks a late service may require a different plan.",
+        "The speaker says no route is available.",
+        "The speaker is asking to drive the bus."
+      ],
+      "words": [
+        [
+          "delay",
+          "지연",
+          "a wait beyond the expected time"
+        ],
+        [
+          "alternative",
+          "대안",
+          "another possible choice"
+        ],
+        [
+          "transfer",
+          "갈아타다",
+          "change from one service or vehicle to another"
+        ],
+        [
+          "schedule",
+          "일정",
+          "a plan showing when things should happen"
+        ]
+      ],
+      "name": "Getting around",
+      "place": "Public transport",
+      "year": 5,
+      "exposure": [
+        [
+          "connection",
+          "연결편",
+          "the next vehicle in a journey"
+        ],
+        [
+          "updated",
+          "갱신된",
+          "changed to include new information"
+        ]
+      ]
+    },
+    {
+      "focus": "Describe emotions precisely; evaluate strategies",
+      "s": [
+        "Looking at another perspective may help me feel less frustrated.",
+        "I can ask someone I trust to help me choose a strategy."
+      ],
+      "story": "Tony feels frustrated when his model bridge falls apart twice. His partner points out that the base stayed stronger on the second attempt. This different perspective reassures him that some progress has been made. They choose a new strategy: test the base before adding the top. The bridge is not finished yet, but Tony can describe what he has learned rather than calling the whole task a failure.",
+      "r": [
+        [
+          "What improved on the second attempt?",
+          "The base stayed stronger.",
+          "The bridge became taller than the school.",
+          "The top was never added."
+        ],
+        [
+          "How does the partner’s comment help?",
+          "It draws attention to evidence of progress.",
+          "It proves the task needs no more work.",
+          "It tells Tony to hide the problem."
+        ]
+      ],
+      "l": [
+        "The speaker considers a different view as a way to manage frustration.",
+        "The speaker says frustration is impossible.",
+        "The speaker wants to stop listening to others."
+      ],
+      "words": [
+        [
+          "frustrated",
+          "좌절한",
+          "upset because something is difficult or blocked"
+        ],
+        [
+          "reassure",
+          "안심시키다",
+          "help someone feel less worried"
+        ],
+        [
+          "perspective",
+          "관점",
+          "a way of seeing or thinking about something"
+        ],
+        [
+          "strategy",
+          "방법이나 전략",
+          "a planned way of dealing with something"
+        ]
+      ],
+      "name": "Feelings and needs",
+      "place": "Wellbeing",
+      "year": 5,
+      "exposure": [
+        [
+          "attempt",
+          "시도",
+          "a try at doing something"
+        ],
+        [
+          "failure",
+          "실패",
+          "not achieving what was planned"
+        ]
+      ]
+    },
+    {
+      "focus": "Assign roles; summarise agreement",
+      "s": [
+        "Everyone can contribute an idea before we decide.",
+        "Useful feedback helps us improve before the deadline."
+      ],
+      "story": "The group must finish a class display by Friday. Tony coordinates the tasks after everyone contributes an idea. One student gathers facts, another designs the headings and a third checks the writing. On Thursday they ask another group for feedback. A visitor cannot tell which arrow to follow, so they change the layout before the deadline.",
+      "r": [
+        [
+          "What problem does the visitor notice?",
+          "The order of the arrows is unclear.",
+          "The deadline is on Monday.",
+          "There are no headings at all."
+        ],
+        [
+          "What makes the feedback useful?",
+          "It identifies a specific feature they can improve.",
+          "It only says the display is bad.",
+          "It arrives after the display is removed."
+        ]
+      ],
+      "l": [
+        "The speaker wants ideas from the whole group before a decision.",
+        "The speaker has already rejected all other ideas.",
+        "The speaker is asking to change the deadline."
+      ],
+      "words": [
+        [
+          "contribute",
+          "기여하다",
+          "give something that helps a shared effort"
+        ],
+        [
+          "coordinate",
+          "조율하다",
+          "arrange different parts so they work together"
+        ],
+        [
+          "deadline",
+          "마감일",
+          "the time by which work should be finished"
+        ],
+        [
+          "feedback",
+          "피드백",
+          "information that helps someone improve their work"
+        ]
+      ],
+      "name": "Working together",
+      "place": "Class projects",
+      "year": 5,
+      "exposure": [
+        [
+          "layout",
+          "배치",
+          "the way things are arranged"
+        ],
+        [
+          "headings",
+          "제목들",
+          "short titles above sections"
+        ]
+      ]
+    },
+    {
+      "focus": "Procedural language; quantities and adjustments",
+      "s": [
+        "We need to adjust the quantities for a larger group.",
+        "Following a clear method helps us get consistent results."
+      ],
+      "story": "A recipe makes enough fruit salad for four people, but the group has eight. Tony suggests doubling the quantities while keeping the method the same. They measure rather than guessing each amount. The fruit pieces do not have to look identical, but similar sizes help each serving contain a mixture. After preparing it with an adult, they check whether the adjusted recipe was enough.",
+      "r": [
+        [
+          "What change do they make?",
+          "They double the quantities.",
+          "They halve the group.",
+          "They remove every instruction."
+        ],
+        [
+          "Why do they keep the method clear?",
+          "It helps them repeat the task and compare results.",
+          "It means quantities never matter.",
+          "It guarantees all fruit tastes identical."
+        ]
+      ],
+      "l": [
+        "The speaker needs different amounts because more people are coming.",
+        "The speaker needs a different language for the recipe.",
+        "The speaker says there is no food to prepare."
+      ],
+      "words": [
+        [
+          "quantity",
+          "양",
+          "how much of something there is"
+        ],
+        [
+          "method",
+          "방법",
+          "an ordered way to do something"
+        ],
+        [
+          "adjust",
+          "조정하다",
+          "change something slightly to suit a need"
+        ],
+        [
+          "consistent",
+          "일정한",
+          "staying similar each time"
+        ]
+      ],
+      "name": "Making something tasty",
+      "place": "Cooking and instructions",
+      "year": 5,
+      "exposure": [
+        [
+          "doubling",
+          "두 배로 늘리기",
+          "making an amount twice as large"
+        ],
+        [
+          "mixture",
+          "혼합물",
+          "different things put together"
+        ]
+      ]
+    },
+    {
+      "focus": "Respectful questions; compare experiences",
+      "s": [
+        "Could you explain the significance of this family custom?",
+        "Our community has diverse stories and experiences to share."
+      ],
+      "story": "During a community afternoon, visitors share aspects of their heritage. Tony notices that two families describe different ways of marking the same occasion. Instead of deciding that one is correct for everyone, he asks about the significance of each custom. The visitors explain their own experiences. Their answers show why one account cannot represent every family in a diverse community.",
+      "r": [
+        [
+          "What does Tony ask about?",
+          "The significance of each custom",
+          "Which family should be excluded",
+          "The price of the school building"
+        ],
+        [
+          "What is the main lesson of the final sentence?",
+          "People within a community can have different experiences.",
+          "A single story always describes everyone.",
+          "Customs cannot be discussed respectfully."
+        ]
+      ],
+      "l": [
+        "The speaker asks respectfully why a custom matters.",
+        "The speaker says the custom must be wrong.",
+        "The speaker asks someone to copy a different family."
+      ],
+      "words": [
+        [
+          "heritage",
+          "문화적 유산",
+          "traditions and experiences passed on from earlier generations"
+        ],
+        [
+          "custom",
+          "관습",
+          "a usual practice in a community"
+        ],
+        [
+          "diverse",
+          "다양한",
+          "including many different kinds"
+        ],
+        [
+          "significance",
+          "의미나 중요성",
+          "why something matters"
+        ]
+      ],
+      "name": "Celebrating together",
+      "place": "Community and whānau",
+      "year": 5,
+      "exposure": [
+        [
+          "occasion",
+          "행사나 때",
+          "a particular event or time"
+        ],
+        [
+          "represent",
+          "대표하다",
+          "show or speak for something"
+        ]
+      ]
+    },
+    {
+      "focus": "Audience and consent; evaluate online claims",
+      "s": [
+        "We should check the source before sharing this claim.",
+        "Consent to one photo does not mean consent to every photo."
+      ],
+      "story": "Tony sees a message claiming that school will close the next day. The message has no named source. Before passing it to a wider audience, he checks the school’s official notice with an adult. The notice says only one entrance will be closed for repairs. Tony explains the difference to his group and shares the reliable notice instead of the original claim.",
+      "r": [
+        [
+          "What will actually be closed?",
+          "One entrance",
+          "The whole school",
+          "Every road in the town"
+        ],
+        [
+          "Why is the school notice a stronger source here?",
+          "The school is directly responsible for its own arrangements.",
+          "It has fewer words than the message.",
+          "It agrees with the most exciting claim."
+        ]
+      ],
+      "l": [
+        "The speaker recommends checking where information came from.",
+        "The speaker recommends sharing every message immediately.",
+        "The speaker says no information can ever be trusted."
+      ],
+      "words": [
+        [
+          "consent",
+          "동의",
+          "clear agreement to a particular action"
+        ],
+        [
+          "reliable",
+          "믿을 만한",
+          "able to be trusted for a good reason"
+        ],
+        [
+          "source",
+          "출처",
+          "where information comes from"
+        ],
+        [
+          "audience",
+          "독자나 청중",
+          "the people a message is meant for"
+        ]
+      ],
+      "name": "The world online",
+      "place": "Digital communication",
+      "year": 5,
+      "exposure": [
+        [
+          "official",
+          "공식적인",
+          "from the organisation in charge"
+        ],
+        [
+          "claim",
+          "주장",
+          "something someone says is true"
+        ]
+      ]
+    },
+    {
+      "focus": "Classification and cautious observation",
+      "s": [
+        "Conservation can help protect native species from threats.",
+        "An adaptation may help an animal survive in its habitat."
+      ],
+      "story": "The class reads about native birds and visits a local reserve with a guide. They learn that different species have different needs. Some need dense plants for shelter, while others feed in open areas. The guide explains that conservation involves protecting habitats as well as individual animals. Tony realises that planting the same tree everywhere would not meet every species’ needs.",
+      "r": [
+        [
+          "What does conservation include in the passage?",
+          "Protecting habitats and animals",
+          "Keeping every habitat identical",
+          "Removing all dense plants"
+        ],
+        [
+          "Why would one kind of planting be insufficient?",
+          "Different species need different conditions.",
+          "No birds use trees.",
+          "Every animal eats exactly the same food."
+        ]
+      ],
+      "l": [
+        "The speaker connects protection with reducing harm to native wildlife.",
+        "The speaker says every species has disappeared.",
+        "The speaker suggests removing all habitats."
+      ],
+      "words": [
+        [
+          "species",
+          "종",
+          "a group of living things of the same kind"
+        ],
+        [
+          "adaptation",
+          "적응 특성",
+          "a feature that helps a living thing survive"
+        ],
+        [
+          "conservation",
+          "자연 보전",
+          "protecting nature and using resources carefully"
+        ],
+        [
+          "threat",
+          "위협",
+          "something that may cause harm"
+        ]
+      ],
+      "name": "Noticing the natural world",
+      "place": "Native wildlife",
+      "year": 5,
+      "exposure": [
+        [
+          "reserve",
+          "보호 구역",
+          "land kept to protect nature"
+        ],
+        [
+          "dense",
+          "빽빽한",
+          "with many things close together"
+        ]
+      ]
+    },
+    {
+      "focus": "Support a proposal with data",
+      "s": [
+        "Our proposal is to use resources more carefully.",
+        "We should consider the consequences before changing the system."
+      ],
+      "story": "The class proposes replacing disposable decorations with reusable ones. Tony compares the materials, storage space and number of future uses. Reusable decorations require somewhere dry to store them, so buying them alone will not solve the problem. The proposal includes labelled storage boxes and a borrowing list. Thinking about these consequences makes the plan more sustainable.",
+      "r": [
+        [
+          "What does the proposal include besides decorations?",
+          "Storage boxes and a borrowing list",
+          "A new rubbish truck",
+          "A different school building"
+        ],
+        [
+          "Why is storage part of sustainability here?",
+          "The decorations must stay usable to be reused.",
+          "Storage makes every material free.",
+          "Decorations never need to be borrowed."
+        ]
+      ],
+      "l": [
+        "The speaker suggests a plan to avoid wasting useful materials.",
+        "The speaker asks to use every resource immediately.",
+        "The speaker says the plan cannot be discussed."
+      ],
+      "words": [
+        [
+          "sustainable",
+          "지속 가능한",
+          "able to continue without using things up"
+        ],
+        [
+          "resource",
+          "자원",
+          "something useful that people or living things need"
+        ],
+        [
+          "proposal",
+          "제안",
+          "a suggested plan"
+        ],
+        [
+          "consequence",
+          "결과",
+          "something that happens because of an action"
+        ]
+      ],
+      "name": "Changing our waste",
+      "place": "Environment",
+      "year": 5,
+      "exposure": [
+        [
+          "disposable",
+          "일회용의",
+          "made to be thrown away after use"
+        ],
+        [
+          "storage",
+          "보관",
+          "keeping things until needed"
+        ]
+      ]
+    },
+    {
+      "focus": "Evaluate progress; use specific goals",
+      "s": [
+        "Improving my technique is a more useful goal than rushing.",
+        "Gradual progress can lead to a meaningful achievement."
+      ],
+      "story": "Tony wants to improve his throwing accuracy. Instead of only trying to throw farther, he asks for feedback on his technique. He chooses a nearby target and records successful throws over several sessions. The target stays in the same place so the results can be compared. His gradual improvement is an achievement even though another student can already throw farther. He builds stamina by practising for a little longer over time.",
+      "r": [
+        [
+          "Why does the target stay in the same place?",
+          "To make the results easier to compare",
+          "To ensure every throw succeeds",
+          "To make the activity impossible"
+        ],
+        [
+          "What does the final sentence suggest about achievement?",
+          "Progress can be meaningful without beating someone else.",
+          "Only the best player can improve.",
+          "Distance is the only useful goal."
+        ]
+      ],
+      "l": [
+        "The speaker values a better method more than speed.",
+        "The speaker wants to finish without practising.",
+        "The speaker says every technique is identical."
+      ],
+      "words": [
+        [
+          "stamina",
+          "지구력",
+          "the ability to keep doing an activity"
+        ],
+        [
+          "technique",
+          "기술이나 방법",
+          "a particular way of doing something"
+        ],
+        [
+          "gradual",
+          "점진적인",
+          "happening in small stages"
+        ],
+        [
+          "achievement",
+          "성취",
+          "something successfully reached through effort"
+        ]
+      ],
+      "name": "Moving and practising",
+      "place": "Sport and activity",
+      "year": 5,
+      "exposure": [
+        [
+          "accuracy",
+          "정확성",
+          "how close something is to the intended result"
+        ],
+        [
+          "successful",
+          "성공한",
+          "achieving the result you wanted"
+        ]
+      ]
+    },
+    {
+      "focus": "Test explanations; revise a conclusion",
+      "s": [
+        "We should investigate before treating an assumption as a fact.",
+        "New evidence may contradict our first explanation."
+      ],
+      "story": "A classroom plant droops, and Tony assumes it needs more water. Before adding any, he checks the soil with the teacher. It is already very wet. That evidence contradicts his first explanation. They investigate other possibilities, including drainage and light. They do not conclude that one of these is the cause until they have checked further.",
+      "r": [
+        [
+          "What contradicts the first explanation?",
+          "The soil is already very wet.",
+          "The plant has a pot.",
+          "The classroom has windows."
+        ],
+        [
+          "What is the most reasonable next step?",
+          "Check other possible causes.",
+          "Add as much water as possible.",
+          "Ignore the new evidence."
+        ]
+      ],
+      "l": [
+        "The speaker recommends checking an idea rather than assuming it is true.",
+        "The speaker says every assumption is a proven fact.",
+        "The speaker wants to stop investigating."
+      ],
+      "words": [
+        [
+          "assumption",
+          "가정",
+          "something you believe without checking"
+        ],
+        [
+          "investigate",
+          "조사하다",
+          "look into a question carefully"
+        ],
+        [
+          "conclude",
+          "결론 내리다",
+          "reach an idea after considering information"
+        ],
+        [
+          "contradict",
+          "모순되다",
+          "say or show the opposite"
+        ]
+      ],
+      "name": "Solving a mystery",
+      "place": "Reasoning",
+      "year": 5,
+      "exposure": [
+        [
+          "drainage",
+          "배수",
+          "the way water flows away"
+        ],
+        [
+          "explanation",
+          "설명",
+          "information about how or why something happens"
+        ]
+      ]
+    },
+    {
+      "focus": "Narrative structure; vary sentence openings",
+      "s": [
+        "A vivid detail can make a familiar event interesting.",
+        "The resolution should connect to the problem introduced earlier."
+      ],
+      "story": "Tony writes about losing a ticket just before a ferry leaves. His first draft lists events in sequence but gives little sense of how he felt. He adds the sound of the departure announcement and his shaking hands to create tension. In the resolution, he finds the ticket in the pocket he had checked too quickly. The ending grows from the original problem rather than introducing an unrelated surprise.",
+      "r": [
+        [
+          "Which detail helps create tension?",
+          "The departure announcement",
+          "The colour of every seat in town",
+          "A list of next week’s lessons"
+        ],
+        [
+          "Why does the resolution fit the story?",
+          "Finding the ticket settles the original problem.",
+          "It starts an entirely different journey.",
+          "It removes every earlier event."
+        ]
+      ],
+      "l": [
+        "The speaker says a clear descriptive detail can improve a story.",
+        "The speaker says every story must be about an unfamiliar place.",
+        "The speaker says descriptions should always be removed."
+      ],
+      "words": [
+        [
+          "sequence",
+          "순서",
+          "the order in which things happen"
+        ],
+        [
+          "tension",
+          "긴장감",
+          "a feeling of uncertainty about what will happen"
+        ],
+        [
+          "resolution",
+          "이야기의 해결",
+          "the part where a story’s main problem is settled"
+        ],
+        [
+          "vivid",
+          "생생한",
+          "creating a clear, strong picture in the mind"
+        ]
+      ],
+      "name": "Telling our stories",
+      "place": "Narrative language",
+      "year": 5,
+      "exposure": [
+        [
+          "departure",
+          "출발",
+          "leaving a place"
+        ],
+        [
+          "unrelated",
+          "관련 없는",
+          "not connected to something"
+        ]
+      ]
+    },
+    {
+      "focus": "Support an argument; acknowledge a counterpoint",
+      "s": [
+        "We should justify our proposal with specific examples.",
+        "Acknowledging a counterargument can make our explanation more thoughtful."
+      ],
+      "story": "Tony proposes a quiet lunchtime area. He explains the benefit for students who want to read or talk without shouting. A classmate points out that space is limited. Tony acknowledges this counterargument and suggests trying a small area twice a week. His revised proposal is more persuasive because it addresses a practical concern instead of pretending that no difficulty exists. His reasons help persuade others to consider a fair trial.",
+      "r": [
+        [
+          "What concern does the classmate raise?",
+          "Space is limited.",
+          "No students like reading.",
+          "Lunchtime has been cancelled."
+        ],
+        [
+          "Why is the revised proposal stronger?",
+          "It responds to a practical concern.",
+          "It ignores the other opinion.",
+          "It promises that every problem will disappear."
+        ]
+      ],
+      "l": [
+        "The speaker wants concrete reasons for a suggestion.",
+        "The speaker wants to replace reasons with louder words.",
+        "The speaker says examples are never useful."
+      ],
+      "words": [
+        [
+          "persuade",
+          "설득하다",
+          "give reasons intended to change someone’s view"
+        ],
+        [
+          "justify",
+          "정당한 이유를 대다",
+          "give reasons for a choice"
+        ],
+        [
+          "counterargument",
+          "반론",
+          "a reason against an idea"
+        ],
+        [
+          "benefit",
+          "장점이나 이익",
+          "a helpful result or advantage"
+        ]
+      ],
+      "name": "An idea worth sharing",
+      "place": "Opinions and explanation",
+      "year": 5,
+      "exposure": [
+        [
+          "acknowledges",
+          "인정하다",
+          "shows that an idea has been heard and considered"
+        ],
+        [
+          "practical",
+          "실용적인",
+          "useful in a real situation"
+        ]
+      ]
+    },
+    {
+      "focus": "Evaluate growth; transfer language to new situations",
+      "s": [
+        "I can evaluate my progress by comparing examples of my work.",
+        "These communication skills are transferable to situations beyond this course."
+      ],
+      "story": "Tony compares an early explanation with a recent one. The newer piece includes a reason, evidence and an answer to a possible objection. He reflects on feedback that helped him improve. Instead of judging progress only by the number of activities finished, he evaluates how independently he can use the language. His next goal is to use the same skills in a real group discussion.",
+      "r": [
+        [
+          "What does the recent explanation include?",
+          "A reason, evidence and an answer to an objection",
+          "Only a longer title",
+          "A list of unrelated words"
+        ],
+        [
+          "Why is the real discussion a useful next goal?",
+          "It tests whether the skills transfer beyond the exercises.",
+          "It guarantees nobody will disagree.",
+          "It replaces the need to understand the language."
+        ]
+      ],
+      "l": [
+        "The speaker will use work samples to judge progress.",
+        "The speaker will judge only by speed.",
+        "The speaker will avoid looking at earlier work."
+      ],
+      "words": [
+        [
+          "reflect",
+          "되돌아보다",
+          "think carefully about an experience"
+        ],
+        [
+          "evaluate",
+          "평가하다",
+          "judge how useful or successful something is"
+        ],
+        [
+          "transferable",
+          "다른 상황에도 쓸 수 있는",
+          "useful in another task or place"
+        ],
+        [
+          "independent",
+          "독립적인",
+          "able to do something with less help"
+        ]
+      ],
+      "name": "Looking back and ahead",
+      "place": "Reflection",
+      "year": 5,
+      "exposure": [
+        [
+          "objection",
+          "반대 의견",
+          "a reason for not agreeing"
+        ],
+        [
+          "discussion",
+          "토론",
+          "a talk where people share ideas"
+        ]
+      ]
+    }
+  ]
+}

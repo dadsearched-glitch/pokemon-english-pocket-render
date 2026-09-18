@@ -1,0 +1,186 @@
+{
+  "version": 1,
+  "active": "Tony",
+  "profiles": {
+    "Tony": {
+      "courseVersion": "nz-life-1",
+      "unitProgress": {
+        "0": {
+          "done": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "partial": {}
+        }
+      },
+      "courseComplete": false,
+      "xp": 123,
+      "chapter": 3,
+      "done": [
+        0,
+        2
+      ],
+      "partial": {
+        "4": {
+          "index": 1,
+          "review": [],
+          "words": [],
+          "order": []
+        }
+      },
+      "packs": 4,
+      "opened": 0,
+      "cards": [
+        25,
+        6,
+        9
+      ],
+      "pendingPack": null,
+      "review": {},
+      "mistakes": [],
+      "battles": 4,
+      "wins": 2,
+      "lessonCount": 12,
+      "days": [],
+      "battle": {
+        "team": [
+          {
+            "id": 25,
+            "hp": 90
+          },
+          {
+            "id": 6,
+            "hp": 140
+          },
+          {
+            "id": 9,
+            "hp": 150
+          }
+        ],
+        "active": 0,
+        "enemies": [
+          {
+            "id": "A1-013",
+            "hp": 80,
+            "max": 80
+          },
+          {
+            "id": "A1-016",
+            "hp": 80,
+            "max": 80
+          },
+          {
+            "id": "A1-026",
+            "hp": 80,
+            "max": 80
+          }
+        ],
+        "enemy": 0,
+        "energy": 0,
+        "combo": 0,
+        "guard": false,
+        "turn": 0,
+        "phase": "question",
+        "result": null,
+        "paid": false,
+        "log": "Answer to charge English Power."
+      },
+      "route": "home"
+    },
+    "Kai": {
+      "courseVersion": "nz-life-1",
+      "unitProgress": {
+        "0": {
+          "done": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "partial": {}
+        }
+      },
+      "courseComplete": false,
+      "xp": 123,
+      "chapter": 4,
+      "done": [
+        0,
+        2
+      ],
+      "partial": {
+        "4": {
+          "index": 1,
+          "review": [],
+          "words": [],
+          "order": []
+        }
+      },
+      "packs": 4,
+      "opened": 0,
+      "cards": [
+        25,
+        6,
+        9
+      ],
+      "pendingPack": null,
+      "review": {},
+      "mistakes": [],
+      "battles": 4,
+      "wins": 2,
+      "lessonCount": 12,
+      "days": [],
+      "battle": {
+        "team": [
+          {
+            "id": 25,
+            "hp": 90
+          },
+          {
+            "id": 6,
+            "hp": 140
+          },
+          {
+            "id": 9,
+            "hp": 150
+          }
+        ],
+        "active": 0,
+        "enemies": [
+          {
+            "id": "A1-013",
+            "hp": 80,
+            "max": 80
+          },
+          {
+            "id": "A1-016",
+            "hp": 80,
+            "max": 80
+          },
+          {
+            "id": "A1-026",
+            "hp": 80,
+            "max": 80
+          }
+        ],
+        "enemy": 0,
+        "energy": 0,
+        "combo": 0,
+        "guard": false,
+        "turn": 0,
+        "phase": "question",
+        "result": null,
+        "paid": false,
+        "log": "Answer to charge English Power."
+      },
+      "route": "home"
+    }
+  },
+  "voice": "mitchell",
+  "sound": false
+}

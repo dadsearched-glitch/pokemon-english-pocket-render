@@ -1,0 +1,27 @@
+// These words already occur in the existing stories. Support does not add tested core words.
+export const YEAR5_SUPPORT=[
+ 'labelled|표시가 붙은|with names or notes added;materials|재료|things used to make something',
+ 'referee|심판|someone who checks that game rules are followed;volunteers|자원하다|offers to do something',
+ 'suitable|알맞은|right for a purpose;options|선택지|things you can choose',
+ 'forecast|일기예보|a report about expected weather;outdoor|야외의|outside a building',
+ 'supervising|보살피는|watching over an activity to keep it safe;direct|직접 가는|going without extra turns or stops',
+ 'contain|들어 있다|have something inside;project|과제|a planned piece of work',
+ 'insist|고집하다|keep saying something must happen;separate|분리된|apart from each other',
+ 'clutter|어질러진 물건|things lying around in the way;replacements|대체품|things used instead of old ones',
+ 'neighbour|이웃|someone who lives nearby;conversation|대화|a talk between people',
+ 'seedlings|어린 모종|very young plants;comparison|비교|looking at how things are alike or different',
+ 'coastal|해안의|near the sea;rearranging|다시 배치하는|moving things into different positions',
+ 'connection|연결편|the next vehicle in a journey;updated|갱신된|changed to include new information',
+ 'attempt|시도|a try at doing something;failure|실패|not achieving what was planned',
+ 'layout|배치|the way things are arranged;headings|제목들|short titles above sections',
+ 'doubling|두 배로 늘리기|making an amount twice as large;mixture|혼합물|different things put together',
+ 'occasion|행사나 때|a particular event or time;represent|대표하다|show or speak for something',
+ 'official|공식적인|from the organisation in charge;claim|주장|something someone says is true',
+ 'reserve|보호 구역|land kept to protect nature;dense|빽빽한|with many things close together',
+ 'disposable|일회용의|made to be thrown away after use;storage|보관|keeping things until needed',
+ 'accuracy|정확성|how close something is to the intended result;successful|성공한|achieving the result you wanted',
+ 'drainage|배수|the way water flows away;explanation|설명|information about how or why something happens',
+ 'departure|출발|leaving a place;unrelated|관련 없는|not connected to something',
+ 'acknowledges|인정하다|shows that an idea has been heard and considered;practical|실용적인|useful in a real situation',
+ 'objection|반대 의견|a reason for not agreeing;discussion|토론|a talk where people share ideas'
+].map(row=>row.split(';').map(w=>w.split('|')));

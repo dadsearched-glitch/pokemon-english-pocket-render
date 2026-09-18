@@ -1,0 +1,17 @@
+import {SET_CARDS} from './catalogue.js';
+export const MODES=[['Vocabulary','Four useful words in context','book'],['Listening','Listen to your guide','headphones'],['Reading','Find a clue in the story','read'],['Sentence','Put the words in order','puzzle'],['Speaking','Say it with confidence','mic'],['Review','Bring the words back','repeat']];
+export const TYPES={electric:{colour:'#f6ce65',symbol:'ϟ',weak:'grass'},fire:{colour:'#ff9876',symbol:'♨',weak:'water'},water:{colour:'#7ccdfa',symbol:'◈',weak:'electric'},grass:{colour:'#91dea4',symbol:'❧',weak:'fire'},psychic:{colour:'#d9a4f4',symbol:'✧',weak:'psychic'},normal:{colour:'#dbd4c0',symbol:'☆',weak:'fire'}};
+// Card catalogue is independent of the learning and battle engines. Art stays runtime-referenced.
+export const LEGACY_CARDS=[
+ [25,'Pikachu','electric',90,'rare','Quick Spark','Thunder Dash'],[133,'Eevee','normal',100,'common','Quick Step','Star Rush'],[1,'Bulbasaur','grass',105,'common','Vine Tap','Leaf Storm'],[4,'Charmander','fire',95,'common','Ember','Flame Spiral'],[7,'Squirtle','water',110,'common','Bubble','Wave Crash'],[39,'Jigglypuff','normal',115,'common','Sing','Star Song'],[37,'Vulpix','fire',90,'common','Warm Glow','Fire Dance'],[54,'Psyduck','water',105,'common','Splash','Mind Wave'],[152,'Chikorita','grass',105,'common','Leaf Cut','Garden Rush'],[172,'Pichu','electric',85,'common','Tiny Spark','Bolt Bounce'],[35,'Clefairy','psychic',100,'common','Moon Tap','Moon Beam'],[147,'Dratini','water',100,'rare','Dragon Tail','Ocean Spiral'],[143,'Snorlax','normal',145,'rare','Body Bump','Dream Smash'],[131,'Lapras','water',130,'rare','Water Pulse','Ice Song'],[448,'Lucario','psychic',120,'rare','Aura Tap','Aura Sphere'],[94,'Gengar','psychic',115,'rare','Shadow Tap','Night Burst'],[6,'Charizard','fire',140,'EX','Flame Wing','Blazing Sky'],[9,'Blastoise','water',150,'EX','Water Jet','Hydro Cannon'],[3,'Venusaur','grass',150,'EX','Vine Swing','Solar Bloom'],[149,'Dragonite','normal',155,'EX','Wing Rush','Dragon Comet'],[150,'Mewtwo','psychic',145,'EX','Mind Pulse','Psychic Nova'],[151,'Mew','psychic',135,'EX','Star Pulse','Wonder Burst'],[135,'Jolteon','electric',130,'EX','Volt Step','Thunder Storm'],[181,'Ampharos','electric',140,'rare','Light Spark','Beacon Bolt']
+].map(([id,name,type,hp,rarity,move,power])=>({id,name,type,hp,rarity,move,power,art:`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png`}));
+Object.assign(TYPES,{fighting:{colour:'#e6a97c',symbol:'◆',weak:'psychic'},dark:{colour:'#94b4cb',symbol:'☾',weak:'fighting'},metal:{colour:'#c0d1df',symbol:'⬡',weak:'fire'},dragon:{colour:'#d6ba6e',symbol:'◇',weak:'dragon'}});
+export const CARDS=[...SET_CARDS,...LEGACY_CARDS];
+export const BATTLE_CARDS=CARDS.filter(c=>c.battleEligible!==false);
+const CARD_INDEX=new Map(CARDS.map(c=>[String(c.id),c]));
+// Profile-specific NZ everyday English courses replace the old repeating 24-word bank.
+export {questions} from './course.js';
+import {COURSES,vocabularyFor} from './course.js';
+export const UNITS=COURSES.Tony;
+export const wordPool=[...vocabularyFor('Tony'),...vocabularyFor('Kai')];
+export const byId=id=>CARD_INDEX.get(String(id));

@@ -1,0 +1,35 @@
+{
+  "units": 144,
+  "unique_core_words": 576,
+  "unique_learning_utterances": 1008,
+  "expected_learning_files": 1008,
+  "manifest_total_including_legacy_and_moves": 1161,
+  "actual_mp3_files": 1161,
+  "missing_learning_files": [],
+  "story_word_ranges": {
+    "1": [
+      24,
+      27
+    ],
+    "2": [
+      33,
+      40
+    ],
+    "3": [
+      41,
+      59
+    ],
+    "4": [
+      57,
+      74
+    ],
+    "5": [
+      65,
+      77
+    ],
+    "6": [
+      82,
+      96
+    ]
+  }
+}

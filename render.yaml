@@ -1,0 +1,8 @@
+services:
+  - type: web
+    name: pokemon-english-pocket
+    runtime: node
+    buildCommand: npm install
+    startCommand: npm run together
+    healthCheckPath: /
+    autoDeploy: false

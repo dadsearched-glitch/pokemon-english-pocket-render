@@ -1,0 +1,9 @@
+node_modules/
+.sites-runtime/
+test-results/
+*.tar.gz
+*.zip
+__pycache__/
+
+dist/
+.env

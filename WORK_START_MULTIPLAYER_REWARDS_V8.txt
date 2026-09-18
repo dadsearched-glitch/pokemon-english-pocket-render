@@ -1,0 +1,72 @@
+Read these files first:
+
+1. `WORK_HANDOFF_MULTIPLAYER_REWARDS_V8.md`
+2. `MULTIPLAYER_RESEARCH_AND_ECONOMY_NOTES.md`
+3. the latest complete v8 source ZIP
+
+Work from the latest proven v8 codebase. Preserve the existing Year 1–6 learning system, Molly audio, pack odds, 310-card catalogue, solo battle, cinematic graphics, profiles, saves and backup/restore.
+
+This is not a request to merely add menu buttons. First verify the real two-device networking/deployment architecture.
+
+Important:
+- the current deployment is static,
+- same Wi-Fi alone does not make two browser pages communicate,
+- do not use BroadcastChannel as the cross-phone transport,
+- prefer WebRTC RTCDataChannel plus an ephemeral signaling path if the deployment can support it,
+- do not silently add a third-party backend/service or expose API secrets,
+- if a signaling service is required outside the current deployment, report that before production deployment.
+
+Then implement in phases:
+
+Phase 1:
+- Create/Join Room
+- two real clients
+- Trainer Duel 1v1
+- Adventure Medal rewards
+- exactly-once match reward ledger
+
+Phase 2:
+- 2-player Boss Raid
+- Team Gauge / Team Attack
+- boss shield phases
+- Cheer/Rescue when a player is knocked out
+- 1–5 star Raid ladders
+- Adventure Medals
+- Pack Shards (5 = one existing normal pack)
+- Team Bond
+- Boss Badges
+- use first-clear raids as the acquisition route for the 24 legacy Adventure Cards if you confirm a new normal profile currently has no other route to them
+
+Phase 3:
+- Co-op Dungeon
+- deterministic shared map
+- run-only temporary items
+
+Phase 4:
+- Duo Tag Battle: 2 humans vs 2 AI
+- Tag Chain / Duo Move
+
+Phase 5:
+- Duplicate Spark from extra copies without deleting cards
+- cosmetic Adventure Shop
+- actual cosmetic unlocks for the existing 25/50/100/150/200/250/310 Discovery Goals
+
+Use each player's own learning level/questions. Do not make the multiplayer contest a speed race between Year levels.
+
+Do not award full packs frequently. Learning must remain the main pack source.
+
+Before editing, give me a short architecture audit and implementation plan.
+
+After each phase, run focused tests. Keep the existing 32 tests passing and add multiplayer/reward/migration tests specified in the handoff.
+
+At the end provide:
+- updated full source ZIP,
+- changed-file list,
+- networking/signaling architecture,
+- save migration details,
+- reward economy implementation,
+- automated/browser test results,
+- real two-phone same-Wi-Fi test status,
+- known limitations.
+
+Do not deploy the new production version until I explicitly approve deployment after reviewing the test report.

@@ -1,0 +1,1458 @@
+{
+  "schema_version": "1.0",
+  "note": "Authoritative Core Word map for Pocket English Year 1-6. 24 units/year, 4 new Core Words/unit, 96/year, 576 unique core words total.",
+  "years": {
+    "1": [
+      {
+        "unit": 1,
+        "topic": "Ready for class",
+        "core_words": [
+          "bag",
+          "book",
+          "pencil",
+          "desk"
+        ]
+      },
+      {
+        "unit": 2,
+        "topic": "Making friends",
+        "core_words": [
+          "hello",
+          "friend",
+          "play",
+          "help"
+        ]
+      },
+      {
+        "unit": 3,
+        "topic": "Lunchbox choices",
+        "core_words": [
+          "lunch",
+          "apple",
+          "water",
+          "hungry"
+        ]
+      },
+      {
+        "unit": 4,
+        "topic": "A change in weather",
+        "core_words": [
+          "sun",
+          "rain",
+          "warm",
+          "cold"
+        ]
+      },
+      {
+        "unit": 5,
+        "topic": "Finding your way",
+        "core_words": [
+          "left",
+          "right",
+          "stop",
+          "road"
+        ]
+      },
+      {
+        "unit": 6,
+        "topic": "At the shops",
+        "core_words": [
+          "shop",
+          "buy",
+          "pay",
+          "money"
+        ]
+      },
+      {
+        "unit": 7,
+        "topic": "A fair playground",
+        "core_words": [
+          "wait",
+          "give",
+          "take",
+          "together"
+        ]
+      },
+      {
+        "unit": 8,
+        "topic": "Looking after things",
+        "core_words": [
+          "keep",
+          "put",
+          "find",
+          "care"
+        ]
+      },
+      {
+        "unit": 9,
+        "topic": "Books we choose",
+        "core_words": [
+          "story",
+          "picture",
+          "page",
+          "read"
+        ]
+      },
+      {
+        "unit": 10,
+        "topic": "Our school garden",
+        "core_words": [
+          "plant",
+          "leaf",
+          "grow",
+          "flower"
+        ]
+      },
+      {
+        "unit": 11,
+        "topic": "A trip to the beach",
+        "core_words": [
+          "sand",
+          "sea",
+          "shell",
+          "swim"
+        ]
+      },
+      {
+        "unit": 12,
+        "topic": "Getting around",
+        "core_words": [
+          "bus",
+          "car",
+          "walk",
+          "ride"
+        ]
+      },
+      {
+        "unit": 13,
+        "topic": "Feelings and needs",
+        "core_words": [
+          "happy",
+          "sad",
+          "angry",
+          "tired"
+        ]
+      },
+      {
+        "unit": 14,
+        "topic": "Working together",
+        "core_words": [
+          "team",
+          "ask",
+          "answer",
+          "work"
+        ]
+      },
+      {
+        "unit": 15,
+        "topic": "Making something tasty",
+        "core_words": [
+          "cup",
+          "spoon",
+          "mix",
+          "eat"
+        ]
+      },
+      {
+        "unit": 16,
+        "topic": "Celebrating together",
+        "core_words": [
+          "family",
+          "party",
+          "song",
+          "dance"
+        ]
+      },
+      {
+        "unit": 17,
+        "topic": "The world online",
+        "core_words": [
+          "screen",
+          "tap",
+          "adult",
+          "close"
+        ]
+      },
+      {
+        "unit": 18,
+        "topic": "Noticing the natural world",
+        "core_words": [
+          "bird",
+          "tree",
+          "bug",
+          "animal"
+        ]
+      },
+      {
+        "unit": 19,
+        "topic": "Changing our waste",
+        "core_words": [
+          "bin",
+          "paper",
+          "bottle",
+          "pick"
+        ]
+      },
+      {
+        "unit": 20,
+        "topic": "Moving and practising",
+        "core_words": [
+          "run",
+          "jump",
+          "catch",
+          "throw"
+        ]
+      },
+      {
+        "unit": 21,
+        "topic": "Solving a mystery",
+        "core_words": [
+          "look",
+          "hide",
+          "where",
+          "found"
+        ]
+      },
+      {
+        "unit": 22,
+        "topic": "Telling our stories",
+        "core_words": [
+          "first",
+          "next",
+          "then",
+          "last"
+        ]
+      },
+      {
+        "unit": 23,
+        "topic": "An idea worth sharing",
+        "core_words": [
+          "think",
+          "say",
+          "like",
+          "want"
+        ]
+      },
+      {
+        "unit": 24,
+        "topic": "Looking back and ahead",
+        "core_words": [
+          "learn",
+          "try",
+          "better",
+          "proud"
+        ]
+      }
+    ],
+    "2": [
+      {
+        "unit": 1,
+        "topic": "Ready for class",
+        "core_words": [
+          "pack",
+          "bring",
+          "begin",
+          "carry"
+        ]
+      },
+      {
+        "unit": 2,
+        "topic": "Making friends",
+        "core_words": [
+          "meet",
+          "smile",
+          "chat",
+          "polite"
+        ]
+      },
+      {
+        "unit": 3,
+        "topic": "Lunchbox choices",
+        "core_words": [
+          "fruit",
+          "sandwich",
+          "drink",
+          "full"
+        ]
+      },
+      {
+        "unit": 4,
+        "topic": "A change in weather",
+        "core_words": [
+          "cloud",
+          "windy",
+          "storm",
+          "coat"
+        ]
+      },
+      {
+        "unit": 5,
+        "topic": "Finding your way",
+        "core_words": [
+          "near",
+          "far",
+          "beside",
+          "between"
+        ]
+      },
+      {
+        "unit": 6,
+        "topic": "At the shops",
+        "core_words": [
+          "coin",
+          "spend",
+          "need",
+          "sale"
+        ]
+      },
+      {
+        "unit": 7,
+        "topic": "A fair playground",
+        "core_words": [
+          "fairly",
+          "queue",
+          "winner",
+          "chance"
+        ]
+      },
+      {
+        "unit": 8,
+        "topic": "Looking after things",
+        "core_words": [
+          "broken",
+          "fix",
+          "label",
+          "shelf"
+        ]
+      },
+      {
+        "unit": 9,
+        "topic": "Books we choose",
+        "core_words": [
+          "title",
+          "author",
+          "chapter",
+          "favourite"
+        ]
+      },
+      {
+        "unit": 10,
+        "topic": "Our school garden",
+        "core_words": [
+          "garden",
+          "dig",
+          "sprout",
+          "wet"
+        ]
+      },
+      {
+        "unit": 11,
+        "topic": "A trip to the beach",
+        "core_words": [
+          "ocean",
+          "rock",
+          "splash",
+          "deep"
+        ]
+      },
+      {
+        "unit": 12,
+        "topic": "Getting around",
+        "core_words": [
+          "ticket",
+          "driver",
+          "leave",
+          "early"
+        ]
+      },
+      {
+        "unit": 13,
+        "topic": "Feelings and needs",
+        "core_words": [
+          "excited",
+          "scared",
+          "sleepy",
+          "brave"
+        ]
+      },
+      {
+        "unit": 14,
+        "topic": "Working together",
+        "core_words": [
+          "group",
+          "job",
+          "leader",
+          "member"
+        ]
+      },
+      {
+        "unit": 15,
+        "topic": "Making something tasty",
+        "core_words": [
+          "pour",
+          "cut",
+          "bake",
+          "smell"
+        ]
+      },
+      {
+        "unit": 16,
+        "topic": "Celebrating together",
+        "core_words": [
+          "gift",
+          "music",
+          "decorate",
+          "guest"
+        ]
+      },
+      {
+        "unit": 17,
+        "topic": "The world online",
+        "core_words": [
+          "device",
+          "button",
+          "photo",
+          "online"
+        ]
+      },
+      {
+        "unit": 18,
+        "topic": "Noticing the natural world",
+        "core_words": [
+          "insect",
+          "nest",
+          "bush",
+          "river"
+        ]
+      },
+      {
+        "unit": 19,
+        "topic": "Changing our waste",
+        "core_words": [
+          "cardboard",
+          "wrapper",
+          "leftover",
+          "dispose"
+        ]
+      },
+      {
+        "unit": 20,
+        "topic": "Moving and practising",
+        "core_words": [
+          "hop",
+          "skip",
+          "kick",
+          "move"
+        ]
+      },
+      {
+        "unit": 21,
+        "topic": "Solving a mystery",
+        "core_words": [
+          "lost",
+          "track",
+          "secret",
+          "wonder"
+        ]
+      },
+      {
+        "unit": 22,
+        "topic": "Telling our stories",
+        "core_words": [
+          "before",
+          "after",
+          "while",
+          "soon"
+        ]
+      },
+      {
+        "unit": 23,
+        "topic": "An idea worth sharing",
+        "core_words": [
+          "because",
+          "maybe",
+          "should",
+          "why"
+        ]
+      },
+      {
+        "unit": 24,
+        "topic": "Looking back and ahead",
+        "core_words": [
+          "hard",
+          "easy",
+          "mistake",
+          "again"
+        ]
+      }
+    ],
+    "3": [
+      {
+        "unit": 1,
+        "topic": "Ready for class",
+        "core_words": [
+          "borrow",
+          "return",
+          "ready",
+          "carefully"
+        ]
+      },
+      {
+        "unit": 2,
+        "topic": "Making friends",
+        "core_words": [
+          "invite",
+          "join",
+          "lonely",
+          "kind"
+        ]
+      },
+      {
+        "unit": 3,
+        "topic": "Lunchbox choices",
+        "core_words": [
+          "crunchy",
+          "fresh",
+          "enough",
+          "thirsty"
+        ]
+      },
+      {
+        "unit": 4,
+        "topic": "A change in weather",
+        "core_words": [
+          "drizzle",
+          "forecast",
+          "shelter",
+          "waterproof"
+        ]
+      },
+      {
+        "unit": 5,
+        "topic": "Finding your way",
+        "core_words": [
+          "corner",
+          "opposite",
+          "straight",
+          "crossing"
+        ]
+      },
+      {
+        "unit": 6,
+        "topic": "At the shops",
+        "core_words": [
+          "price",
+          "change",
+          "receipt",
+          "choose"
+        ]
+      },
+      {
+        "unit": 7,
+        "topic": "A fair playground",
+        "core_words": [
+          "fair",
+          "turn",
+          "agree",
+          "rule"
+        ]
+      },
+      {
+        "unit": 8,
+        "topic": "Looking after things",
+        "core_words": [
+          "tidy",
+          "sort",
+          "repair",
+          "useful"
+        ]
+      },
+      {
+        "unit": 9,
+        "topic": "Books we choose",
+        "core_words": [
+          "character",
+          "setting",
+          "clue",
+          "ending"
+        ]
+      },
+      {
+        "unit": 10,
+        "topic": "Our school garden",
+        "core_words": [
+          "seed",
+          "soil",
+          "shoot",
+          "gentle"
+        ]
+      },
+      {
+        "unit": 11,
+        "topic": "A trip to the beach",
+        "core_words": [
+          "shore",
+          "tide",
+          "shallow",
+          "litter"
+        ]
+      },
+      {
+        "unit": 12,
+        "topic": "Getting around",
+        "core_words": [
+          "arrive",
+          "depart",
+          "timetable",
+          "passenger"
+        ]
+      },
+      {
+        "unit": 13,
+        "topic": "Feelings and needs",
+        "core_words": [
+          "worried",
+          "calm",
+          "rest",
+          "explain"
+        ]
+      },
+      {
+        "unit": 14,
+        "topic": "Working together",
+        "core_words": [
+          "task",
+          "partner",
+          "plan",
+          "check"
+        ]
+      },
+      {
+        "unit": 15,
+        "topic": "Making something tasty",
+        "core_words": [
+          "measure",
+          "stir",
+          "mixture",
+          "finally"
+        ]
+      },
+      {
+        "unit": 16,
+        "topic": "Celebrating together",
+        "core_words": [
+          "celebrate",
+          "welcome",
+          "tradition",
+          "belong"
+        ]
+      },
+      {
+        "unit": 17,
+        "topic": "The world online",
+        "core_words": [
+          "message",
+          "private",
+          "permission",
+          "pause"
+        ]
+      },
+      {
+        "unit": 18,
+        "topic": "Noticing the natural world",
+        "core_words": [
+          "native",
+          "feather",
+          "quietly",
+          "notice"
+        ]
+      },
+      {
+        "unit": 19,
+        "topic": "Changing our waste",
+        "core_words": [
+          "reduce",
+          "reuse",
+          "recycle",
+          "rubbish"
+        ]
+      },
+      {
+        "unit": 20,
+        "topic": "Moving and practising",
+        "core_words": [
+          "balance",
+          "stretch",
+          "practise",
+          "improve"
+        ]
+      },
+      {
+        "unit": 21,
+        "topic": "Solving a mystery",
+        "core_words": [
+          "missing",
+          "search",
+          "perhaps",
+          "discover"
+        ]
+      },
+      {
+        "unit": 22,
+        "topic": "Telling our stories",
+        "core_words": [
+          "beginning",
+          "middle",
+          "suddenly",
+          "afterwards"
+        ]
+      },
+      {
+        "unit": 23,
+        "topic": "An idea worth sharing",
+        "core_words": [
+          "opinion",
+          "reason",
+          "suggest",
+          "listen"
+        ]
+      },
+      {
+        "unit": 24,
+        "topic": "Looking back and ahead",
+        "core_words": [
+          "remember",
+          "confident",
+          "challenge",
+          "goal"
+        ]
+      }
+    ],
+    "4": [
+      {
+        "unit": 1,
+        "topic": "Ready for class",
+        "core_words": [
+          "prepare",
+          "follow",
+          "understand",
+          "finish"
+        ]
+      },
+      {
+        "unit": 2,
+        "topic": "Making friends",
+        "core_words": [
+          "greet",
+          "share",
+          "friendly",
+          "support"
+        ]
+      },
+      {
+        "unit": 3,
+        "topic": "Lunchbox choices",
+        "core_words": [
+          "healthy",
+          "snack",
+          "refill",
+          "prefer"
+        ]
+      },
+      {
+        "unit": 4,
+        "topic": "A change in weather",
+        "core_words": [
+          "cloudy",
+          "shower",
+          "temperature",
+          "protect"
+        ]
+      },
+      {
+        "unit": 5,
+        "topic": "Finding your way",
+        "core_words": [
+          "direction",
+          "nearby",
+          "across",
+          "map"
+        ]
+      },
+      {
+        "unit": 6,
+        "topic": "At the shops",
+        "core_words": [
+          "cost",
+          "total",
+          "cheaper",
+          "decide"
+        ]
+      },
+      {
+        "unit": 7,
+        "topic": "A fair playground",
+        "core_words": [
+          "patient",
+          "equal",
+          "solve",
+          "calmly"
+        ]
+      },
+      {
+        "unit": 8,
+        "topic": "Looking after things",
+        "core_words": [
+          "clean",
+          "mend",
+          "store",
+          "waste"
+        ]
+      },
+      {
+        "unit": 9,
+        "topic": "Books we choose",
+        "core_words": [
+          "plot",
+          "detail",
+          "theme",
+          "describe"
+        ]
+      },
+      {
+        "unit": 10,
+        "topic": "Our school garden",
+        "core_words": [
+          "root",
+          "stem",
+          "growth",
+          "sunlight"
+        ]
+      },
+      {
+        "unit": 11,
+        "topic": "A trip to the beach",
+        "core_words": [
+          "coast",
+          "wave",
+          "rockpool",
+          "pollution"
+        ]
+      },
+      {
+        "unit": 12,
+        "topic": "Getting around",
+        "core_words": [
+          "journey",
+          "station",
+          "board",
+          "cancel"
+        ]
+      },
+      {
+        "unit": 13,
+        "topic": "Feelings and needs",
+        "core_words": [
+          "nervous",
+          "relaxed",
+          "upset",
+          "solution"
+        ]
+      },
+      {
+        "unit": 14,
+        "topic": "Working together",
+        "core_words": [
+          "role",
+          "discuss",
+          "cooperate",
+          "complete"
+        ]
+      },
+      {
+        "unit": 15,
+        "topic": "Making something tasty",
+        "core_words": [
+          "recipe",
+          "slice",
+          "boil",
+          "taste"
+        ]
+      },
+      {
+        "unit": 16,
+        "topic": "Celebrating together",
+        "core_words": [
+          "culture",
+          "ceremony",
+          "special",
+          "community"
+        ]
+      },
+      {
+        "unit": 17,
+        "topic": "The world online",
+        "core_words": [
+          "password",
+          "safe",
+          "trust",
+          "report"
+        ]
+      },
+      {
+        "unit": 18,
+        "topic": "Noticing the natural world",
+        "core_words": [
+          "environment",
+          "forest",
+          "creature",
+          "survive"
+        ]
+      },
+      {
+        "unit": 19,
+        "topic": "Changing our waste",
+        "core_words": [
+          "compost",
+          "plastic",
+          "collect",
+          "save"
+        ]
+      },
+      {
+        "unit": 20,
+        "topic": "Moving and practising",
+        "core_words": [
+          "warm-up",
+          "skill",
+          "effort",
+          "routine"
+        ]
+      },
+      {
+        "unit": 21,
+        "topic": "Solving a mystery",
+        "core_words": [
+          "unusual",
+          "possibility",
+          "pattern",
+          "result"
+        ]
+      },
+      {
+        "unit": 22,
+        "topic": "Telling our stories",
+        "core_words": [
+          "event",
+          "paragraph",
+          "dialogue",
+          "connect"
+        ]
+      },
+      {
+        "unit": 23,
+        "topic": "An idea worth sharing",
+        "core_words": [
+          "idea",
+          "example",
+          "point",
+          "convince"
+        ]
+      },
+      {
+        "unit": 24,
+        "topic": "Looking back and ahead",
+        "core_words": [
+          "progress",
+          "strength",
+          "target",
+          "future"
+        ]
+      }
+    ],
+    "5": [
+      {
+        "unit": 1,
+        "topic": "Ready for class",
+        "core_words": [
+          "clarify",
+          "instruction",
+          "organise",
+          "responsibility"
+        ]
+      },
+      {
+        "unit": 2,
+        "topic": "Making friends",
+        "core_words": [
+          "include",
+          "considerate",
+          "hesitate",
+          "encourage"
+        ]
+      },
+      {
+        "unit": 3,
+        "topic": "Lunchbox choices",
+        "core_words": [
+          "ingredient",
+          "portion",
+          "balanced",
+          "preference"
+        ]
+      },
+      {
+        "unit": 4,
+        "topic": "A change in weather",
+        "core_words": [
+          "conditions",
+          "predict",
+          "likely",
+          "warning"
+        ]
+      },
+      {
+        "unit": 5,
+        "topic": "Finding your way",
+        "core_words": [
+          "route",
+          "landmark",
+          "intersection",
+          "destination"
+        ]
+      },
+      {
+        "unit": 6,
+        "topic": "At the shops",
+        "core_words": [
+          "budget",
+          "compare",
+          "value",
+          "purchase"
+        ]
+      },
+      {
+        "unit": 7,
+        "topic": "A fair playground",
+        "core_words": [
+          "compromise",
+          "resolve",
+          "disagreement",
+          "respectful"
+        ]
+      },
+      {
+        "unit": 8,
+        "topic": "Looking after things",
+        "core_words": [
+          "priority",
+          "efficient",
+          "maintain",
+          "reusable"
+        ]
+      },
+      {
+        "unit": 9,
+        "topic": "Books we choose",
+        "core_words": [
+          "infer",
+          "evidence",
+          "narrator",
+          "motive"
+        ]
+      },
+      {
+        "unit": 10,
+        "topic": "Our school garden",
+        "core_words": [
+          "observe",
+          "germinate",
+          "variable",
+          "record"
+        ]
+      },
+      {
+        "unit": 11,
+        "topic": "A trip to the beach",
+        "core_words": [
+          "habitat",
+          "marine",
+          "fragile",
+          "impact"
+        ]
+      },
+      {
+        "unit": 12,
+        "topic": "Getting around",
+        "core_words": [
+          "delay",
+          "alternative",
+          "transfer",
+          "schedule"
+        ]
+      },
+      {
+        "unit": 13,
+        "topic": "Feelings and needs",
+        "core_words": [
+          "frustrated",
+          "reassure",
+          "perspective",
+          "strategy"
+        ]
+      },
+      {
+        "unit": 14,
+        "topic": "Working together",
+        "core_words": [
+          "contribute",
+          "coordinate",
+          "deadline",
+          "feedback"
+        ]
+      },
+      {
+        "unit": 15,
+        "topic": "Making something tasty",
+        "core_words": [
+          "quantity",
+          "method",
+          "adjust",
+          "consistent"
+        ]
+      },
+      {
+        "unit": 16,
+        "topic": "Celebrating together",
+        "core_words": [
+          "heritage",
+          "custom",
+          "diverse",
+          "importance"
+        ]
+      },
+      {
+        "unit": 17,
+        "topic": "The world online",
+        "core_words": [
+          "consent",
+          "reliable",
+          "source",
+          "audience"
+        ]
+      },
+      {
+        "unit": 18,
+        "topic": "Noticing the natural world",
+        "core_words": [
+          "species",
+          "adaptation",
+          "conservation",
+          "threat"
+        ]
+      },
+      {
+        "unit": 19,
+        "topic": "Changing our waste",
+        "core_words": [
+          "sustainable",
+          "resource",
+          "proposal",
+          "consequence"
+        ]
+      },
+      {
+        "unit": 20,
+        "topic": "Moving and practising",
+        "core_words": [
+          "stamina",
+          "technique",
+          "gradual",
+          "achievement"
+        ]
+      },
+      {
+        "unit": 21,
+        "topic": "Solving a mystery",
+        "core_words": [
+          "theory",
+          "investigate",
+          "conclude",
+          "question"
+        ]
+      },
+      {
+        "unit": 22,
+        "topic": "Telling our stories",
+        "core_words": [
+          "sequence",
+          "tension",
+          "resolution",
+          "vivid"
+        ]
+      },
+      {
+        "unit": 23,
+        "topic": "An idea worth sharing",
+        "core_words": [
+          "persuade",
+          "justify",
+          "viewpoint",
+          "benefit"
+        ]
+      },
+      {
+        "unit": 24,
+        "topic": "Looking back and ahead",
+        "core_words": [
+          "reflect",
+          "evaluate",
+          "apply",
+          "independent"
+        ]
+      }
+    ],
+    "6": [
+      {
+        "unit": 1,
+        "topic": "Ready for class",
+        "core_words": [
+          "prioritise",
+          "requirement",
+          "initiative",
+          "accountability"
+        ]
+      },
+      {
+        "unit": 2,
+        "topic": "Making friends",
+        "core_words": [
+          "empathy",
+          "inclusion",
+          "negotiate",
+          "mutual"
+        ]
+      },
+      {
+        "unit": 3,
+        "topic": "Lunchbox choices",
+        "core_words": [
+          "nutrition",
+          "dietary",
+          "moderate",
+          "substitute"
+        ]
+      },
+      {
+        "unit": 4,
+        "topic": "A change in weather",
+        "core_words": [
+          "precaution",
+          "humidity",
+          "severe",
+          "probability"
+        ]
+      },
+      {
+        "unit": 5,
+        "topic": "Finding your way",
+        "core_words": [
+          "navigate",
+          "detour",
+          "orientation",
+          "accessible"
+        ]
+      },
+      {
+        "unit": 6,
+        "topic": "At the shops",
+        "core_words": [
+          "consumer",
+          "discount",
+          "quality",
+          "expense"
+        ]
+      },
+      {
+        "unit": 7,
+        "topic": "A fair playground",
+        "core_words": [
+          "fairness",
+          "conflict",
+          "mediate",
+          "outcome"
+        ]
+      },
+      {
+        "unit": 8,
+        "topic": "Looking after things",
+        "core_words": [
+          "durable",
+          "preserve",
+          "minimise",
+          "lifespan"
+        ]
+      },
+      {
+        "unit": 9,
+        "topic": "Books we choose",
+        "core_words": [
+          "interpret",
+          "symbolism",
+          "implication",
+          "tone"
+        ]
+      },
+      {
+        "unit": 10,
+        "topic": "Our school garden",
+        "core_words": [
+          "experiment",
+          "hypothesis",
+          "factor",
+          "data"
+        ]
+      },
+      {
+        "unit": 11,
+        "topic": "A trip to the beach",
+        "core_words": [
+          "ecosystem",
+          "erosion",
+          "biodiversity",
+          "vulnerable"
+        ]
+      },
+      {
+        "unit": 12,
+        "topic": "Getting around",
+        "core_words": [
+          "commute",
+          "disruption",
+          "connection",
+          "capacity"
+        ]
+      },
+      {
+        "unit": 13,
+        "topic": "Feelings and needs",
+        "core_words": [
+          "resilience",
+          "regulate",
+          "coping",
+          "wellbeing"
+        ]
+      },
+      {
+        "unit": 14,
+        "topic": "Working together",
+        "core_words": [
+          "delegate",
+          "collaboration",
+          "consensus",
+          "accountable"
+        ]
+      },
+      {
+        "unit": 15,
+        "topic": "Making something tasty",
+        "core_words": [
+          "ratio",
+          "texture",
+          "process",
+          "modify"
+        ]
+      },
+      {
+        "unit": 16,
+        "topic": "Celebrating together",
+        "core_words": [
+          "significance",
+          "identity",
+          "representation",
+          "influence"
+        ]
+      },
+      {
+        "unit": 17,
+        "topic": "The world online",
+        "core_words": [
+          "credibility",
+          "bias",
+          "misinformation",
+          "verify"
+        ]
+      },
+      {
+        "unit": 18,
+        "topic": "Noticing the natural world",
+        "core_words": [
+          "organism",
+          "population",
+          "interdependence",
+          "distribution"
+        ]
+      },
+      {
+        "unit": 19,
+        "topic": "Changing our waste",
+        "core_words": [
+          "consumption",
+          "renewable",
+          "footprint",
+          "efficiency"
+        ]
+      },
+      {
+        "unit": 20,
+        "topic": "Moving and practising",
+        "core_words": [
+          "endurance",
+          "coordination",
+          "recovery",
+          "performance"
+        ]
+      },
+      {
+        "unit": 21,
+        "topic": "Solving a mystery",
+        "core_words": [
+          "assumption",
+          "contradict",
+          "deduction",
+          "plausible"
+        ]
+      },
+      {
+        "unit": 22,
+        "topic": "Telling our stories",
+        "core_words": [
+          "flashback",
+          "foreshadowing",
+          "atmosphere",
+          "structure"
+        ]
+      },
+      {
+        "unit": 23,
+        "topic": "An idea worth sharing",
+        "core_words": [
+          "counterargument",
+          "claim",
+          "rebuttal",
+          "reasoning"
+        ]
+      },
+      {
+        "unit": 24,
+        "topic": "Looking back and ahead",
+        "core_words": [
+          "transferable",
+          "self-assess",
+          "adapt",
+          "ownership"
+        ]
+      }
+    ]
+  }
+}

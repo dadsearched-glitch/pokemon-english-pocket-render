@@ -1,0 +1,22 @@
+Read `WORK_HANDOFF_LEARNING_DATA_Y1_Y6.md` first and use `Y1_Y6_CORE_WORDS.csv` / `Y1_Y6_CORE_WORDS.json` as the authoritative Core Word map.
+
+Work from the LATEST completed Pocket English source, not the old v4 visual build if a newer Work build exists.
+
+This is a LEARNING-DATA-ONLY upgrade:
+- preserve the current completed graphics and battle system,
+- preserve cards, packs, XP, catalogue, PIN/access, saves, backup/restore and other completed systems,
+- audit and refine Year 3/4/5 learning data,
+- add full Year 1/2/6 learning data,
+- make Settings support Year 1 through Year 6 per profile,
+- keep Kai default Year 3 and Tony default Year 4,
+- preserve progress separately for every year,
+- keep Speaking as provided-sentence repetition only for every level,
+- regenerate/update **Molly-only** audio for all changed/new learning strings; do not generate new Mitchell learning audio,
+- update parent-test mode for Year 1–6.
+- if the current learning voice selector still shows Mitchell, remove/hide that option and keep Molly as the only active learning voice.
+
+Before editing, report the current learning-data architecture, level/progress schema, audio pipeline, files to change, and migration plan.
+
+Then implement the complete Year 1–6 learning data, run the validation specified in the handoff, and return an updated full source ZIP plus a factual test report.
+
+Do not redesign graphics or battles. Do not deploy unless I explicitly ask.
