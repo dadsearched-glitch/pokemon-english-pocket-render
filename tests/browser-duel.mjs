@@ -28,7 +28,6 @@ try{
   assert.match(code,/^[A-Z2-9]{6}$/);
   await guest.page.locator('#mp-code').fill(code);
   await guest.page.getByRole('button',{name:/Join room/}).click();
-  await host.page.getByRole('button',{name:/참가 요청/}).click({timeout:15000});
   await guest.page.waitForFunction(()=>document.body.innerText.includes('연결 1')||document.body.innerText.includes('Ready'),null,{timeout:20000});
   await host.page.waitForFunction(()=>document.body.innerText.includes('연결 1'),null,{timeout:20000});
   await guest.page.getByRole('button',{name:'Orange'}).click();

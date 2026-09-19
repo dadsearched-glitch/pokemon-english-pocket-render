@@ -34,7 +34,9 @@ export function createSignaling({now=Date.now}={}){
    if(req.method==='POST'&&action==='accept'){if(p.id!==r.host)fail(403,'Only the host can accept a player.');const other=r.members.find(x=>x.id===body.id);if(!other)fail(404,'Player left.');other.accepted=true;other.seen=now();send(200,{ok:true});return true;}
    if(req.method==='POST'&&action==='signal'){
     const other=r.members.find(x=>x.id===body.to);if(!p.accepted||!other?.accepted||(p.id!==r.host&&other.id!==r.host))fail(403,'Peer not approved.');
-    if(!['offer','answer'].includes(body.description?.type)||typeof body.description.sdp!=='string'||body.description.sdp.length>32000)fail(400,'Invalid negotiation.');
+    if(!['offer','answer','candidate'].includes(body.description?.type))fail(400,'Invalid negotiation.');
+    if(body.description.type==='candidate'&&typeof body.description.candidate!=='string')fail(400,'Invalid ICE candidate.');
+    if(['offer','answer'].includes(body.description.type)&&(typeof body.description.sdp!=='string'||body.description.sdp.length>32000))fail(400,'Invalid negotiation.');
     if(other.signals.length>=30)fail(429,'Negotiation queue full.');
     other.signals.push({seq:++r.seq,from:p.id,description:{type:body.description.type,sdp:body.description.sdp}});send(200,{ok:true});return true;
    }

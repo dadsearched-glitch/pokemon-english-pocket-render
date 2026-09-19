@@ -9,7 +9,7 @@ import {SET_CARDS,isSpecial,finishLabel} from './catalogue.js';
 import {COURSES,unitFor,vocabularyFor,migrateCourse,enterUnit,battlePrompt} from './course.js';
 import {initRewards,validRewards,acceptsProfileRewards,sparkOf,sparkTier,DISCOVERY,syncDiscovery,equippedLook,equippedTitle} from './rewards.js';
 import {startSentenceRecognition} from './speech.js';
-const APP_VERSION='v8.1.0-together-preview · 2026-09-20 · build 8cb98e4';
+const APP_VERSION='v8.1.0-together-netdiag · 2026-09-20';
 const LAYOUT_KEY='pocket-english-layout';
 let layoutChoice='auto';try{const stored=localStorage.getItem(LAYOUT_KEY);if(['auto','vertical','side'].includes(stored))layoutChoice=stored;}catch{}
 const TEST_MODE=new URLSearchParams(location.search).get('test')==='1',STORAGE_KEY=storageKey(TEST_MODE);

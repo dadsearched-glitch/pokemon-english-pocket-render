@@ -5,6 +5,7 @@ test('rooms enforce bearer ownership, four player cap, expiry and no game payloa
  try{const h=(await call()).data;assert.match(h.code,/^[A-Z2-9]{6}$/);const guests=[];for(let i=0;i<3;i++)guests.push((await call('/'+h.code+'/join')).data);assert.equal(guests.every(g=>g.members.find(p=>p.id===g.self)?.accepted),true);assert.equal((await call('/'+h.code+'/join')).status,409);
  assert.equal((await call('/'+h.code+'/accept',{id:guests[0].self},guests[0].token)).status,403);assert.equal((await call('/'+h.code+'/accept',{id:guests[0].self},h.token)).status,200);
  assert.equal((await call('/'+h.code+'/signal',{to:h.self,description:{type:'battle_action',sdp:'private data'}},guests[0].token)).status,400);
+ assert.equal((await call('/'+h.code+'/signal',{to:h.self,description:{type:'candidate',candidate:'candidate:1 1 UDP 1 192.168.1.2 1234 typ host',sdpMid:'0',sdpMLineIndex:0}},guests[0].token)).status,200);
  assert.equal((await call('/'+h.code+'/signal',{to:h.self,description:{type:'offer',sdp:'test'}},guests[1].token)).status,200);
  assert.equal((await call('/'+h.code+'/signal',{to:guests[0].self,description:{type:'offer',sdp:'test'}},h.token)).status,200);
  assert.equal((await call('/'+h.code+'/start',{},guests[0].token)).status,403);assert.equal((await call('/'+h.code+'/start',{},h.token)).status,200);assert.equal((await call('/'+h.code+'/join')).status,409);
