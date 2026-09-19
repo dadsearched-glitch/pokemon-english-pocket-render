@@ -24,5 +24,5 @@ export class PeerRoom{
  send(id,data){const ch=this.peers.get(id)?.channel;if(ch?.readyState!=='open'||ch.bufferedAmount>100000)return false;ch.send(JSON.stringify(data));return true;}
  broadcast(data){for(const id of this.peers.keys())this.send(id,data);}
  connected(){return [...this.peers].filter(([,p])=>p.channel?.readyState==='open').map(([id])=>id);}
- close(){this.closed=true;clearTimeout(this.timer);for(const p of this.peers.values())p.pc.close();if(this.code)this.request('/'+this.code+'/leave',{}).catch(()=>{});}
+ async close(){this.closed=true;clearTimeout(this.timer);for(const p of this.peers.values())p.pc.close();if(this.code)await this.request('/'+this.code+'/leave',{}).catch(()=>{});}
 }
