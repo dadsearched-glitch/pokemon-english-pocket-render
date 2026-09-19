@@ -1,11 +1,11 @@
 import test from 'node:test';import assert from 'node:assert/strict';import http from 'node:http';import {createSignaling} from '../network/signaling.mjs';
-test('rooms enforce approval, bearer ownership, four player cap, expiry and no game payload storage',async()=>{
+test('rooms enforce bearer ownership, four player cap, expiry and no game payload storage',async()=>{
  let now=100000;const handle=createSignaling({now:()=>now});const server=http.createServer(handle);await new Promise(r=>server.listen(0,'127.0.0.1',r));const url='http://127.0.0.1:'+server.address().port+'/api/rooms';
  const call=async(path='',body={},token)=>{const r=await fetch(url+path,{method:'POST',headers:{'Content-Type':'application/json',...(token?{Authorization:'Bearer '+token}:{})},body:JSON.stringify(body)});return {status:r.status,data:await r.json()};};
- try{const h=(await call()).data;assert.match(h.code,/^[A-Z2-9]{6}$/);const guests=[];for(let i=0;i<3;i++)guests.push((await call('/'+h.code+'/join')).data);assert.equal((await call('/'+h.code+'/join')).status,409);
+ try{const h=(await call()).data;assert.match(h.code,/^[A-Z2-9]{6}$/);const guests=[];for(let i=0;i<3;i++)guests.push((await call('/'+h.code+'/join')).data);assert.equal(guests.every(g=>g.members.find(p=>p.id===g.self)?.accepted),true);assert.equal((await call('/'+h.code+'/join')).status,409);
  assert.equal((await call('/'+h.code+'/accept',{id:guests[0].self},guests[0].token)).status,403);assert.equal((await call('/'+h.code+'/accept',{id:guests[0].self},h.token)).status,200);
  assert.equal((await call('/'+h.code+'/signal',{to:h.self,description:{type:'battle_action',sdp:'private data'}},guests[0].token)).status,400);
- assert.equal((await call('/'+h.code+'/signal',{to:h.self,description:{type:'offer',sdp:'test'}},guests[1].token)).status,403);
+ assert.equal((await call('/'+h.code+'/signal',{to:h.self,description:{type:'offer',sdp:'test'}},guests[1].token)).status,200);
  assert.equal((await call('/'+h.code+'/signal',{to:guests[0].self,description:{type:'offer',sdp:'test'}},h.token)).status,200);
  assert.equal((await call('/'+h.code+'/start',{},guests[0].token)).status,403);assert.equal((await call('/'+h.code+'/start',{},h.token)).status,200);assert.equal((await call('/'+h.code+'/join')).status,409);
  now+=7200001;assert.equal((await call('/'+h.code+'/join')).status,404);

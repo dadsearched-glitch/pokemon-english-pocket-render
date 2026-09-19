@@ -26,7 +26,7 @@ export function createSignaling({now=Date.now}={}){
    if(req.method==='POST'&&(!code||action==='join')){const ip=req.socket.remoteAddress;const v=rates.get(ip)||{n:0,until:now()+60000};if(++v.n>30)fail(429,'Please wait before trying another room.');rates.set(ip,v);}
    if(req.method==='POST'&&!code){if(rooms.size>=200)fail(503,'Rooms full.');let code;do{code=Array.from(randomBytes(6),n=>CODE[n%CODE.length]).join('');}while(rooms.has(code));const p={id:randomUUID(),token:token(),accepted:true,signals:[],seen:now()};const r={code,host:p.id,created:now(),expires:now()+600000,members:[p],seq:0};rooms.set(code,r);send(201,{...view(r,p),token:p.token});return true;}
    const r=rooms.get(code);if(!r)fail(404,'Room not found or expired.');
-   if(req.method==='POST'&&action==='join'){if(r.started)fail(409,'The match has already started.');if(r.members.length>=4)fail(409,'This room already has four players.');const p={id:randomUUID(),token:token(),accepted:false,signals:[],seen:now()};r.members.push(p);send(201,{...view(r,p),token:p.token});return true;}
+  if(req.method==='POST'&&action==='join'){if(r.started)fail(409,'The match has already started.');if(r.members.length>=4)fail(409,'This room already has four players.');const p={id:randomUUID(),token:token(),accepted:true,signals:[],seen:now()};r.members.push(p);send(201,{...view(r,p),token:p.token});return true;}
    const p=member(r,req.headers.authorization?.replace(/^Bearer /,''));
    if(req.method==='POST'&&action==='reconnect'){p.generation=(p.generation||0)+1;p.signals=[];p.seen=now();send(200,view(r,p));return true;}
    if(req.method==='POST'&&action==='start'){if(p.id!==r.host)fail(403,'Host only.');r.started=true;r.expires=now()+7200000;send(200,{ok:true});return true;}
