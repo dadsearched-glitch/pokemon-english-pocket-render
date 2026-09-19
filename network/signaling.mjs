@@ -3,6 +3,7 @@ const CODE='ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
 const token=()=>randomBytes(24).toString('hex');
 export function createSignaling({now=Date.now}={}){
  const rooms=new Map(),rates=new Map();
+ const debug=(event,r,p,extra='')=>{if(process.env.DEBUG_WEBRTC==='1')console.log(`[webrtc] ${event} room=${r.code} member=${p?.id||'unknown'}${extra?' '+extra:''}`);};
  function fail(status,message){throw Object.assign(new Error(message),{status});}
  function stale(r){if(r.started)return;r.members=r.members.filter(p=>p.id===r.host||((p.seen||r.created)+20000>now()));if(!r.members.some(p=>p.id===r.host))rooms.delete(r.code);}
  function clean(){for(const [id,r]of rooms){if(r.expires<now())rooms.delete(id);else stale(r);}for(const[k,v]of rates)if(v.until<now())rates.delete(k);}
@@ -30,7 +31,7 @@ export function createSignaling({now=Date.now}={}){
    const p=member(r,req.headers.authorization?.replace(/^Bearer /,''));
    if(req.method==='POST'&&action==='reconnect'){p.generation=(p.generation||0)+1;p.signals=[];p.seen=now();send(200,view(r,p));return true;}
    if(req.method==='POST'&&action==='start'){if(p.id!==r.host)fail(403,'Host only.');r.started=true;r.expires=now()+7200000;send(200,{ok:true});return true;}
-   if(req.method==='GET'&&!action){send(200,view(r,p));return true;}
+  if(req.method==='GET'&&!action){debug('signal GET',r,p,`types=${p.signals.map(s=>s.description.type).join(',')||'none'} count=${p.signals.length}`);send(200,view(r,p));return true;}
    if(req.method==='POST'&&action==='accept'){if(p.id!==r.host)fail(403,'Only the host can accept a player.');const other=r.members.find(x=>x.id===body.id);if(!other)fail(404,'Player left.');other.accepted=true;other.seen=now();send(200,{ok:true});return true;}
    if(req.method==='POST'&&action==='signal'){
     const other=r.members.find(x=>x.id===body.to);if(!p.accepted||!other?.accepted||(p.id!==r.host&&other.id!==r.host))fail(403,'Peer not approved.');
@@ -38,7 +39,7 @@ export function createSignaling({now=Date.now}={}){
     if(body.description.type==='candidate'&&typeof body.description.candidate!=='string')fail(400,'Invalid ICE candidate.');
     if(['offer','answer'].includes(body.description.type)&&(typeof body.description.sdp!=='string'||body.description.sdp.length>32000))fail(400,'Invalid negotiation.');
     if(other.signals.length>=30)fail(429,'Negotiation queue full.');
-    other.signals.push({seq:++r.seq,from:p.id,description:{type:body.description.type,sdp:body.description.sdp}});send(200,{ok:true});return true;
+    other.signals.push({seq:++r.seq,from:p.id,description:{type:body.description.type,sdp:body.description.sdp,candidate:body.description.candidate,sdpMid:body.description.sdpMid,sdpMLineIndex:body.description.sdpMLineIndex}});debug(`${body.description.type} POST`,r,p,`to=${other.id} queue=${other.signals.length}`);send(200,{ok:true});return true;
    }
    if(req.method==='POST'&&action==='ack'){p.signals=p.signals.filter(x=>x.seq>Number(body.seq));send(200,{ok:true});return true;}
    if(req.method==='POST'&&action==='leave'){if(p.id===r.host)rooms.delete(code);else r.members=r.members.filter(x=>x!==p);send(200,{ok:true});return true;}
