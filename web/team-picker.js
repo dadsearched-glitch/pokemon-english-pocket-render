@@ -3,10 +3,12 @@ const escapeHtml=value=>String(value??'').replace(/[&<>"']/g,char=>({'&':'&amp;'
 function pickerCard(card,selected=false){
   const image=card.cardImage||card.art;
   const rarity=card.rarity||'common';
-  return `<span class="team-picker-card ${selected?'is-selected':''} rarity-${escapeHtml(String(rarity).toLowerCase())}">
+  const finish=card.finish||'normal';
+  return `<span class="team-picker-card ${selected?'is-selected':''} rarity-${escapeHtml(String(rarity).toLowerCase())} finish-${escapeHtml(String(finish).toLowerCase())}">
     <span class="team-picker-art"><img src="${escapeHtml(image)}" alt="${escapeHtml(card.name)}" loading="lazy"></span>
     <span class="team-picker-copy"><b>${escapeHtml(card.name)}</b><small>${escapeHtml(rarity)} · ${escapeHtml(card.type||'')}</small><small>HP ${escapeHtml(card.hp||'—')} · ${escapeHtml(card.power||card.move||'Battle')}</small></span>
     ${selected?'<strong class="team-picker-mark">✓ SELECTED</strong>':''}
+    <span class="team-picker-foil" aria-hidden="true"></span>
   </span>`;
 }
 

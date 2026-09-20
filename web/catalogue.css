@@ -22,3 +22,20 @@
 .printed-card.spark-aura>.foil{opacity:.7}
 .printed-card.spark-glint>.foil,.printed-card.spark-trail>.foil,.printed-card.spark-master>.foil{opacity:.95}
 .printed-card .spark-mark{left:6px;top:6px}
+
+.detail-room{isolation:isolate;overflow:hidden;background:#071a2a}
+.detail-room-backdrop{position:absolute;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+.detail-room-backdrop:before,.detail-room-backdrop:after{content:'';position:absolute;inset:-25%;background:radial-gradient(circle at 50% 38%,var(--detail-glow),transparent 34%),conic-gradient(from 0deg,var(--detail-aura),transparent 22%,var(--detail-aura),transparent 52%,var(--detail-aura));opacity:.75;animation:detail-room-rotate 18s linear infinite}
+.detail-room-backdrop:after{inset:-5%;background:radial-gradient(circle at 20% 20%,#fff8 0 1px,transparent 2px),radial-gradient(circle at 75% 32%,#fff8 0 2px,transparent 3px),radial-gradient(circle at 42% 78%,#fff7 0 1px,transparent 2px);background-size:130px 170px,190px 230px,160px 210px;opacity:.4;animation:detail-sparkle 4s ease-in-out infinite alternate}
+.detail-room-backdrop i{position:absolute;left:50%;top:43%;width:72%;aspect-ratio:1;border:1px solid var(--detail-glow);border-radius:50%;box-shadow:0 0 28px var(--detail-glow);transform:translate(-50%,-50%);animation:detail-ring 3s ease-out infinite}
+.detail-room-backdrop i:nth-child(2){animation-delay:.75s}.detail-room-backdrop i:nth-child(3){animation-delay:1.5s}.detail-room-backdrop i:nth-child(4){animation-delay:2.25s}
+.detail-room .modal-content{position:relative;z-index:2}
+.detail-tier-normal{--detail-glow:#547b8c;--detail-aura:#234a5e22}
+.detail-tier-holo{--detail-glow:#66d7ff;--detail-aura:#3cbde844}
+.detail-tier-illustration{--detail-glow:#dca0ff;--detail-aura:#d76cff55}
+.detail-tier-rainbow,.detail-tier-immersive{--detail-glow:#ffe788;--detail-aura:#ff67d955}
+.detail-tier-crown{--detail-glow:#ffd45c;--detail-aura:#ffad2f66}
+.detail-tier-crown .detail-room-backdrop:before{background:radial-gradient(circle at 50% 38%,#ffd45c99,transparent 30%),repeating-conic-gradient(#ffe49c55 0deg 8deg,transparent 8deg 24deg);animation-duration:24s}
+.detail-tier-rainbow .detail-room-backdrop:before,.detail-tier-immersive .detail-room-backdrop:before{background:radial-gradient(circle at 50% 38%,#fff9c899,transparent 32%),conic-gradient(from 0deg,#e9a4ff88,#7eeeff66,#fff3a466,#99ffb566,#e9a4ff88);animation-duration:12s}
+@keyframes detail-room-rotate{to{transform:rotate(360deg)}}@keyframes detail-ring{0%{opacity:0;transform:translate(-50%,-50%) scale(.45)}35%{opacity:.8}100%{opacity:0;transform:translate(-50%,-50%) scale(1.25)}}@keyframes detail-sparkle{50%{opacity:.8;transform:scale(1.04)}}
+@media(prefers-reduced-motion:reduce){.detail-room-backdrop:before,.detail-room-backdrop:after,.detail-room-backdrop i{animation:none}}
