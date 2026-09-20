@@ -1,3 +1,20 @@
+# TEST REPORT — 2026-09-20 Phase A server relay
+
+## Automated verification
+
+- `npm.cmd test`: **59/59 PASS**
+- `npm.cmd run build`: **PASS**
+- Focused markers printed:
+  - `SERVER RELAY 2P PASS`
+  - `SERVER RELAY 4P PASS`
+- Relay coverage includes authenticated room create/join, four-human cap, opaque envelope routing, targeted messages, broadcast, and 2v2 fan-out.
+- `npm.cmd run together` + `Invoke-WebRequest http://127.0.0.1:4190/?slice=frieza`: **HTTP 200** (route served).
+
+## Unverified
+
+- Full browser rendering and gameplay at `/?slice=frieza` were not run in this pass.
+- Real-device LAN (2P/4P), reconnect during an active battle, and Render production smoke test remain **UNVERIFIED**.
+
 # TEST REPORT — 2026-09-17 schema harden
 
 ## 자동검증

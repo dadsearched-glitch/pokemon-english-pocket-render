@@ -1,3 +1,9 @@
+Phase A — server relay (2026-09-20):
+- REPLACE browser WebRTC transport with authenticated WebSocket/server relay while preserving the `PeerRoom` API and existing host-authoritative multiplayer models.
+- ADD relay envelope validation, reconnect/leave handling, max-four-human room enforcement, and production/local WebSocket upgrade wiring (`npm run together`).
+- REMOVE browser offer/answer, ICE, STUN/TURN and data-channel active path; relay debug now reports server connections.
+- ADD `tests/server-relay.test.mjs` covering 2-player and 4-player 2v2 relay delivery.
+
 Guard / cosmetics / schema (2026-09-17 이어서):
 - FIX web/coop-model.js — Tag Defender Guard는 다음 피격만 줄이고 자기 공격을 약화하지 않음
 - FIX network/signaling.mjs — Origin host를 요청 Host와 비교

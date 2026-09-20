@@ -2,7 +2,7 @@ import {chromium} from 'playwright';
 import assert from 'node:assert/strict';
 
 const url = process.env.BASE_URL || 'http://127.0.0.1:4190';
-const browser = await chromium.launch({args:['--enable-features=WebRTC-HideLocalIpsWithMdns=false']});
+const browser = await chromium.launch();
 
 async function openTrainer(name){
   const context = await browser.newContext({viewport:{width:390,height:844},reducedMotion:'reduce'});
@@ -30,23 +30,19 @@ try{
   await guest.page.getByRole('button',{name:/Join room/}).click();
   await guest.page.waitForFunction(()=>document.body.innerText.includes('연결 1')||document.body.innerText.includes('Ready'),null,{timeout:20000});
   await host.page.waitForFunction(()=>document.body.innerText.includes('연결 1'),null,{timeout:20000});
-  const waitDebug=async(page,predicate,label)=>{try{return await page.waitForFunction(({predicate})=>{const d=window.__pocketTogetherDebug?.();return d&&Function('d','return '+predicate)(d)||false;},{predicate},{timeout:20000});}catch(error){throw Error('WEBRTC E2E FAIL: '+label);}};
-  await waitDebug(host.page,"d.peers.length===1&&d.peers[0].offerSent>=1",'host offer');
-  await waitDebug(guest.page,"d.peers.length===1&&d.peers[0].offerReceived>=1&&d.peers[0].answerSent>=1",'guest answer');
-  await waitDebug(host.page,"d.peers[0].answerReceived>=1&&d.peers[0].dataChannelState==='open'",'host data channel');
-  await waitDebug(guest.page,"d.peers[0].dataChannelState==='open'",'guest data channel');
-    await waitDebug(host.page,"Object.keys(d.lobby).length===2",'host hello lobby');
+  const waitRelay=async(page,predicate,label)=>{try{return await page.waitForFunction(({predicate})=>{const d=window.__pocketTogetherDebug?.();return d&&Function('d','return '+predicate)(d)||false;},{predicate},{timeout:20000});}catch(error){throw Error('SERVER RELAY E2E FAIL: '+label);}};
+  await waitRelay(host.page,"d.connected.length===1",'host relay connection');
+  await waitRelay(guest.page,"d.connected.length===1",'guest relay connection');
+  await waitRelay(host.page,"Object.keys(d.lobby).length===2",'host hello lobby');
   const hostDebug=await host.page.evaluate(()=>window.__pocketTogetherDebug());
   const guestDebug=await guest.page.evaluate(()=>window.__pocketTogetherDebug());
-  console.log('WEBRTC DEBUG SNAPSHOT',{host:hostDebug.peers[0],guest:guestDebug.peers[0]});
+  console.log('SERVER RELAY DEBUG SNAPSHOT',{host:hostDebug.peers[0],guest:guestDebug.peers[0]});
   assert.equal(hostDebug.members.length,2,'host signaling members');
   assert.equal(guestDebug.members.length,2,'guest signaling members');
   assert.equal(Object.keys(hostDebug.lobby).length,2,'host lobby members');
-  assert(hostDebug.peers[0].offerSent>=1&&hostDebug.peers[0].answerReceived>=1&&hostDebug.peers[0].remoteCandidates>=1,'host negotiation');
-  assert(guestDebug.peers[0].offerReceived>=1&&guestDebug.peers[0].answerSent>=1&&guestDebug.peers[0].remoteCandidates>=1,'guest negotiation');
-  assert.equal(hostDebug.peers[0].dataChannelState,'open');
-  assert.equal(guestDebug.peers[0].dataChannelState,'open');
-  console.log('WEBRTC E2E PASS',{code,host:hostDebug.peers[0],guest:guestDebug.peers[0]});
+  assert.equal(hostDebug.connected.length,1,'host relay connection');
+  assert.equal(guestDebug.connected.length,1,'guest relay connection');
+  console.log('SERVER RELAY 1V1 E2E PASS',{code,host:hostDebug.peers[0],guest:guestDebug.peers[0]});
   await guest.page.getByRole('button',{name:'Orange'}).click();
   await host.page.getByRole('button',{name:/Ready/}).click();
   await guest.page.getByRole('button',{name:/Ready/}).click();

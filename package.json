@@ -9,5 +9,8 @@
     "build": "node build.mjs",
     "together": "node network/dev-server.mjs",
     "verify:all": "node tools/vscode-verify.mjs"
+  },
+  "dependencies": {
+    "ws": "^8.18.0"
   }
 }

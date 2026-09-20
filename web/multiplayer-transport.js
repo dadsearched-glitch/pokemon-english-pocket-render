@@ -1,29 +1,54 @@
-// WebRTC data channel with ephemeral HTTP signaling and test-only connection diagnostics.
-export class PeerRoom{
- constructor({onchange=()=>{},onmessage=()=>{},onerror=()=>{},onstatus=()=>{}}={}){Object.assign(this,{onchange,onmessage,onerror,onstatus});this.peers=new Map();this.closed=false;this.status='idle';this.debug=[];}
- log(id,event,extra={}){const entry={at:Date.now(),id,event,...extra};this.debug=[...this.debug.slice(-39),entry];this.onstatus(entry);}
- async request(path='',body){const r=await fetch('/api/rooms'+path,{method:body?'POST':'GET',headers:{'Content-Type':'application/json',...(this.token?{Authorization:'Bearer '+this.token}:{})},...(body?{body:JSON.stringify(body)}:{})});let data;try{data=await r.json();}catch{data='Connection failed.';}if(r.status===404){this.closed=true;this.status='gone';}if(!r.ok)throw Error(typeof data==='string'?data:'Connection failed.');return data;}
- async open(code){if(code&&!/^[A-Za-z0-9]{6}$/.test(String(code).trim()))throw Error('방 코드 6자리를 확인해 주세요.');const v=await this.request(code?'/'+code.trim().toUpperCase()+'/join':'',{});Object.assign(this,{code:v.code,id:v.self,host:v.host,token:v.token,status:'waiting'});this.update(v);this.poll();return this;}
- credentials(){return {code:this.code,id:this.id,host:this.host,token:this.token};}
- async resume(c){Object.assign(this,c);const v=await this.request('/'+this.code+'/reconnect',{});this.update(v);this.poll();return this;}
- get isHost(){return this.id===this.host;}
- async accept(id){await this.request('/'+this.code+'/accept',{id});await this.tick();}
- update(v){this.members=v.members;this.expires=v.expires;this.started=!!v.started;this.onchange();}
- async poll(){if(this.closed)return;try{await this.tick();}catch(e){this.onerror(e.message);if(this.status==='gone'){this.closed=true;this.onchange();return;}}if(!this.closed)this.timer=setTimeout(()=>this.poll(),1200);}
- async tick(){if(this.busy||this.closed)return;this.busy=true;try{const v=await this.request('/'+this.code);this.update(v);if(this.isHost)for(const member of v.members)if(member.id!==this.id&&member.accepted)await this.ensurePeerForMember(member);
-  for(const signal of v.signals){await this.signal(signal);await this.request('/'+this.code+'/ack',{seq:signal.seq});}
-  }finally{this.busy=false;}}
- peerState(id){const p=this.peers.get(id);if(!p)return {memberDetected:false,peerCreated:false,dataChannelCreated:false,offerCreated:false,offerSent:0,offerReceived:0,answerCreated:false,answerSent:0,answerReceived:0,localDescription:'none',remoteDescription:'none',signalingState:'new',iceGatheringState:'new',iceConnectionState:'new',connectionState:'new',dataChannelState:'closed',localCandidates:0,remoteCandidates:0,addIceCandidateSuccess:0,addIceCandidateErrors:0,lastSignalingError:'',lastWebRTCError:''};return {memberDetected:p.memberDetected,peerCreated:true,dataChannelCreated:p.dataChannelCreated,offerCreated:p.offerCreated,offerSent:p.offerSent,offerReceived:p.offerReceived,answerCreated:p.answerCreated,answerSent:p.answerSent,answerReceived:p.answerReceived,localDescription:p.pc.localDescription?.type||'none',remoteDescription:p.pc.remoteDescription?.type||'none',signalingState:p.pc.signalingState,iceGatheringState:p.pc.iceGatheringState,iceConnectionState:p.pc.iceConnectionState,connectionState:p.pc.connectionState,dataChannelState:p.channel?.readyState||'closed',localCandidates:p.localCandidates,remoteCandidates:p.remoteCandidates,addIceCandidateSuccess:p.addIceCandidateSuccess,addIceCandidateErrors:p.addIceCandidateErrors,lastSignalingError:p.lastSignalingError||'',lastWebRTCError:p.lastWebRTCError||''};}
- async ensurePeerForMember(member){let p=this.peers.get(member.id);if(p)p.memberDetected=true;if(p&&p.negotiating)return;if(p&&p.pc.signalingState!=='stable'&&!['failed','closed'].includes(p.pc.connectionState))return;if(p&&['failed','closed'].includes(p.pc.connectionState)){p.pc.close();this.peers.delete(member.id);}if(!this.peers.has(member.id)){this.log(member.id,'member-detected');p=this.peer(member.id);p.memberDetected=true;await this.offer(member.id);this.peers.get(member.id).generation=member.generation;}}
- peer(id){let entry=this.peers.get(id);if(entry)return entry;const pc=new RTCPeerConnection({iceServers:[{urls:'stun:stun.l.google.com:19302'}]});entry={pc,channel:null,pendingCandidates:[],remoteDescription:false,localCandidates:0,remoteCandidates:0,addIceCandidateSuccess:0,addIceCandidateErrors:0,negotiating:false,memberDetected:false,dataChannelCreated:false,offerCreated:false,offerSent:0,offerReceived:0,answerCreated:false,answerSent:0,answerReceived:0,lastSignalingError:'',lastWebRTCError:''};this.peers.set(id,entry);this.log(id,'peer-create');const state=()=>{const current=this.peerState(id);this.log(id,'state',current);if(['failed','closed'].includes(current.connectionState)||['failed','closed'].includes(current.iceConnectionState)){entry.lastWebRTCError='connection failed';this.onerror('다른 기기와 직접 연결하지 못했습니다.');}this.onchange();};pc.onicecandidate=e=>{if(e.candidate){entry.localCandidates++;this.log(id,'local-candidate',{count:entry.localCandidates,type:e.candidate.type});this.request('/'+this.code+'/signal',{to:id,description:{type:'candidate',candidate:e.candidate.candidate,sdpMid:e.candidate.sdpMid,sdpMLineIndex:e.candidate.sdpMLineIndex}}).catch(error=>{entry.lastSignalingError=error.message;this.onerror(error.message);});}else this.log(id,'ice-complete',{count:entry.localCandidates});};pc.onicegatheringstatechange=state;pc.oniceconnectionstatechange=state;pc.onsignalingstatechange=state;pc.onconnectionstatechange=state;pc.ondatachannel=e=>this.bind(id,e.channel);entry.watchdog=setTimeout(()=>{const current=this.peerState(id);if(!['connected','completed'].includes(current.connectionState)&&!['connected','completed'].includes(current.iceConnectionState)){entry.lastWebRTCError='10s negotiation timeout';this.onerror('다른 기기와 직접 연결하지 못했습니다.');}},10000);return entry;}
- bind(id,ch){const p=this.peers.get(id);p.channel=ch;p.dataChannelCreated=true;this.log(id,'datachannel-created');ch.onopen=()=>{this.status='connected';this.log(id,'datachannel-open');this.onchange();};ch.onclose=()=>{this.log(id,'datachannel-close');this.onchange();};ch.onerror=()=>{p.lastWebRTCError='DataChannel error';this.onerror('DataChannel error.');};ch.onmessage=e=>{if(typeof e.data!=='string'||e.data.length>60000)return;try{this.onmessage(id,JSON.parse(e.data));}catch{p.lastWebRTCError='Invalid peer message';this.onerror('Invalid peer message.');}};}
- async addCandidate(id,candidate){const p=this.peer(id);p.remoteCandidates++;if(!p.remoteDescription){p.pendingCandidates.push(candidate);this.log(id,'remote-candidate-queued',{count:p.remoteCandidates});return;}try{await p.pc.addIceCandidate(candidate);p.addIceCandidateSuccess++;this.log(id,'remote-candidate-added',{count:p.addIceCandidateSuccess});}catch(error){p.addIceCandidateErrors++;p.lastWebRTCError=error.message;this.log(id,'remote-candidate-error',{count:p.addIceCandidateErrors});throw error;}}
- async drainCandidates(id){const p=this.peers.get(id);if(!p)return;for(const candidate of p.pendingCandidates.splice(0)){try{await p.pc.addIceCandidate(candidate);p.addIceCandidateSuccess++;this.log(id,'remote-candidate-added',{count:p.addIceCandidateSuccess});}catch(error){p.addIceCandidateErrors++;p.lastWebRTCError=error.message;this.log(id,'remote-candidate-error',{count:p.addIceCandidateErrors});throw error;}}}
- async gather(pc){if(pc.iceGatheringState==='complete')return;await new Promise((resolve,reject)=>{const timer=setTimeout(()=>{pc.removeEventListener('icegatheringstatechange',done);reject(Error('Network negotiation timed out.'));},12000);function done(){if(pc.iceGatheringState==='complete'){clearTimeout(timer);pc.removeEventListener('icegatheringstatechange',done);resolve();}}pc.addEventListener('icegatheringstatechange',done);done();});}
- async offer(id){const p=this.peer(id);if(p.negotiating||p.offerSent)return;p.negotiating=true;this.bind(id,p.pc.createDataChannel('pocket-v1',{ordered:true}));p.offerCreated=true;this.log(id,'offer-created');await p.pc.setLocalDescription(await p.pc.createOffer());await this.gather(p.pc);try{await this.request('/'+this.code+'/signal',{to:id,description:{type:'offer',sdp:p.pc.localDescription.sdp}});p.offerSent++;this.log(id,'offer-sent');}catch(error){p.lastSignalingError=error.message;throw error;}}
- async signal(s){if(s.description.type==='candidate'){await this.addCandidate(s.from,{candidate:s.description.candidate,sdpMid:s.description.sdpMid??null,sdpMLineIndex:s.description.sdpMLineIndex??null});return;}if(s.description.type==='offer'&&!this.isHost){const old=this.peers.get(s.from),queued=old?.pendingCandidates||[],remoteCandidates=old?.remoteCandidates||0,remoteSuccess=old?.addIceCandidateSuccess||0,remoteErrors=old?.addIceCandidateErrors||0;old?.pc.close();this.peers.delete(s.from);const fresh=this.peer(s.from);fresh.pendingCandidates.push(...queued);fresh.remoteCandidates=remoteCandidates;fresh.addIceCandidateSuccess=remoteSuccess;fresh.addIceCandidateErrors=remoteErrors;}const p=this.peer(s.from);if(s.description.type==='offer'){if(this.isHost)return;p.offerReceived++;this.log(s.from,'offer-received');await p.pc.setRemoteDescription(s.description);p.remoteDescription=true;await this.drainCandidates(s.from);p.answerCreated=true;await p.pc.setLocalDescription(await p.pc.createAnswer());await this.gather(p.pc);await this.request('/'+this.code+'/signal',{to:s.from,description:{type:'answer',sdp:p.pc.localDescription.sdp}});p.answerSent++;this.log(s.from,'answer-sent');}else if(this.isHost&&p.pc.signalingState==='have-local-offer'){await p.pc.setRemoteDescription(s.description);p.remoteDescription=true;await this.drainCandidates(s.from);p.answerReceived++;p.negotiating=false;this.log(s.from,'answer-received');}}
- send(id,data){const ch=this.peers.get(id)?.channel;if(ch?.readyState!=='open'||ch.bufferedAmount>100000)return false;ch.send(JSON.stringify(data));return true;}
- broadcast(data){for(const id of this.peers.keys())this.send(id,data);}
- connected(){return [...this.peers].filter(([,p])=>p.channel?.readyState==='open').map(([id])=>id);}
- async close(){this.closed=true;clearTimeout(this.timer);for(const p of this.peers.values())p.pc.close();if(this.code)await this.request('/'+this.code+'/leave',{}).catch(()=>{});}
+// Server relay transport. PeerRoom keeps the public contract used by multiplayer.js,
+// but all game envelopes now travel over one authenticated WebSocket connection.
+export class PeerRoom {
+  constructor({onchange=()=>{},onmessage=()=>{},onerror=()=>{},onstatus=()=>{}}={}) {
+    Object.assign(this,{onchange,onmessage,onerror,onstatus});
+    this.peers=new Map(); this.closed=false; this.status='idle'; this.debug=[];
+    this.socket=null; this.connectedIds=new Set();
+  }
+  log(id,event,extra={}) { const entry={at:Date.now(),id,event,...extra}; this.debug=[...this.debug.slice(-39),entry]; this.onstatus(entry); }
+  async request(path='',body) {
+    const r=await fetch('/api/rooms'+path,{method:body?'POST':'GET',headers:{'Content-Type':'application/json',...(this.token?{Authorization:'Bearer '+this.token}:{})},...(body?{body:JSON.stringify(body)}:{})});
+    let data; try { data=await r.json(); } catch { data='Connection failed.'; }
+    if(r.status===404){this.closed=true;this.status='gone';}
+    if(!r.ok) throw Error(typeof data==='string'?data:(data?.error||'Connection failed.'));
+    return data;
+  }
+  async open(code) {
+    if(code&&!/^[A-Za-z0-9]{6}$/.test(String(code).trim())) throw Error('방 코드 6자리를 확인해 주세요.');
+    const v=await this.request(code?'/'+code.trim().toUpperCase()+'/join':'',{});
+    Object.assign(this,{code:v.code,id:v.self,host:v.host,token:v.token,status:'waiting'}); this.update(v); this.connectSocket(); return this;
+  }
+  credentials(){return {code:this.code,id:this.id,host:this.host,token:this.token};}
+  async resume(c){Object.assign(this,c);const v=await this.request('/'+this.code+'/reconnect',{});this.update(v);this.connectSocket();return this;}
+  get isHost(){return this.id===this.host;}
+  async accept(id){await this.request('/'+this.code+'/accept',{id});}
+  update(v){
+    this.members=v.members||[];
+    this.expires=v.expires;
+    this.started=!!v.started;
+    // The relay reports socket presence separately from room membership. This
+    // keeps the existing connected() contract without treating a disconnected
+    // member as ready to receive game envelopes.
+    this.connectedIds=new Set(this.members.filter(m=>m.id!==this.id&&m.connected).map(m=>m.id));
+    for(const id of this.connectedIds)this.ensurePeer(id);
+    this.onchange();
+  }
+  connectSocket(){
+    if(this.socket&&this.socket.readyState<=1)return;
+    const scheme=location.protocol==='https:'?'wss':'ws';
+    const ws=new WebSocket(`${scheme}://${location.host}/api/rooms/${this.code}/ws?token=${encodeURIComponent(this.token)}`);
+    this.socket=ws;
+    ws.onopen=()=>{this.status='connected';this.log(this.id,'relay-open');this.onchange();};
+    ws.onclose=()=>{this.connectedIds.clear();this.status=this.closed?'gone':'reconnecting';this.onchange();};
+    ws.onerror=()=>this.onerror('Server relay connection failed.');
+    ws.onmessage=e=>{try{const m=JSON.parse(e.data);if(m.type==='relay:members'){this.update(m.view);return;}if(m.type==='relay:message'){this.connectedIds.add(m.from);this.ensurePeer(m.from);this.onmessage(m.from,m.envelope);}}catch{this.onerror('Invalid relay message.');}};
+  }
+  ensurePeer(id){if(id===this.id)return; if(!this.peers.has(id))this.peers.set(id,{id,memberDetected:true});}
+  connected(){return [...this.connectedIds];}
+  peerState(id){const connected=this.connectedIds.has(id);return {memberDetected:!!this.members?.some(m=>m.id===id),peerCreated:this.peers.has(id),relayState:connected?'open':'waiting',connectionState:connected?'connected':'new',lastError:''};}
+  send(to,envelope){if(!this.socket||this.socket.readyState!==WebSocket.OPEN){this.onerror('Relay is not connected.');return false;}this.socket.send(JSON.stringify({kind:'message',to,envelope}));this.log(to,'relay-send');return true;}
+  broadcast(envelope){if(!this.socket||this.socket.readyState!==WebSocket.OPEN){this.onerror('Relay is not connected.');return false;}this.socket.send(JSON.stringify({kind:'broadcast',envelope}));this.log('room','relay-broadcast');return true;}
+  async leave(){try{await this.request('/'+this.code+'/leave',{});}finally{this.close();}}
+  close(){this.closed=true;try{this.socket?.close();}catch{}this.status='closed';}
 }
