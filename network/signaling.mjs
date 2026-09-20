@@ -5,6 +5,8 @@ const token=()=>randomBytes(24).toString('hex');
 const MAX_ENVELOPE=60000;
 export function createSignaling({now=Date.now}={}){
  const rooms=new Map(),rates=new Map(),wss=new WebSocketServer({noServer:true});
+ const logUpgrade=(event,req,extra='')=>console.log(`WS ${event} pathname=${new URL(req.url,'http://relay').pathname} upgrade=${req.headers.upgrade||''} connection=${req.headers.connection||''}${extra?' '+extra:''}`);
+ const rejectUpgrade=(socket,status,message)=>{socket.write(`HTTP/1.1 ${status} ${message}\r\nConnection: close\r\nContent-Length: 0\r\n\r\n`);socket.destroy();};
  const fail=(status,message)=>{throw Object.assign(new Error(message),{status});};
  const view=(r,p)=>({code:r.code,host:r.host,self:p.id,expires:r.expires,started:!!r.started,members:r.members.map(({id,accepted=true,socket})=>({id,accepted,connected:socket?.readyState===1})),relay:true});
  const notify=r=>{for(const p of r.members)if(p.socket?.readyState===1)p.socket.send(JSON.stringify({type:'relay:members',view:view(r,p)}));};
@@ -31,9 +33,22 @@ export function createSignaling({now=Date.now}={}){
   }catch(e){send(res,e.status||500,e.status?{error:e.message}:{error:'Room service error.'});}return true;
  };
  handler.upgrade=(req,socket,head)=>{
-  try{const u=new URL(req.url,'http://relay'),m=u.pathname.match(/^\/api\/rooms\/([A-Z0-9]{6})\/ws$/),r=m&&rooms.get(m[1]),p=r&&r.members.find(x=>x.token===u.searchParams.get('token'));if(!r||!p){socket.destroy();return;}
-   wss.handleUpgrade(req,socket,head,ws=>{p.socket=ws;ws.on('message',raw=>{try{if(raw.length>MAX_ENVELOPE)throw Error();const msg=JSON.parse(raw.toString());if(!msg||!['message','broadcast'].includes(msg.kind)||typeof msg.envelope!=='object'||Array.isArray(msg.envelope)||typeof msg.envelope.type!=='string'||msg.envelope.type.length>64)throw Error();const targets=msg.kind==='message'?[r.members.find(x=>x.id===msg.to)]:r.members.filter(x=>x.id!==p.id);for(const t of targets)if(t?.socket?.readyState===1)t.socket.send(JSON.stringify({type:'relay:message',from:p.id,envelope:msg.envelope}));}catch{ws.send(JSON.stringify({type:'relay:error',error:'Invalid game envelope.'}));}});ws.on('close',()=>{if(p.socket===ws){p.socket=null;notify(r);}});ws.send(JSON.stringify({type:'relay:members',view:view(r,p)}));notify(r);});
-  }catch{socket.destroy();}
+  const u=new URL(req.url,'http://relay'),pathname=u.pathname,tokenValue=u.searchParams.get('token');
+  logUpgrade('UPGRADE',req,`room=${pathname.match(/^\/api\/rooms\/([A-Z0-9]{6})\/ws$/)?.[1]||''} tokenPresent=${tokenValue?'true':'false'}`);
+  if(pathname==='/ws-health'){
+   console.log('WS HANDLE_UPGRADE START health');
+   wss.handleUpgrade(req,socket,head,ws=>{console.log('WS HANDLE_UPGRADE OK health');ws.send('WS_HEALTH_OK');ws.close();});
+   return;
+  }
+  const code=pathname.match(/^\/api\/rooms\/([A-Z0-9]{6})\/ws$/)?.[1],r=code&&rooms.get(code);
+  if(!code){console.log('WS UPGRADE REJECT 404 invalid route');rejectUpgrade(socket,404,'Not Found');return;}
+  if(!r){console.log(`WS UPGRADE REJECT 404 room missing room=${code}`);rejectUpgrade(socket,404,'Not Found');return;}
+  const p=r.members.find(x=>x.token===tokenValue);
+  if(!p){console.log(`WS UPGRADE REJECT 403 invalid token room=${code}`);rejectUpgrade(socket,403,'Forbidden');return;}
+  try{
+   console.log(`WS HANDLE_UPGRADE START room=${code} member=${p.id}`);
+   wss.handleUpgrade(req,socket,head,ws=>{console.log(`WS HANDLE_UPGRADE OK room=${code} member=${p.id}`);p.socket=ws;ws.on('message',raw=>{try{if(raw.length>MAX_ENVELOPE)throw Error();const msg=JSON.parse(raw.toString());if(!msg||!['message','broadcast'].includes(msg.kind)||typeof msg.envelope!=='object'||Array.isArray(msg.envelope)||typeof msg.envelope.type!=='string'||msg.envelope.type.length>64)throw Error();const targets=msg.kind==='message'?[r.members.find(x=>x.id===msg.to)]:r.members.filter(x=>x.id!==p.id);for(const t of targets)if(t?.socket?.readyState===1)t.socket.send(JSON.stringify({type:'relay:message',from:p.id,envelope:msg.envelope}));}catch{ws.send(JSON.stringify({type:'relay:error',error:'Invalid game envelope.'}));}});ws.on('close',()=>{if(p.socket===ws){p.socket=null;notify(r);}});ws.send(JSON.stringify({type:'relay:members',view:view(r,p)}));notify(r);});
+  }catch(error){console.log(`WS UPGRADE REJECT 500 room=${code} reason=${error.message}`);rejectUpgrade(socket,500,'Internal Server Error');}
  };
  return handler;
 }
