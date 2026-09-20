@@ -41,3 +41,17 @@ Phase 3–5 던전 / 태그 / Spark·상점 (2026-09-17 이어서):
 - GAME `8.1-together-preview-1`
 
 미구현: cloud signaling, 공식배포, 실기기 같은 Wi-Fi 2대/4대 검증.
+# 2026-09-20 — Phase B/C multiplayer graphics pass
+
+- Added responsive player cards in the lobby with selected card thumbnails, existing rarity/power labels, team colors, and connection/choosing/ready/reconnecting states.
+- Clarified 1v1 `MY SIDE`/`OPPONENT`, four-human `BLUE TEAM`/`ORANGE TEAM`, co-op Raid/Dungeon, and Tag `HUMAN TEAM vs AI TEAM` presentation.
+- Strengthened battle hierarchy with turn banners, active-player emphasis, grouped HP bars, boss/enemy treatment, and short reduced-motion-safe feedback animations.
+- No networking, learning data, save schema, rewards, economy, or game rules changed.
+
+# 2026-09-20 — Phase B/C structural UI redesign
+
+- Redesigned solo Training Arena selection into a three-slot visual squad plus artwork-backed card library with rarity/type/HP metadata and selected-card framing.
+- Redesigned solo battle into enemy / VS / active-player hierarchy with a large turn banner, explicit energy/combo/status, and a separate bench.
+- Added state-derived combat feedback hooks for lunge/shake/flash-style classes; classes are only applied from existing before/after battle state.
+- Reworked Together card selection into a visual card grid and selected-team panel; improved raid boss-centric composition while keeping Dungeon and Tag distinct.
+- Preserved multiplayer protocol, transport, learning correctness, saves, rewards, and battle rules.

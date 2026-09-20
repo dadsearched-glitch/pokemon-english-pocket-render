@@ -50,3 +50,39 @@
 - tests/rewards-schema.test.mjs
 - WORK_HANDOFF_CONTINUE.md
 - TEST_REPORT.md
+# TEST REPORT — 2026-09-20 Phase B/C graphics/UI
+
+# TEST REPORT — 2026-09-20 Phase B/C structural redesign
+
+## Automated verification
+
+- `node --check web/app.js; node --check web/multiplayer.js`: **PASS**
+- `npm.cmd test`: **61/61 PASS**
+- `npm.cmd run build`: **PASS**
+- `git diff --check`: **PASS**
+
+## Route/UI scope
+
+- Solo lobby and battle renderers now use structural squad/arena/bench layouts.
+- Together lobby uses visual card tiles and selected-team slots; raid composition is boss-centric.
+- Browser visual inspection at `/?slice=frieza` and physical 360/390/412px devices remain **UNVERIFIED** because Playwright is not installed and no device farm is available.
+
+## Unverified
+
+- Real-device LAN, reconnect during battle, and Render production smoke testing remain **UNVERIFIED**.
+
+## Automated verification
+
+- `npm.cmd test`: **61/61 PASS**
+- `npm.cmd run build`: **PASS**
+- `node --test tests/browser-lobby.mjs`: **UNVERIFIED/NOT RUN** — Playwright is not installed in this worktree (`ERR_MODULE_NOT_FOUND: playwright`).
+- Local `npm.cmd run together` started successfully on port 4190; route/browser visual inspection was not completed because the browser test dependency is unavailable.
+
+## Scope
+
+- Updated only `web/multiplayer.js` and `web/multiplayer.css` for this pass.
+- Relay/network integration tests remain covered by the full 61-test suite; no transport files were modified.
+
+## Unverified
+
+- Real-device LAN (360/390/412px phones), reconnect during battle, and Render production smoke testing remain **UNVERIFIED**.
