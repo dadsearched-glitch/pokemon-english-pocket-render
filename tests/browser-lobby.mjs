@@ -31,7 +31,7 @@ try{
   await a.page.getByRole('button',{name:/Create room/}).click();
   await a.page.waitForSelector('.room-code');
   await a.page.getByRole('button',{name:/Ready/}).click();
-  await a.page.waitForSelector('text=준비 취소');
+  await a.page.waitForFunction(() => /준비 취소|Cancel ready/.test(document.body.innerText));
   await a.page.locator('.mp-cards button[aria-pressed="true"]').first().click();
   await a.page.waitForSelector('text=Ready · 준비 완료');
   await a.page.getByRole('button',{name:/방 나가기/}).click();

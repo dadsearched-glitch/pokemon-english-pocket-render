@@ -1,0 +1,239 @@
+/* Battle V3 — arcade readability + short cinematic attack moments.
+   No third-party FX assets: effects are CSS/vector layers built on existing game art. */
+
+/* ---------- shared multiplayer battlefield polish ---------- */
+.together .battle-shell{position:relative;overflow:hidden;background:linear-gradient(160deg,#fffef8 0%,#eff8f4 60%,#e5f2ef 100%)}
+.together .turn-banner{position:relative;overflow:hidden;background:linear-gradient(105deg,#0f2f45,#18556b 56%,#1b725e);box-shadow:inset 0 1px #ffffff38,0 5px 14px #17324a25}
+.together .turn-banner:after{content:'';position:absolute;inset:0;background:linear-gradient(115deg,transparent 30%,#fff2 45%,transparent 60%);translate:-120% 0;animation:v3-banner-sheen 7s ease-in-out infinite;pointer-events:none}
+.together .mode-kicker{display:inline-flex;align-items:center;gap:5px;padding:3px 8px;border-radius:999px;background:#9de5cf1f;color:#b9ffe5}
+
+.together .mp-arena.battle-v3{isolation:isolate;overflow:hidden;border:3px solid #76a9a4;border-radius:28px;box-shadow:inset 0 0 0 1px #ffffff99,inset 0 -35px 60px #0b354143,0 8px 0 #b6d0c8,0 18px 34px #12374226;background-position:center;background-size:cover}
+.together .mp-arena.battle-v3:before{content:'';position:absolute;z-index:0;inset:0;background:linear-gradient(180deg,#e9fdff1f 0%,transparent 38%,#082c3226 100%);pointer-events:none}
+.together .mp-arena.battle-v3:after{content:'';position:absolute;z-index:0;left:8%;right:8%;bottom:5%;height:20%;border-radius:50%;background:radial-gradient(ellipse,#d8f6c939 0 38%,transparent 70%);filter:blur(6px);pointer-events:none}
+.together .v3-stage-light{position:absolute;z-index:0;inset:-20%;pointer-events:none;background:radial-gradient(circle at 74% 25%,#fff8 0 3%,transparent 20%),radial-gradient(circle at 22% 72%,#c9fff342 0 4%,transparent 24%);mix-blend-mode:screen;animation:v3-stage-drift 8s ease-in-out infinite alternate}
+.together .mp-arena.battle-v3>*:not(.v3-stage-light):not(.v3-cinematic-layer){position:relative;z-index:1}
+
+/* Unit cards are a HUD around the Pokémon, rather than large white rectangles. */
+.together .battle-v3 .mp-unit{overflow:hidden;border-color:#ffffffb8;background:linear-gradient(160deg,#fffffff5 0 64%,#eef8f4ef 100%);box-shadow:0 8px 18px #0b33453d,inset 0 1px #fff;transition:transform .2s ease,box-shadow .2s ease,filter .2s ease}
+.together .battle-v3 .mp-unit:before{content:'';position:absolute;z-index:0;left:-25%;right:-25%;top:-60%;height:82%;background:radial-gradient(circle,var(--unit-color,#9be7c7) 0,transparent 64%);opacity:.22;pointer-events:none}
+.together .battle-v3 .mp-unit>*{position:relative;z-index:1}
+.together .battle-v3 .mp-unit.is-me{border-color:#7ae0c7;box-shadow:0 0 0 3px #5ccdb048,0 9px 22px #0b33454f,inset 0 1px #fff}
+.together .battle-v3 .mp-unit.is-ex,.together .battle-v3 .mp-unit.rarity-ex{border-color:#c47ae6;box-shadow:0 0 0 2px #e8b5ff75,0 0 24px #bd7ae45f,0 9px 22px #0b33454f}
+.together .battle-v3 .mp-unit.is-ex:after,.together .battle-v3 .mp-unit.is-special-art:after{content:'';position:absolute;z-index:2;inset:-45% -80%;background:linear-gradient(112deg,transparent 38%,#fff9 47%,#e6d5ff7d 50%,#b9fff37a 53%,transparent 62%);transform:translateX(-45%) rotate(4deg);animation:v3-foil-sweep 5.6s ease-in-out infinite;pointer-events:none}
+.together .battle-v3 .unit-owner{z-index:3}
+.together .battle-v3 .unit-owner>span{max-width:75%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.together .battle-v3 .unit-owner b{background:linear-gradient(#17324a,#0b2536);box-shadow:0 2px 5px #0a263550}
+
+.together .unit-stage{position:relative;display:grid;place-items:center;min-height:100px;isolation:isolate;transform-origin:50% 74%;will-change:transform,filter}
+.together .unit-stage .unit-mon{position:relative;z-index:3;min-height:inherit;width:100%}
+.together .unit-stage .unit-mon img{position:relative;z-index:3;max-height:158px;filter:drop-shadow(0 9px 6px #17324a48);animation:v3-unit-idle 3.6s ease-in-out infinite}
+.together .unit-ground-shadow{position:absolute;z-index:1;left:17%;right:17%;bottom:7%;height:14%;border-radius:50%;background:radial-gradient(ellipse,#123a4961 0 45%,transparent 72%);filter:blur(3px);transform:scaleX(1.15)}
+.together .unit-aura{position:absolute;z-index:0;left:15%;right:15%;top:8%;bottom:5%;border-radius:50%;background:radial-gradient(circle,var(--unit-color,#9be7c7) 0 8%,transparent 63%);opacity:.18;filter:blur(2px)}
+.together .is-ex .unit-aura,.together .rarity-ex .unit-aura{opacity:.4;animation:v3-aura-breathe 2s ease-in-out infinite}
+.together .is-special-art .unit-aura{opacity:.48;box-shadow:0 0 30px var(--unit-color)}
+.together .unit-name{margin-top:-2px}
+.together .unit-name strong{font-weight:1000;letter-spacing:-.02em}
+.together .unit-skill{display:flex;align-items:center;gap:5px;min-width:0}
+.together .unit-skill small{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:#5c7178;font-size:8px;font-weight:700}
+.together .unit-type{display:inline-flex;align-items:center;gap:3px;flex:0 0 auto;border:1px solid color-mix(in srgb,var(--unit-color) 65%,#5e7a7d);border-radius:999px;padding:2px 5px;background:color-mix(in srgb,var(--unit-color) 22%,white);color:#294851;font-size:7px;font-weight:1000;letter-spacing:.06em}
+.together .unit-hp .hp-track{position:relative;height:10px;overflow:hidden;background:#dbe7e2;box-shadow:inset 0 1px 2px #59736c35}
+.together .unit-hp .hp-track i{position:relative;background:linear-gradient(90deg,#34b779,#b2ee6f);box-shadow:inset 0 1px #eaffd4;transition:width .35s cubic-bezier(.2,.7,.2,1)}
+.together .unit-hp .hp-track i:after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,transparent,#fff8,transparent);translate:-100% 0;animation:v3-hp-sheen 4s linear infinite}
+.together .unit-energy{align-items:center}
+.together .unit-energy i{display:grid;place-items:center;width:12px;height:12px;background:#d7e4df;border:1px solid #91a9a1;color:transparent;box-shadow:inset 0 1px #fff}
+.together .unit-energy i span{font-size:7px;font-style:normal;font-weight:1000}
+.together .unit-energy i.on{background:linear-gradient(#ffe885,#f6bd3f);color:#815507;border-color:#c89225;box-shadow:0 0 8px #ffd04f8f,inset 0 1px #fff8}
+.together .unit-energy.is-ready i.on{animation:v3-energy-ready .8s ease-in-out infinite alternate}
+
+.together .vs-mark{display:grid;place-items:center;line-height:.8;z-index:3!important;text-shadow:0 4px 0 #9d5f28,0 0 15px #fff6,0 0 24px #ffd56a66}
+.together .vs-mark small{font-size:.22em;letter-spacing:.22em;font-style:normal;color:#fff;opacity:.8;margin-bottom:4px}
+.together .arena-mode-label{background:linear-gradient(100deg,#0d2b41e8,#124b60ec,#0d2b41e8);border:1px solid #ffffff43;box-shadow:0 4px 10px #0a263536}
+
+/* Mode identity */
+.together .mode-duel{background-image:linear-gradient(90deg,#346da74f 0 48%,#2e8b7352 52% 100%),linear-gradient(#1c5c7680,#a5d4bb67),url('./art/forest-arena.png')}
+.together .mode-duel .duel-opponent{transform:perspective(800px) rotateY(2deg)}
+.together .mode-duel .duel-self{transform:perspective(800px) rotateY(-2deg)}
+
+.together .mode-duo{background-image:linear-gradient(90deg,#2d79c6a8 0 47.5%,#122e43a6 49% 51%,#e47d3ca8 52.5% 100%),url('./art/forest-arena.png')}
+.together .mode-duo .duo-team{backdrop-filter:blur(3px);box-shadow:0 8px 18px #0b334540}
+.together .mode-duo .duo-blue{background:linear-gradient(160deg,#eff8fff0,#dcecffd9);border-color:#69aaf0}
+.together .mode-duo .duo-orange{background:linear-gradient(160deg,#fff7f0f0,#ffe6d6db);border-color:#ee955f}
+
+.together .mode-raid{background-image:radial-gradient(circle at 50% 20%,#fff7 0 3%,transparent 21%),radial-gradient(circle at 50% 35%,#bd86ff33 0 15%,transparent 45%),linear-gradient(#1b214ec4 0 45%,#6b345bc4 64%,#c27755ad 100%),url('./art/forest-arena.png')!important}
+.together .mode-raid:after{background:radial-gradient(ellipse,#ffcf793a 0 35%,transparent 72%)}
+.together .raid-stage-title{border:1px solid #d9c2ff6e;background:linear-gradient(90deg,#21163aec,#43245aeb,#21163aec);box-shadow:0 4px 12px #120a2f55}
+.together .mode-raid .raid-boss{overflow:visible;background:linear-gradient(160deg,#fffdf3e8,#f5ebffe0);border:2px solid #ffd269;box-shadow:0 0 0 3px #ffcf6b4a,0 0 35px #d889ff52,0 14px 35px #240e3d77}
+.together .mode-raid .raid-boss .unit-stage{min-height:180px}
+.together .mode-raid .raid-boss .unit-stage img{max-height:245px;animation:v3-boss-idle 2.8s ease-in-out infinite}
+.together .mode-raid .raid-boss .unit-aura{opacity:.55;background:radial-gradient(circle,#fff9 0 3%,var(--unit-color) 15%,transparent 65%);animation:v3-boss-aura 2s ease-in-out infinite}
+.together .mode-raid .raid-boss .unit-ground-shadow{left:24%;right:24%;bottom:2%;height:10%;background:radial-gradient(ellipse,#1b193e8a 0 45%,transparent 72%)}
+.together .mode-raid .unit-shield{grid-template-columns:auto minmax(80px,1fr);padding:4px 7px;border-radius:9px;background:#dff4ffcc;border:1px solid #7bc5ef;color:#19597d;box-shadow:0 0 10px #6dc8ff42}
+.together .mode-raid .unit-shield i{height:10px;background:#cce0e9}
+.together .mode-raid .unit-shield i b{background:linear-gradient(90deg,#4caaff,#b9f5ff);box-shadow:0 0 9px #65c7ff}
+
+.together .mode-dungeon{background-image:linear-gradient(#153b43c9 0 44%,#315947bc 64%,#687755aa 100%),url('./art/forest-arena.png')}
+.together .dungeon-stage-title{background:linear-gradient(90deg,#113b3ce9,#226357e5,#113b3ce9);border:1px solid #d7ffc94d}
+.together .dungeon-route-mini{grid-column:1/-1;display:flex;justify-content:center;align-items:center;gap:0;margin:-4px auto 2px;min-height:25px}
+.together .dungeon-route-mini i{position:relative;display:grid;place-items:center;width:26px;height:26px;border-radius:50%;background:#173d42;border:2px solid #a8c8b7;color:#dceadf;font-style:normal;font-size:9px;font-weight:900;box-shadow:0 2px 5px #0d31343d}
+.together .dungeon-route-mini i:not(:last-child):after{content:'';position:absolute;left:22px;width:24px;height:4px;background:#8aa79c;z-index:-1}
+.together .dungeon-route-mini i+ i{margin-left:18px}
+.together .dungeon-route-mini i.done{background:#3aa879;border-color:#b9f6c3;color:#fff}
+.together .dungeon-route-mini i.here{background:#ffd66b;border-color:#fff0a3;color:#70510b;box-shadow:0 0 13px #ffd66b;animation:v3-route-here 1s ease-in-out infinite alternate}
+.together .mode-dungeon .dungeon-foe{background:linear-gradient(160deg,#fffef3ed,#eff8f0e8)}
+
+.together .mode-tag{background-image:linear-gradient(90deg,#65418fb8 0 47.5%,#182d46ad 49% 51%,#258a78b8 52.5% 100%),url('./art/forest-arena.png')}
+.together .mode-tag .tag-side{backdrop-filter:blur(3px);box-shadow:0 9px 22px #0c263c45}
+.together .mode-tag .tag-ai{background:linear-gradient(160deg,#f9f0fff0,#eadbffd8);border-color:#ae79df}
+.together .mode-tag .tag-human{background:linear-gradient(160deg,#f1fffaf0,#d8f7ebdc);border-color:#48c4a5}
+
+/* Shared gauges */
+.together .team-gauge{position:relative!important;overflow:hidden;min-width:178px;padding:8px 12px!important;border:1px solid #ffffff4a;background:linear-gradient(105deg,#102d45ed,#184e62ed)!important;box-shadow:0 5px 12px #0b2d3d4a,inset 0 1px #fff2}
+.together .team-gauge:before{content:'';position:absolute;inset:0;background:linear-gradient(100deg,transparent,#fff2,transparent);translate:-120% 0;animation:v3-gauge-sweep 3.6s ease-in-out infinite}
+.together .team-gauge .gauge-copy{position:relative;z-index:1;display:grid;line-height:1.05}
+.together .team-gauge .gauge-copy small{font-size:7px;letter-spacing:.13em;color:#b5dfd8}
+.together .team-gauge .gauge-copy strong{font-size:12px;color:#fff}
+.together .team-gauge .gauge-pips{position:relative;z-index:1}
+.together .team-gauge .gauge-pips i{display:grid;place-items:center;width:18px;height:18px;background:#6e8989;border:1px solid #a5bbb5;color:transparent;box-shadow:inset 0 1px #fff3}
+.together .team-gauge .gauge-pips i span{font-size:10px;font-style:normal;font-weight:1000}
+.together .team-gauge .gauge-pips i.on{background:linear-gradient(#ffe990,#f5b93b);border-color:#f5d16f;color:#7d5003;box-shadow:0 0 10px #ffd56a}
+.together .team-gauge.is-ready{border-color:#ffe78f;background:linear-gradient(105deg,#583b18ee,#9a621bee)!important;box-shadow:0 0 0 2px #ffe78f55,0 0 22px #ffcf5a73,inset 0 1px #fff4;animation:v3-ready-pulse 1s ease-in-out infinite alternate}
+
+/* ---------- Battle command console ---------- */
+.together .question{overflow:hidden;background:linear-gradient(155deg,#fffdf5,#f1faf5);box-shadow:0 5px 0 #a9d3c8,0 12px 28px #143b4722}
+.together .v3-power-meter{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:-4px 0 14px;padding:9px 12px;border:1px solid #bdd7ce;border-radius:14px;background:linear-gradient(100deg,#edf9f4,#fff8db)}
+.together .v3-power-meter>div{display:grid}.together .v3-power-meter small{font-size:8px;letter-spacing:.14em;color:#397165;font-weight:900}.together .v3-power-meter strong{font-size:14px;color:#174e65}
+.together .v3-power-meter>span{display:flex;gap:6px}.together .v3-power-meter i{display:grid;place-items:center;width:30px;height:30px;border-radius:10px;background:#dce8e2;border:1px solid #a5bdb5;color:#8ba198;font-style:normal;font-weight:1000;box-shadow:inset 0 1px #fff}
+.together .v3-power-meter i.on{background:linear-gradient(#ffe88c,#f3bb46);border-color:#d49f2f;color:#805306;box-shadow:0 0 10px #ffd05773,inset 0 1px #fff8}
+.together .v3-power-meter.is-ready{border-color:#e9b842;background:linear-gradient(100deg,#fff8cf,#ffe8a3);box-shadow:0 0 0 2px #ffd05a3f,0 5px 15px #9b6a1a22}
+.together .v3-power-meter.is-ready strong{color:#895b04}.together .v3-power-meter.is-ready i.on{animation:v3-energy-ready .7s ease-in-out infinite alternate}
+.together .v3-question-copy{text-align:center;margin-bottom:10px}.together .v3-question-copy>small{font-size:8px;letter-spacing:.16em;color:#348270;font-weight:1000}.together .v3-question-copy h2{margin:4px 0 2px;font-size:clamp(28px,6vw,42px);letter-spacing:-.03em}.together .v3-question-copy p{margin:0;color:#57737a}
+.together .v3-answers{gap:10px}.together .v3-answers button{display:grid!important;grid-template-columns:32px 1fr;align-items:center;text-align:left;gap:9px;background:linear-gradient(#fff,#eff8f4);border:1px solid #a9c9be;box-shadow:0 3px 0 #bad1c8;color:#174e65;font-weight:900}.together .v3-answers button>span{display:grid;place-items:center;width:28px;height:28px;border-radius:8px;background:#174e65;color:#fff;font-size:11px}.together .v3-answers button:not(:disabled):active{translate:0 2px;box-shadow:0 1px 0 #bad1c8}
+.together .v3-command-title{margin:5px 0 8px;font-size:18px;color:#174e65}
+.together .v3-move-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+.together button.v3-move{position:relative;display:grid;grid-template-columns:44px minmax(0,1fr) auto;align-items:center;gap:8px;min-height:72px;margin:0;padding:8px 9px;text-align:left;background:linear-gradient(145deg,#eff8f5,#fff);border:1px solid #9fc6ba;box-shadow:0 4px 0 #b2ccc4;overflow:hidden}
+.together button.v3-move:before{content:'';position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--move-color,#8adbc1)}
+.together button.v3-move.special{border-color:#d8a95c;background:linear-gradient(145deg,#fff9e8,#fff1c9);box-shadow:0 4px 0 #d8bd8b}
+.together button.v3-move.special:after{content:'';position:absolute;inset:0;background:linear-gradient(110deg,transparent 35%,#fff8 48%,transparent 60%);translate:-120% 0;animation:v3-gauge-sweep 4s ease-in-out infinite;pointer-events:none}
+.together .move-icon{position:relative;z-index:1;display:grid;place-items:center;width:40px;height:40px;border-radius:12px;background:color-mix(in srgb,var(--move-color) 30%,white);border:2px solid color-mix(in srgb,var(--move-color) 70%,#607c7a);color:#244b50;font-size:20px;font-weight:1000;box-shadow:inset 0 1px #fff}
+.together .move-copy{position:relative;z-index:1;display:grid;gap:2px;min-width:0}.together .move-copy b{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:13px;color:#17324a}.together .move-copy small{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:8px;color:#60777d}
+.together .move-power{position:relative;z-index:1;align-self:start;padding:2px 5px;border-radius:99px;background:#e4eee9;color:#4e6f6a;font-size:7px;font-weight:1000;letter-spacing:.08em}.together .v3-move.special .move-power{background:#f6d578;color:#75510b}
+.together button.v3-command{display:grid;align-content:center;gap:2px;min-height:64px;margin:0;padding:8px 10px;text-align:left;background:linear-gradient(#edf6f3,#ddebe7);border:1px solid #9dbcb4;box-shadow:0 4px 0 #b3cac3;color:#174e65}.together button.v3-command b{font-size:13px}.together button.v3-command small{font-size:8px;color:#61777d}.together button.v3-command.finisher{grid-column:1/-1;background:linear-gradient(110deg,#41325e,#74508d 46%,#a9698d);border-color:#e2b5ef;color:#fff;box-shadow:0 4px 0 #4b375e,0 0 18px #ab6ec14a}.together button.v3-command.finisher small{color:#f6ddff}.together button.v3-command.finisher:not(:disabled){animation:v3-finisher-ready 1.2s ease-in-out infinite alternate}
+.together .v3-switch-row{display:grid;grid-template-columns:auto repeat(3,minmax(0,1fr));align-items:center;gap:6px;margin-top:10px;padding-top:9px;border-top:1px dashed #bfd2cc}.together .v3-switch-row>small{font-size:7px;letter-spacing:.1em;color:#668079;font-weight:900}.together button.v3-switch{display:grid;grid-template-columns:36px minmax(0,1fr);align-items:center;gap:3px;min-height:45px;margin:0;padding:3px 6px;background:#edf6f1;border:1px solid #b3ccc3;box-shadow:none;font-size:9px}.together button.v3-switch img{width:34px!important;height:34px!important;object-fit:contain}.together button.v3-switch.is-active{border-color:#e1b44f;background:#fff3c7;box-shadow:0 0 0 2px #e7c15d3d}
+.together .v3-target-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(205px,1fr));gap:9px;margin-bottom:9px}.together .v3-target-card{display:grid;gap:6px;padding:10px;border:1px solid #c0d4ce;border-radius:14px;background:#f7fbf9}.together .v3-target-card>b{font-size:12px;color:#17324a}.together .v3-target-card>small{font-size:9px;color:#657a81}.together .v3-target-card .v3-move{width:100%}
+.together .v3-chain-status{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:8px 12px;margin:-6px 0 12px;border-radius:12px;background:#efe4f8;border:1px solid #c5a3df;color:#674182}.together .v3-chain-status small{font-size:8px;letter-spacing:.14em;font-weight:900}.together .v3-chain-status strong{font-size:13px}.together .v3-chain-status.is-ready{color:#fff;background:linear-gradient(100deg,#543877,#9b4c89);border-color:#f0b7ee;box-shadow:0 0 16px #c16fdc5c;animation:v3-ready-pulse 1s ease-in-out infinite alternate}
+
+/* ---------- cinematic layer ---------- */
+.together.v3-cinematic-running .question{opacity:.68;pointer-events:none;filter:saturate(.7)}
+.together .v3-cinematic-layer{position:absolute;z-index:60;inset:0;overflow:hidden;border-radius:inherit;pointer-events:none;--fx:#ffe47c}
+.together .v3-cinematic-layer:before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 45%,transparent 0 25%,#0618242e 72%,#06182466 100%);opacity:.8}
+.together .v3-move-banner{position:absolute;z-index:70;left:4%;right:4%;top:6%;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:10px;padding:10px 15px;border-top:2px solid var(--fx);border-bottom:2px solid var(--fx);background:linear-gradient(90deg,transparent,#071f35ee 9%,#113e55f2 50%,#071f35ee 91%,transparent);color:#fff;text-shadow:0 2px 3px #000;box-shadow:0 5px 16px #06192552}
+.together .v3-move-banner small{font-size:7px;letter-spacing:.15em;color:#bcebdd;font-weight:900}.together .v3-move-banner strong{text-align:center;font-size:clamp(18px,4vw,29px);letter-spacing:.035em}.together .v3-move-banner span{font-size:8px;font-weight:900;color:var(--fx)}
+.together .v3-special-cutin{position:absolute;z-index:72;left:-4%;right:-4%;top:18%;height:48%;display:grid;grid-template-columns:45% 1fr;align-items:center;gap:8px;overflow:hidden;padding:8px 12%;background:linear-gradient(112deg,#071d33 4%,color-mix(in srgb,var(--fx) 62%,#153a5a) 68%,#f8fff3 100%);border-block:3px solid #fff;box-shadow:0 0 28px var(--fx)}
+.together .v3-special-cutin:before{content:'';position:absolute;inset:-50%;background:repeating-linear-gradient(115deg,transparent 0 28px,#ffffff22 30px 34px,transparent 36px 65px);transform:rotate(-4deg)}
+.together .v3-special-cutin img{position:relative;z-index:2;width:100%;height:135%;object-fit:contain;filter:drop-shadow(0 8px 7px #07172b94)}
+.together .v3-special-cutin>div{position:relative;z-index:2;display:grid;gap:2px;color:#fff;text-shadow:0 3px 4px #06131f}.together .v3-special-cutin small{font-size:8px;letter-spacing:.16em;color:#dffdf3;font-weight:900}.together .v3-special-cutin b{font-size:clamp(22px,5vw,38px);line-height:.95}.together .v3-special-cutin span{font-size:clamp(12px,2.4vw,18px);color:#fff3ae;font-weight:900}.together .v3-special-cutin.is-ex{background:linear-gradient(112deg,#142c73,#9c45b3 43%,#f3bd5c 70%,#54d9cb);box-shadow:0 0 34px #ffe17d,0 0 55px #c26ce6}.together .v3-special-cutin.is-team{background:linear-gradient(112deg,#103d58,#2c8075 36%,#d1a947 74%,#fff5b8);box-shadow:0 0 42px #ffe88f}
+
+/* Projectile/effect art: intentionally irregular, shard/line based, not large geometric circles. */
+.together .v3-travel{position:absolute;z-index:64;height:8px;transform-origin:0 50%;border-radius:999px;background:linear-gradient(90deg,transparent 0 3%,#fff 16%,var(--fx) 48%,#fff 73%,transparent 100%);box-shadow:0 0 9px #fff,0 0 18px var(--fx)}
+.together .v3-travel:after{content:'';position:absolute;left:5%;right:5%;top:-7px;height:22px;background:repeating-linear-gradient(90deg,transparent 0 22px,#ffffff75 24px 28px,transparent 30px 48px);filter:blur(1px);clip-path:polygon(0 35%,100% 0,98% 60%,0 100%)}
+.together .v3-travel.is-special{height:13px;box-shadow:0 0 12px #fff,0 0 30px var(--fx),0 0 55px color-mix(in srgb,var(--fx) 55%,transparent)}
+.together .v3-travel-electric{height:10px;border-radius:0;clip-path:polygon(0 38%,16% 0,25% 53%,40% 12%,51% 62%,66% 18%,79% 58%,100% 25%,88% 76%,72% 42%,60% 92%,45% 48%,31% 88%,20% 44%,7% 82%);background:linear-gradient(90deg,#fffbd1,#ffe04c,#fff)}
+.together .v3-travel-fire{height:18px;clip-path:polygon(0 45%,8% 15%,16% 43%,25% 0,34% 50%,45% 17%,54% 58%,67% 7%,76% 51%,87% 21%,100% 45%,88% 75%,75% 55%,63% 95%,52% 53%,40% 84%,30% 49%,18% 81%,9% 54%);background:linear-gradient(90deg,transparent,#ffed94 14%,#ff9b3f 54%,#f04d2e 85%,transparent);box-shadow:0 0 16px #ff8b38,0 0 26px #f14d2b}
+.together .v3-travel-water{height:20px;background:linear-gradient(180deg,#eaffff,#7ee7ff 38%,#2f9fe4 72%,#eaffff);clip-path:polygon(0 25%,15% 0,32% 28%,49% 7%,67% 31%,84% 5%,100% 31%,95% 73%,77% 95%,60% 72%,43% 96%,25% 69%,8% 93%);box-shadow:0 0 18px #73dfff}
+.together .v3-travel-grass{height:7px;background:linear-gradient(90deg,#eaffbd,#78e87d,#2d9f68,#d8ffae);box-shadow:0 0 11px #75e97b}
+.together .v3-travel-psychic{height:10px;background:linear-gradient(90deg,transparent,#f7dcff,#cb78f0,#8a5fe5,#f7dcff,transparent);box-shadow:0 0 14px #db83ff,0 0 30px #8a5fe5}
+.together .v3-travel-dark{height:12px;background:linear-gradient(90deg,transparent,#e8d8ff,#754b9e,#17162d,#e8d8ff,transparent);box-shadow:0 0 16px #7e53ad}
+.together .v3-travel-metal{height:9px;background:linear-gradient(180deg,#fff,#9fc6d6,#456778,#e9fbff);clip-path:polygon(0 30%,22% 0,45% 38%,67% 4%,100% 42%,78% 100%,54% 58%,31% 96%);box-shadow:0 0 10px #d8f5ff}
+.together .v3-travel-dragon{height:15px;background:linear-gradient(90deg,transparent,#fff8c6 12%,#ffd765 30%,#966ffc 58%,#4fd8d5 82%,transparent);box-shadow:0 0 12px #fff,0 0 26px #a876ff}
+.together .v3-travel-fighting{height:8px;background:linear-gradient(90deg,transparent,#fff3d8,#e99c62,#9c573b,transparent);box-shadow:0 0 14px #f1a66d}
+
+.together .v3-vine{position:absolute;z-index:65;height:18px;transform-origin:0 50%;border-top:7px solid var(--fx);border-radius:50% 55% 35% 60%;filter:drop-shadow(0 0 5px #66dc78)}
+.together .v3-vine:before,.together .v3-vine:after{content:'';position:absolute;width:19px;height:9px;border-radius:100% 0 100% 0;background:linear-gradient(90deg,#dfffc5,#56c96b);box-shadow:0 0 5px #75df7c}.together .v3-vine:before{left:43%;top:-8px;rotate:-30deg}.together .v3-vine:after{left:70%;top:2px;rotate:150deg}
+.together .v3-particle{position:absolute;z-index:67;width:15px;height:15px;background:var(--fx);filter:drop-shadow(0 0 5px var(--fx))}
+.together .v3-particle.type-electric{width:13px;height:21px;clip-path:polygon(53% 0,100% 0,68% 39%,96% 39%,17% 100%,41% 52%,10% 52%);background:#ffe45b}
+.together .v3-particle.type-fire{width:14px;height:20px;border-radius:60% 40% 65% 35%;background:radial-gradient(circle at 45% 60%,#fff49a 0 17%,#ffad32 38%,#ef502d 72%,transparent 75%)}
+.together .v3-particle.type-water{width:11px;height:17px;border-radius:55% 55% 63% 63%;clip-path:polygon(50% 0,100% 55%,78% 100%,22% 100%,0 55%);background:#a7efff}
+.together .v3-particle.type-grass{width:18px;height:9px;border-radius:100% 0 100% 0;background:linear-gradient(90deg,#e8ffc8,#54c967)}
+.together .v3-particle.type-metal{width:18px;height:9px;clip-path:polygon(0 45%,35% 0,100% 22%,75% 100%,28% 82%);background:linear-gradient(135deg,#fff,#9fc3d4 46%,#536f80)}
+.together .v3-particle.type-dragon{width:16px;height:16px;clip-path:polygon(50% 0,100% 50%,50% 100%,0 50%);background:linear-gradient(135deg,#ffef97,#8b6bff,#52d9d4)}
+.together .v3-particle.type-fighting{width:17px;height:17px;clip-path:polygon(50% 0,62% 37%,100% 50%,62% 63%,50% 100%,38% 63%,0 50%,38% 37%);background:#f0a064}
+.together .v3-particle.type-normal{width:17px;height:17px;clip-path:polygon(50% 0,61% 36%,100% 38%,69% 60%,79% 100%,50% 75%,21% 100%,31% 60%,0 38%,39% 36%);background:#fff2ad}
+.together .v3-psy-ring{position:absolute;z-index:66;width:120px;height:60px;border:4px solid var(--fx);border-radius:50%;box-shadow:0 0 13px var(--fx),inset 0 0 12px color-mix(in srgb,var(--fx) 55%,transparent)}
+.together .v3-dark-slash{position:absolute;z-index:66;width:150px;height:14px;border-radius:100%;background:linear-gradient(90deg,transparent,#f0e5ff 15%,#a16bd0 42%,#211a3b 76%,transparent);box-shadow:0 0 12px #9c63d2}
+
+.together .v3-impact-core{position:absolute;z-index:69;width:94px;height:94px;background:radial-gradient(circle,#fffde4 0 11%,var(--fx) 23%,transparent 62%);clip-path:polygon(50% 0,61% 32%,86% 10%,76% 40%,100% 46%,70% 57%,91% 84%,60% 69%,51% 100%,43% 68%,13% 91%,30% 59%,0 49%,31% 40%,14% 13%,42% 33%);filter:drop-shadow(0 0 8px #fff) drop-shadow(0 0 16px var(--fx))}
+.together .v3-impact-ray{position:absolute;z-index:68;width:var(--len,70px);height:5px;transform-origin:0 50%;background:linear-gradient(90deg,#fff,var(--fx),transparent);clip-path:polygon(0 25%,100% 0,84% 100%,0 75%);filter:drop-shadow(0 0 4px var(--fx))}
+.together .v3-impact-shard{position:absolute;z-index:69;width:17px;height:9px;background:var(--fx);clip-path:polygon(0 46%,34% 0,100% 22%,78% 100%,27% 80%);filter:drop-shadow(0 0 4px var(--fx))}
+.together .v3-impact-shard.type-grass{border-radius:100% 0 100% 0;clip-path:none;background:linear-gradient(90deg,#eaffc6,#55cb65)}
+.together .v3-impact-shard.type-fire{height:18px;border-radius:60% 40% 65% 35%;clip-path:none;background:radial-gradient(circle at 50% 65%,#fff19a,#ffad32 38%,#ef512d 70%,transparent 73%)}
+.together .v3-impact-shard.type-water{width:10px;height:17px;clip-path:polygon(50% 0,100% 55%,76% 100%,24% 100%,0 55%);background:#9cefff}
+
+.together .v3-damage-pop{position:absolute;z-index:75;font-size:clamp(27px,7vw,54px);font-weight:1000;color:#fff4b4;text-shadow:0 3px 0 #9f392c,2px 0 #9f392c,-2px 0 #9f392c,0 0 14px #fff;letter-spacing:-.04em;white-space:nowrap}
+.together .v3-callout{position:absolute;z-index:76;left:50%;top:62%;padding:8px 16px;border-radius:999px;border:2px solid #fff;background:#a24a2eef;color:#fff6c6;font-size:clamp(15px,3.5vw,25px);font-weight:1000;letter-spacing:.04em;text-shadow:0 2px #66251c;box-shadow:0 0 18px #ffb2578a;white-space:nowrap}
+.together .v3-callout.is-break{top:52%;background:#286997ef;color:#e9fbff;box-shadow:0 0 21px #75d5ff8c}
+.together .v3-callout.is-ko{top:44%;padding:10px 22px;background:#253144f2;color:#fff;font-size:clamp(24px,6vw,44px);box-shadow:0 0 24px #fff6}
+.together .v3-callout.is-team{top:34%;background:linear-gradient(90deg,#2a6f62ef,#9b6c25ef);color:#fff5b5;border-color:#fff1a5;box-shadow:0 0 26px #ffe2778e}
+.together .v3-team-charged{box-shadow:0 0 0 3px #ffe7838a,0 0 28px #ffe27d!important;filter:brightness(1.08)}
+
+/* ---------- Solo battle: remove placeholder round impact and make VFX more organic ---------- */
+.cinematic-layer .impact-ring{display:none!important}
+.cinematic-layer .v3-solo-impact{position:absolute;left:calc(65% - 42px);top:calc(36% - 42px);width:84px;height:84px;background:radial-gradient(circle,#fff9c8 0 10%,var(--cine-colour) 22%,transparent 60%);clip-path:polygon(50% 0,61% 33%,87% 10%,76% 41%,100% 49%,70% 58%,91% 85%,60% 70%,51% 100%,43% 69%,13% 91%,30% 59%,0 50%,31% 40%,14% 13%,42% 33%);filter:drop-shadow(0 0 9px #fff) drop-shadow(0 0 17px var(--cine-colour))}
+.cinematic-layer .v3-solo-ray{position:absolute;left:65%;top:36%;height:4px;background:linear-gradient(90deg,#fff,var(--cine-colour),transparent);transform-origin:0 50%;filter:drop-shadow(0 0 4px var(--cine-colour));clip-path:polygon(0 25%,100% 0,86% 100%,0 75%)}
+.cinematic-layer .vine{position:absolute;left:38%;top:50%;width:230px;height:17px;transform-origin:0 50%;border-top:7px solid #7ddf7d;border-radius:45% 55% 35% 60%;filter:drop-shadow(0 0 5px #64d870)}
+.cinematic-layer .vine:before,.cinematic-layer .vine:after{content:'';position:absolute;width:20px;height:10px;border-radius:100% 0 100% 0;background:linear-gradient(90deg,#e5ffc9,#59ca68)}
+.cinematic-layer .vine:before{left:42%;top:-8px;rotate:-26deg}.cinematic-layer .vine:after{left:70%;top:1px;rotate:150deg}
+.special-cutin{height:auto;min-height:43%;inset:20% -5% 30%;box-shadow:0 0 36px var(--cine-colour),0 10px 30px #07192b70}
+.speed-lines{background:repeating-conic-gradient(from 12deg at 70% 30%,transparent 0deg 8deg,#e9fbff7a 9deg,transparent 10deg 21deg);opacity:.55}
+.damage-number{filter:drop-shadow(0 0 5px #fff6)}
+
+/* ---------- animation ---------- */
+@keyframes v3-banner-sheen{0%,42%{translate:-120% 0}62%,100%{translate:120% 0}}
+@keyframes v3-stage-drift{to{transform:translate(3%,-2%) scale(1.05)}}
+@keyframes v3-foil-sweep{0%,55%{transform:translateX(-55%) rotate(4deg)}75%,100%{transform:translateX(55%) rotate(4deg)}}
+@keyframes v3-unit-idle{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(-3px) scale(1.008)}}
+@keyframes v3-boss-idle{0%,100%{transform:translateY(0) scale(1.02)}50%{transform:translateY(-5px) scale(1.055)}}
+@keyframes v3-aura-breathe{to{opacity:.56;transform:scale(1.08)}}
+@keyframes v3-boss-aura{50%{opacity:.8;transform:scale(1.08);filter:blur(3px)}}
+@keyframes v3-hp-sheen{0%,72%{translate:-110% 0}100%{translate:120% 0}}
+@keyframes v3-energy-ready{to{filter:brightness(1.2);transform:translateY(-1px);box-shadow:0 0 13px #ffd04f}}
+@keyframes v3-route-here{to{transform:translateY(-2px);box-shadow:0 0 18px #ffd66b}}
+@keyframes v3-gauge-sweep{0%,45%{translate:-120% 0}75%,100%{translate:120% 0}}
+@keyframes v3-ready-pulse{to{filter:brightness(1.1);transform:translateY(-1px)}}
+@keyframes v3-finisher-ready{to{filter:brightness(1.12);box-shadow:0 4px 0 #4b375e,0 0 28px #c67ee479}}
+
+/* ---------- responsive ---------- */
+@media(max-width:700px){
+ .together .battle-v3 .unit-stage{min-height:78px}.together .battle-v3 .unit-stage .unit-mon img{max-height:118px}
+ .together .battle-v3 .unit-skill small{display:none}.together .battle-v3 .unit-type{font-size:6px;padding:1px 4px}
+ .together .mode-raid .raid-boss .unit-stage{min-height:128px}.together .mode-raid .raid-boss .unit-stage img{max-height:175px}
+ .together .v3-special-cutin{grid-template-columns:44% 1fr;padding-inline:7%;height:44%;top:22%}
+ .together .v3-move-banner{left:2%;right:2%;grid-template-columns:1fr;padding:8px 12px}.together .v3-move-banner small,.together .v3-move-banner span{display:none}
+ .together .v3-target-grid{grid-template-columns:1fr}.together button.v3-move{min-height:64px;grid-template-columns:38px minmax(0,1fr) auto}.together .move-icon{width:35px;height:35px;font-size:17px}
+}
+@media(max-width:520px){
+ .together .mp-arena.battle-v3{border-radius:20px;padding:7px;gap:6px}
+ .together .arena-mode-label{font-size:7px;padding:5px 6px}.together .arena-mode-label b{font-size:8px}
+ .together .battle-v3 .mp-unit{padding:5px}.together .battle-v3 .unit-stage{min-height:58px}.together .battle-v3 .unit-stage .unit-mon img{max-height:82px}.together .battle-v3 .unit-ground-shadow{bottom:3%}
+ .together .battle-v3 .unit-owner{font-size:7px}.together .battle-v3 .unit-name strong{font-size:9px}.together .battle-v3 .unit-name span{font-size:6px}.together .battle-v3 .unit-hp small{font-size:7px}
+ .together .unit-energy i{width:9px;height:9px}.together .unit-energy i span{font-size:5px}
+ .together .mode-raid{grid-template-rows:auto 145px auto auto!important}.together .mode-raid .raid-boss .unit-stage{min-height:88px}.together .mode-raid .raid-boss .unit-stage img{max-height:112px}
+ .together .mode-raid .coop-lineup .unit-skill,.together .mode-dungeon .coop-lineup .unit-skill{display:none}
+ .together .dungeon-route-mini i{width:20px;height:20px;font-size:7px}.together .dungeon-route-mini i:not(:last-child):after{left:17px;width:18px}.together .dungeon-route-mini i+i{margin-left:13px}
+ .together .team-gauge{min-width:150px;padding:6px 9px!important}.together .team-gauge .gauge-pips i{width:14px;height:14px}.together .team-gauge .gauge-copy strong{font-size:10px}
+ .together .v3-power-meter{padding:7px 9px}.together .v3-power-meter i{width:25px;height:25px;border-radius:8px}.together .v3-power-meter strong{font-size:12px}
+ .together .v3-move-grid{grid-template-columns:1fr 1fr;gap:6px}.together button.v3-move{grid-template-columns:33px minmax(0,1fr);gap:5px;min-height:58px;padding:6px}.together .move-icon{width:30px;height:30px;border-radius:9px;font-size:15px}.together .move-power{display:none}.together .move-copy b{font-size:11px}.together .move-copy small{font-size:7px}
+ .together button.v3-command{min-height:54px;padding:6px}.together button.v3-command b{font-size:11px}.together button.v3-command small{font-size:7px}
+ .together .v3-switch-row{grid-template-columns:repeat(3,1fr)}.together .v3-switch-row>small{grid-column:1/-1}.together button.v3-switch{grid-template-columns:28px minmax(0,1fr);padding:2px 4px}.together button.v3-switch img{width:27px!important;height:27px!important}.together button.v3-switch span{font-size:7px}
+ .together .v3-special-cutin{height:40%;top:25%;grid-template-columns:46% 1fr}.together .v3-special-cutin b{font-size:20px}.together .v3-special-cutin span{font-size:11px}
+ .together .v3-callout{font-size:15px;padding:6px 10px}
+}
+@media(max-width:390px){
+ .together .battle-v3 .unit-stage{min-height:48px}.together .battle-v3 .unit-stage .unit-mon img{max-height:65px}
+ .together .mode-duel{grid-template-columns:minmax(0,1fr) 20px minmax(0,1fr)!important}.together .mode-duel .vs-mark{font-size:18px}
+ .together .mode-tag,.together .mode-duo{grid-template-columns:minmax(0,1fr) 18px minmax(0,1fr)!important}.together .mode-tag .vs-mark,.together .mode-duo .vs-mark{font-size:16px}
+ .together .v3-answers button{grid-template-columns:26px 1fr;gap:5px;padding:7px!important;font-size:12px!important}.together .v3-answers button>span{width:23px;height:23px}
+}
+@media(prefers-reduced-motion:reduce){
+ .together .turn-banner:after,.together .v3-stage-light,.together .battle-v3 .mp-unit.is-ex:after,.together .battle-v3 .mp-unit.is-special-art:after,.together .unit-stage .unit-mon img,.together .unit-aura,.together .unit-hp .hp-track i:after,.together .unit-energy.is-ready i.on,.together .team-gauge:before,.together .team-gauge.is-ready,.together .v3-power-meter.is-ready i.on,.together button.v3-command.finisher:not(:disabled),.together .dungeon-route-mini i.here{animation:none!important}
+}
+.cinematic-layer .solo-effective{position:absolute;z-index:25;left:50%;top:54%;padding:7px 14px;border:2px solid #fff0a4;border-radius:999px;background:#9f492fed;color:#fff7c4;font-weight:1000;font-size:clamp(14px,3.5vw,21px);letter-spacing:.04em;text-shadow:0 2px #68261c;box-shadow:0 0 18px #ffb25988;white-space:nowrap}
