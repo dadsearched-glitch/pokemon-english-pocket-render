@@ -68,23 +68,32 @@ export function openPack(p,random=Math.random){
  p.packs--;p.opened++;p.cards.push(...cards);p.pendingPack={cards,index:-1};return p.pendingPack;
 }
 export function revealNext(p){if(!p.pendingPack)return false;if(p.pendingPack.index>=4){p.pendingPack=null;return false;}p.pendingPack.index++;return true;}
-export function startBattle(p,team){
+const REGION_BOSSES=[3,9,6,149,150,25];
+export function bossUnlocked(p,region){return Number.isInteger(region)&&region>=0&&region<6&&Array.from({length:4},(_,n)=>region*4+n).every(i=>(i===p.chapter?p.done:p.unitProgress?.[i]?.done)?.length===6);}
+export function battleRole(card){if(card.hp>=145)return 'guardian';if(['grass','water'].includes(card.type))return 'support';return 'striker';}
+export function bossTell(b){if(b?.mode!=='boss'||b.result)return '';const nextTurn=b.phase==='question'?b.turn+1:b.turn;return nextTurn%3===0?'⚠ 강한 공격 예고 · 방어하면 피해가 줄어요.':'상대의 다음 공격에 대비하세요.';}
+const incomingDamage=(b,base)=>b.mode==='boss'&&b.turn%3===0?base+8:base;
+export function startBattle(p,team,{mode='training',region=null}={}){
  if(p.battle&&!p.battle.result)return p.battle;
- if(team.length!==3||new Set(team.map(String)).size!==3||!team.every(id=>p.cards.includes(id)&&byId(id)&&byId(id).battleEligible!==false))return null;
- const enemies=[BATTLE_CARDS[(p.battles*3+3)%BATTLE_CARDS.length],BATTLE_CARDS[(p.battles*3+6)%BATTLE_CARDS.length],BATTLE_CARDS[(p.battles*3+16)%BATTLE_CARDS.length]];
- p.battles++;p.battle={team:team.map(id=>({id,hp:byId(id).hp})),active:0,enemies:enemies.map(c=>({id:c.id,hp:80,max:80})),enemy:0,energy:0,combo:0,guard:false,turn:0,phase:'question',result:null,paid:false,log:'Answer to charge English Power.'};return p.battle;
+ if(!Array.isArray(team)||team.length!==3||new Set(team.map(String)).size!==3||!team.every(id=>p.cards.some(owned=>String(owned)===String(id))&&byId(id)&&byId(id).battleEligible!==false))return null;
+ if(mode==='boss'&&!bossUnlocked(p,region))return null;
+ if(!['boss','training'].includes(mode))return null;
+ const enemies=mode==='boss'?[byId(REGION_BOSSES[region])]:[BATTLE_CARDS[(p.battles*3+3)%BATTLE_CARDS.length],BATTLE_CARDS[(p.battles*3+6)%BATTLE_CARDS.length],BATTLE_CARDS[(p.battles*3+16)%BATTLE_CARDS.length]];
+ p.battles++;p.battle={mode,region:mode==='boss'?region:null,team:team.map(id=>({id,hp:byId(id).hp})),active:0,enemies:enemies.map(c=>({id:c.id,hp:mode==='boss'?140+region*15:80,max:mode==='boss'?140+region*15:80})),enemy:0,energy:0,combo:0,guard:false,turn:0,phase:'question',result:null,paid:false,log:mode==='boss'?'Region guardian awaits. Answer to charge English Power.':'Answer to charge English Power.'};return p.battle;
 }
-function enemyHit(b,damage){let t=b.team[b.active];t.hp=Math.max(0,t.hp-Math.round(damage*(b.guard?.4:1)));b.guard=false;if(!t.hp){const next=b.team.findIndex(t=>t.hp>0);if(next<0){b.result='lost';b.phase='end';b.log='A brave try! Your team will be fully healed for the next match.';}else{b.active=next;b.log+=' A teammate steps in!';}}}
+function enemyHit(b,damage){let t=b.team[b.active];const role=b.mode==='boss'?battleRole(byId(t.id)):'';t.hp=Math.max(0,t.hp-Math.round(damage*(b.guard?(role==='guardian'?.25:.4):1)));b.guard=false;if(!t.hp){const next=b.team.findIndex(t=>t.hp>0);if(next<0){b.result='lost';b.phase='end';b.log='A brave try! Your team will be fully healed for the next match.';}else{b.active=next;b.log+=' A teammate steps in!';}}}
 export function battleAnswer(p,correct){const b=p.battle;if(!b||b.result||b.phase!=='question')return false;
- b.turn++;if(correct){b.energy=Math.min(3,b.energy+1);b.combo++;b.phase='move';b.log='Great English! Choose a move, or charge again.';}else{b.combo=0;b.log='Keep trying! The opponent deals 10 damage.';enemyHit(b,10);}return true;
+ b.turn++;if(correct){b.energy=Math.min(3,b.energy+1);b.combo++;b.phase='move';b.log='Great English! Choose a move, or charge again.';}else{b.combo=0;b.log='Keep trying! The opponent attacks.';enemyHit(b,incomingDamage(b,10));}return true;
 }
 export function battleMove(p,move){const b=p.battle;if(!b||b.result||b.phase!=='move')return false;
  if(move==='charge'){if(b.energy>=3)return false;b.phase='question';b.log='Build more energy for your special move.';return true;}
- if(move==='guard'){b.guard=true;b.log='Shield up! Incoming damage reduced.';b.phase='question';enemyHit(b,16);return true;}
+ if(move==='guard'){b.guard=true;b.log='Shield up! Incoming damage reduced.';b.phase='question';if(b.mode==='boss'&&battleRole(byId(b.team[b.active].id))==='guardian')b.team[b.active].hp=Math.min(byId(b.team[b.active].id).hp,b.team[b.active].hp+6);enemyHit(b,incomingDamage(b,16));return true;}
  if(!['basic','special'].includes(move)||b.energy<(move==='special'?3:1))return false;
  const own=byId(b.team[b.active].id),enemy=b.enemies[b.enemy],foe=byId(enemy.id),weak=TYPES[foe.type].weak===own.type;
- const damage=Math.round(((move==='special'?48:25)+Math.min(4,b.combo)*2)*(weak?1.35:1));b.energy-=move==='special'?3:1;enemy.hp=Math.max(0,enemy.hp-damage);b.log=`${move==='special'?own.power:own.move}! ${damage} damage${weak?' · Super effective!':''}`;
- if(enemy.hp===0){b.enemy++;if(b.enemy===b.enemies.length){b.enemy--;b.result='won';b.phase='end';if(!b.paid){p.xp+=20;p.wins++;b.paid=true;}b.log='Victory! Your team earned 20 XP.';return true;}b.log+=' Next opponent!';}else enemyHit(b,16);
+ const role=b.mode==='boss'?battleRole(own):'',bonus=role==='striker'&&move==='special'?8:0;
+ const damage=Math.round(((move==='special'?48:25)+Math.min(4,b.combo)*2+bonus)*(weak?1.35:1));b.energy-=move==='special'?3:1;enemy.hp=Math.max(0,enemy.hp-damage);b.log=`${move==='special'?own.power:own.move}! ${damage} damage${weak?' · Super effective!':''}`;
+ if(role==='support'&&move==='basic'){b.team[b.active].hp=Math.min(own.hp,b.team[b.active].hp+8);b.log+=' Support restored 8 HP.';}
+ if(enemy.hp===0){b.enemy++;if(b.enemy===b.enemies.length){b.enemy--;b.result='won';b.phase='end';if(!b.paid){p.xp+=20;p.wins++;b.paid=true;if(b.mode==='boss'){const key=`${p.learningLevel}:${b.region}`;p.soloBossClears||=[];if(!p.soloBossClears.includes(key)){p.soloBossClears.push(key);p.packs++;b.firstClear=true;}}}b.log=b.firstClear?'Guardian victory! 20 XP and first-clear pack earned.':'Victory! Your team earned 20 XP.';return true;}b.log+=' Next opponent!';}else enemyHit(b,incomingDamage(b,16));
  if(!b.result)b.phase='question';return true;
 }
 export function switchCard(p,index){const b=p.battle;if(!b||b.result||index===b.active||!b.team[index]?.hp)return false;b.active=index;b.log=`${byId(b.team[index].id).name} is ready!`;return true;}

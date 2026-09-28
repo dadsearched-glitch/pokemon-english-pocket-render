@@ -1,0 +1,14 @@
+import {test} from 'node:test';
+import assert from 'node:assert/strict';
+import {freshSave,createProfile} from '../web/model.js';
+import {recordLearningEvent,parentInsights,diagnosticItems,startDiagnostic,currentDiagnostic,diagnosticHeard,answerDiagnostic,finishDiagnosticSpeaking,diagnosticRecommendation} from '../web/learning-insights.js';
+
+const learner=year=>{const s=freshSave();createProfile(s,'Learner',year);return s.profiles[s.active];};
+
+test('parent learning activity distinguishes independent listening, reading support and speaking modes',()=>{const p=learner(3),now=new Date(2026,8,29,12).getTime();for(const kind of ['listenAudio','listenRead','reading','speakingMatch','speakingSelf','situation','daily'])assert.equal(recordLearningEvent(p,kind,now),true);recordLearningEvent(p,'listenAudio',now-8*86400000);assert.equal(recordLearningEvent(p,'unverified',now),false);const result=parentInsights(JSON.parse(JSON.stringify(p)),3,now);assert.equal(result.recent,7);assert.equal(result.previous,1);assert.equal(result.listenAudio,2);assert.equal(result.listenRead,1);assert.equal(result.speakingMatch,1);assert.equal(result.speakingSelf,1);assert.equal(parentInsights(p,4,now).recent,0);});
+
+test('level preview covers three word, two listening and one speaking samples in every year',()=>{for(let year=1;year<=6;year++){const items=diagnosticItems(year);assert.deepEqual(items.map(i=>i.kind),['word','word','word','listen','listen','speaking']);for(const item of items.filter(i=>i.options)){assert.equal(new Set(item.options).size,item.options.length);assert.ok(item.options[item.correct]);}}});
+
+test('level preview is resumable, reading fallback is separate and the recommendation never changes Year',()=>{const p=learner(3);startDiagnostic(p,4);assert.equal(p.learningLevel,3);for(let i=0;i<3;i++){const q=currentDiagnostic(p);assert.equal(answerDiagnostic(p,q.correct),true);}let q=currentDiagnostic(p);assert.equal(answerDiagnostic(p,q.correct),null);diagnosticHeard(p,{fallback:true});assert.equal(answerDiagnostic(p,q.correct),true);q=currentDiagnostic(p);diagnosticHeard(p);assert.equal(answerDiagnostic(p,q.correct),true);assert.equal(currentDiagnostic(p).kind,'speaking');assert.equal(finishDiagnosticSpeaking(p,true),true);const r=diagnosticRecommendation(JSON.parse(JSON.stringify(p)));assert.equal(r.year,4);assert.equal(r.words,3);assert.equal(r.listen,1);assert.equal(r.readFallback,1);assert.equal(r.suggested,4);assert.equal(p.learningLevel,3);});
+
+test('strong independent preview suggests trying the next Year without switching it',()=>{const p=learner(3);startDiagnostic(p,3);for(let i=0;i<5;i++){const q=currentDiagnostic(p);if(q.kind==='listen')diagnosticHeard(p);answerDiagnostic(p,q.correct);}finishDiagnosticSpeaking(p,true);assert.equal(diagnosticRecommendation(p).suggested,4);assert.equal(p.learningLevel,3);});

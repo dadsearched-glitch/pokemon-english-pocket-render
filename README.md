@@ -1,51 +1,25 @@
-<<<<<<< HEAD
-> Latest review update (2026-09-15): v7 now uses Molly only at the user's request. Mitchell selection/audio removed; old voice preferences migrate to Molly without changing profile records. See V7_BROWSER_REVIEW.md for current evidence. Earlier dual-voice statements below are historical.
+# Pokémon English Pocket — Battle V3 / v260929.2
 
-# Pokémon English Pocket — v7
+Family fan game for supplementary New Zealand everyday English practice. The editable app is in `web/`; profiles and progress stay in each browser's local storage.
 
-Family fan game for supplementary English practice. This v7 source continues the published v6 without changing the existing course, pack economy or battle rules.
+## What is here
 
-## Current integrated edition
+- Year 1–6 courses, 24 units per year. Each unit has vocabulary, listening, reading, sentence building, speaking, and review.
+- Up to five local profiles, packs and collection, solo team battles, and the optional Together modes.
+- Completed map units can be practised again without duplicate mission rewards. The daily solo practice revisits three learned words, chooses a useful sentence in context, then asks the learner to say a personal variation. Its first completion each day gives one pack shard. Five shards make a pack, and each fifth completed solo day grants an unowned legacy collection card when one remains.
+- Each four-unit region unlocks a solo guardian battle. Guardian, support and striker cards have different effects in that battle; the first clear grants one pack. Settings offers a short Year preview and a parent snapshot that separates listening, reading support and speaking self-checks.
+- Existing browser saves keep the same storage key. Export a backup from Settings before changing devices or clearing browser data.
 
-Version 7 adds up to five named local trainer profiles, preservation-first v6 migration, EX-or-higher reveal effects, visibly different type attacks and stronger camera impact, tablet-wide layouts, adaptive no-hint retry after assisted answers, a small parent learning snapshot and collection discovery goals. No PIN or GPT login is required.
+## Run and test locally
 
-Read `UPGRADE_V7.md` first for the new behavior, `VALIDATION_V7.md` for actual v7 verification, and `UPGRADE_V6.md` / `VALIDATION.md` for retained historical context.
+Install the dependencies with `npm install`, then run `npm run together` and open `http://localhost:4190`. This serves the editable `web/` files and the same-origin room/signaling service. `npm test` runs automated checks; `npm run build` copies the web source to `dist/` for the alternate `npm start` server. The `?test=1` URL opens a separate parent-test save and never writes to normal game progress.
 
-## Play locally
+## Render
 
-The ZIP includes a built `dist/`. With Node.js installed:
+`render.yaml` configures the Node web service with `npm run together`. The existing Render service `pokemon-english-pocket-render` is linked to `dadsearched-glitch/pokemon-english-pocket-render` on `main` and serves `https://pokemon-english-pocket-render.onrender.com/`. Update that service through this repository; a local build alone does not update the live site.
 
-```bash
-node server.mjs
-```
+See `RELEASE_READY_V260929_2_KO.md` for the item-by-item review, verification evidence, packaging details and remaining device/content checks.
 
-Then open `http://localhost:4173`. To rebuild from editable `web/` source, run `node build.mjs` first. No npm package installation is required for play/build. See `RUN_LOCAL_KO.md`.
+## Assets and scope
 
-## Profiles and storage
-
-
-## Learning and sound
-
-
-## Cards and battles
-
-
-## Assets and privacy
-
-Pokémon names/art belong to their respective owners. Card images load from TCGdex and battle art from the PokeAPI community sprite repository as in the prior release; external availability does not grant redistribution rights. The game has no analytics, payments or chat of its own.
-
-## Verification
-
-Run:
-
-```bash
-npm test
-```
-
-The packaged v7 source passed 25/25 automated tests and a clean build on 2026-09-15. See `VALIDATION_V7.md` for the exact scope and the unverified real-device areas. Do not interpret automated or desktop CSS checks as completed physical-tablet or microphone testing.
-=======
-# Pokémon English Pocket
-
-Render deployment repository for the same-origin game and multiplayer signaling service.
->>>>>>> origin/main
-The packaged v7 source passed 25/25 automated tests and a clean build on 2026-09-15. See `VALIDATION_V7.md` for the exact scope and the unverified real-device areas. Do not interpret automated or desktop CSS checks as completed physical-tablet or microphone testing.
+Voice files are pre-generated Molly/NZ English MP3 files. Card images and battle art load from external TCGdex and PokeAPI sprite hosts. This is an independent family fan game, not the official Pokémon TCG. Browser tests and automated checks do not replace testing touch, microphone, storage, and connection recovery on the child's actual device.
