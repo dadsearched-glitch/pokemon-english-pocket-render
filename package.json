@@ -11,6 +11,6 @@
     "verify:all": "node tools/vscode-verify.mjs"
   },
   "dependencies": {
-    "ws": "^8.18.0"
+    "ws": "^8.22.0"
   }
 }
